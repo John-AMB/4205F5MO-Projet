@@ -1,13 +1,12 @@
-import ideas from "../../../public/ideas.json";
+import GalleryItem from "../GalleyItem/GalleryItem";
+import ideas from "../../data/ideas.json";
+import "./Gallery.css";
 
 const Gallery = () => {
   return (
     <div className="gallery">
       {ideas.map((item, index) => (
-        <div key={index} className="galleryItem">
-          <img src={item.photo} alt={item.title} />
-          <p>{item.title}</p>
-        </div>
+        <GalleryItem key={index} item={item} />
       ))}
     </div>
   );

@@ -1,20 +1,23 @@
-import { useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./GalleryItem.css";
 
 const GalleryItem = ({ item }) => {
   const [open, setOpen] = useState(false);
   const buttonRef = useRef();
+  const ref = useRef();
+  const [span, setSpan] = useState(0);
 
-  const toggleOptions = () => {
-    setOpen((prev) => !prev);
-  };
+  useEffect(() => {
+    const height = ref.current.clientHeight;
+    const spanRows = Math.ceil(height / 10);
+    setSpan(spanRows);
+  }, []);
 
   return (
-    <div className="galleryItem">
-      <img src={item.photo} alt={item.title} />
-
+    <div className="galleryItem" style={{ gridRowEnd: `span ${span}` }}>
+      <img ref={ref} src={item.photo} />
       <div className="overlayIcons">
-        <button ref={buttonRef} onClick={toggleOptions}>
+        <button ref={buttonRef} onClick={() => setOpen((prev) => !prev)}>
           <img src="/general/more.svg" alt="options" />
         </button>
       </div>
@@ -25,8 +28,6 @@ const GalleryItem = ({ item }) => {
           <div className="optionFormat">Delete</div>
         </div>
       )}
-
-      <p>{item.title}</p>
     </div>
   );
 };
