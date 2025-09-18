@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import "./App.css";
+import { AuthContext } from "./components/AuthContext/auth-context";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useState } from "react";
+import RootLayout from "./components/Containers/Roots";
+import ErrorPage from "./components/Containers/ErrorPage";
+import Gallery from "./components/Gallery/Gallery";
+import "./App.css";
 function App() {
-  const [count, setCount] = useState(0)
+  const login = () => setIsLoggedIn(true);
+  const logout = () => setIsLoggedIn(false);
+  const routerIsLoggedIn = () =>
+    createBrowserRouter([
+      {
+        path: "/",
+        element: <RootLayout />,
+        errorElement: <ErrorPage />,
+        children: [{ path: "", element: <Gallery /> }],
+      },
+    ]);
+  const routerIsLoggedOut = () =>
+    createBrowserRouter([
+      {
+        path: "/",
+        element: <RootLayout />,
+        errorElement: <ErrorPage />,
+        children: [{ path: "", element: <Gallery /> }],
+      },
+    ]);
+  const [isLoggedIn, setIsLoggedIn] = useState(AuthContext);
 
+  if (isLoggedIn)
+    return (
+      <AuthContext.Provider
+        value={{ isLoggedIn: isLoggedIn, login: login, logout: logout }}
+      >
+        <RouterProvider router={routerIsLoggedIn()} />
+      </AuthContext.Provider>
+    );
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <AuthContext.Provider
+      value={{ isLoggedIn: isLoggedIn, login: login, logout: logout }}
+    >
+      <RouterProvider router={routerIsLoggedOut()} />
+    </AuthContext.Provider>
+  );
 }
 
-export default App
+export default App;
