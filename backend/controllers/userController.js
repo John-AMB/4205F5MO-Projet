@@ -23,7 +23,28 @@ const getUser = (req, res) => {
   });
 };
 
+//methode qui creer une user
+const createUser = (req, res) => {
+  const { username, password, bio } = req.body;
+
+  //lorsque username OU password = null
+  if (!username || !password) {
+    return res
+      .status(400)
+      .json({ message: "Nom d'utilisateur et mot de passe requis" });
+  }
+
+  User.createUser({ username, password, bio }, (err, results) => {
+    if (err) return res.status(500).json(err);
+    res.json({
+      message: "Utilisateur créé sans problème",
+      id: results.insertId, //lorsqu'on veut rediriger le id de notre nouveau compte a frontend, futur addition
+    });
+  });
+};
+
 module.exports = {
   getUsers,
   getUser,
+  createUser,
 };

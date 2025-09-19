@@ -1,0 +1,44 @@
+.inscription-container {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #494949;
+  text-align: center;
+}
+
+.inscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inscription-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: left;
+}
+
+.inscription-form input,
+.inscription-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.inscription-form button {
+  padding: 10px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.inscription-form button:hover {
+  background: #005fa3;
+}

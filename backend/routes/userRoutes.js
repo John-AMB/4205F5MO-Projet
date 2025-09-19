@@ -9,4 +9,7 @@ router.get("/", userController.getUsers);
 // GET /users/:id
 router.get("/:id", userController.getUser);
 
+// POST /users
+router.post("/", userController.createUser);
+
 module.exports = router;
