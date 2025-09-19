@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-function UserProfile({ userId }) {
+function UserProfile() {
+  const { userId } = useParams(); // prend le userId <- URL: <Route path="/user/:userId" element={<UserProfile />}
   const [user, setUser] = useState(null);
 
   useEffect(() => {

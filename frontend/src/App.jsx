@@ -1,16 +1,13 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import UserProfile from "../components/userProfile";
+import UserProfile from "../components/userProfile.jsx";
 
 function App() {
-  const loggedInUserId = 1; // doit changer pour que le const devient de login
-
   return (
-    <div>
-      <UserProfile userId={loggedInUserId} />
-    </div>
+    <Routes>
+      <Route path="/user/:userId" element={<UserProfile />} />
+    </Routes>
   );
 }
 
