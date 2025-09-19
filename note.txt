@@ -15,6 +15,9 @@ ctrl+c = arreter les processus.
 Vite/frontend -> port 5173 -> localhost:5173
 React/backend -> port 3001 -> localhost:3001
 
+Git pushes:
+git add .
+git commit -m "msg" //-m = message
 git push -u origin nomdeBranch //-u = future pushes are simpler, i.e you just need to git push
 
 Etiquettes:
