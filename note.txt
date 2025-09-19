@@ -22,3 +22,8 @@ Etiquettes:
 [Add] File Addition - Quand un ou plusieurs fichiers sont crees.
 [Upd] Update - Quand un fichier est modifie, sans ajout ni suppression.
 [Del] Delete - Quand des fichiers doivent etre supprimes du repo.
+
+Process: 
+Browser(url) -> component fetch -> backend-> 
+index.js routes -> userRoutes -> userController -> 
+userModel -> db -> Controller callback -> frontend

@@ -7,6 +7,7 @@ function App() {
   return (
     <Routes>
       <Route path="/user/:userId" element={<UserProfile />} />
+      {/*Au cas que URL est /user/:userId-> montre UserProfile*/}
     </Routes>
   );
 }

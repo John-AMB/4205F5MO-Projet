@@ -9,7 +9,7 @@ function UserProfile() {
     //fonctionne apres useState
     if (!userId) return; //lorsque userId retourne null, renvoi null
 
-    fetch(`http://localhost:3001/users/${userId}`)
+    fetch(`http://localhost:3001/users/${userId}`) //prend les info de user avec userId
       .then((res) => res.json())
       .then((data) => setUser(data)); //stocke les info de user dans le db dans const user
   }, [userId]); //si userId change -> useEffect est appele encore
