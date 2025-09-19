@@ -8,10 +8,10 @@ const Header = () => {
       <div className="trois">
         <img href="/" src="/general/logo.png" className="logo" />
         <Link className="home" to="/">
-          home
+          Home
         </Link>
         <Link className="create" to="/add">
-          create
+          Create
         </Link>
       </div>
       <form className="search">
