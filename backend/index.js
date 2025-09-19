@@ -20,3 +20,35 @@ db.connect((err) => {
   if (err) throw err;
   console.log("Datanase connexion reussie");
 });
+
+//access pr le table users
+app.get("/users", (req, res) => {
+  db.query("SELECT * FROM users", (err, results) => {
+    if (err) return res.status(500).json(err);
+    res.json(results); // Envoi JSON -> frontend
+  });
+});
+
+//acceder les info necessaires de profile d'un user
+app.get("/users/:id", (req, res) => {
+  const userId = req.params.id;
+
+  db.query(
+    "SELECT username, bio FROM users WHERE id = ?",
+    [userId],
+    (err, results) => {
+      if (err) return res.status(500).json(err);
+
+      if (results.length === 0) {
+        return res.status(404).json({ message: "Utilisateur non trouvé" });
+      }
+
+      res.json(results[0]); // Envoi UN user -> frontend
+    }
+  );
+});
+
+//start backend
+app.listen(3001, () => {
+  console.log("Backend: http://localhost:3001");
+});
