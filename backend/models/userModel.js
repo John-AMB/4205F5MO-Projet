@@ -22,9 +22,19 @@ const createUser = (user, callback) => {
   );
 };
 
+//verifie si le username et password correspondent a un user dans le database -> un user existant
+const findByUsernameAndPassword = (username, password, callback) => {
+  db.query(
+    "SELECT * FROM users WHERE username = ? AND password = ?",
+    [username, password],
+    callback
+  );
+};
+
 //les fichiers qui importent userModel.js a access:
 module.exports = {
   getAllUsers,
   getUserById,
   createUser,
+  findByUsernameAndPassword,
 };

@@ -6,6 +6,7 @@ import { AuthContext } from "./components/AuthContext/auth-context";
 
 import UserProfile from "./components/userProfile.jsx";
 import Inscription from "./components/Inscription.jsx";
+import Login from "./components/Login.jsx";
 import RootLayout from "./components/Containers/Roots";
 import ErrorPage from "./components/Containers/ErrorPage";
 import Gallery from "./components/Gallery/Gallery";
@@ -52,6 +53,7 @@ function App() {
       <Route path="/user/:userId" element={<UserProfile />} />
       {/*Au cas que URL est /user/:userId-> montre UserProfile*/}
       <Route path="/inscription" element={<Inscription />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 }

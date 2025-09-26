@@ -43,8 +43,37 @@ const createUser = (req, res) => {
   });
 };
 
+//methode qui connecte une user
+const loginUser = (req, res) => {
+  const { username, password } = req.body;
+
+  //lorsque username OU password = null
+  if (!username || !password) {
+    return res
+      .status(400)
+      .json({ message: "Nom d'utilisateur et mot de passe requis" });
+  }
+
+  //methode dans userModel.js
+  User.findByUsernameAndPassword(username, password, (err, results) => {
+    if (err) return res.status(500).json(err);
+
+    if (results.length === 0) {
+      return res.status(401).json({ message: "Identifiants incorrects" });
+    }
+
+    const user = results[0];
+    res.json({
+      message: "Connexion réussie",
+      user: { id: user.id, username: user.username, bio: user.bio },
+      //passe les infos utilisateur a frontend. stocked dans le res
+    });
+  });
+};
+
 module.exports = {
   getUsers,
   getUser,
   createUser,
+  loginUser,
 };
