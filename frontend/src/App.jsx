@@ -11,47 +11,14 @@ import ErrorPage from "./components/Containers/ErrorPage";
 import Gallery from "./components/Gallery/Gallery";
 
 function App() {
-  // const login = () => setIsLoggedIn(true);
-  // const logout = () => setIsLoggedIn(false);
-  // const routerIsLoggedIn = () =>
-  //   createBrowserRouter([
-  //     {
-  //       path: "/",
-  //       element: <RootLayout />,
-  //       errorElement: <ErrorPage />,
-  //       children: [{ path: "", element: <Gallery /> }],
-  //     },
-  //   ]);
-  // const routerIsLoggedOut = () =>
-  //   createBrowserRouter([
-  //     {
-  //       path: "/",
-  //       element: <RootLayout />,
-  //       errorElement: <ErrorPage />,
-  //       children: [{ path: "", element: <Gallery /> }],
-  //     },
-  //   ]);
-  // const [isLoggedIn, setIsLoggedIn] = useState(AuthContext);
-
-  // if (isLoggedIn)
-  //   return (
-  //     <AuthContext.Provider
-  //       value={{ isLoggedIn: isLoggedIn, login: login, logout: logout }}
-  //     >
-  //       <RouterProvider router={routerIsLoggedIn()} />
-  //     </AuthContext.Provider>
-  //   );
-  // return (
-  //   <AuthContext.Provider
-  //     value={{ isLoggedIn: isLoggedIn, login: login, logout: logout }}
-  //   >
-  //     <RouterProvider router={routerIsLoggedOut()} />
-  //   </AuthContext.Provider>
   return (
     <Routes>
-      <Route path="/user/:userId" element={<UserProfile />} />
-      {/*Au cas que URL est /user/:userId-> montre UserProfile*/}
-      <Route path="/inscription" element={<Inscription />} />
+      <Route path="/" element={<RootLayout />}>
+        <Route path="/" element={<Gallery />} />
+        <Route path="/user/:userId" element={<UserProfile />} />
+        {/*Au cas que URL est /user/:userId-> montre UserProfile*/}
+        <Route path="/inscription" element={<Inscription />} />
+      </Route>
     </Routes>
   );
 }

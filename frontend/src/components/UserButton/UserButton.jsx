@@ -27,7 +27,7 @@ const UserButton = () => {
       )}
     </div>
   ) : (
-    <Link to="/login" className="loginLink">
+    <Link to="/inscription" className="loginLink">
       Login / Sign Up
     </Link>
   );
