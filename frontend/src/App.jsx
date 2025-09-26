@@ -5,6 +5,7 @@ import { useState } from "react";
 import RootLayout from "./components/Containers/Roots";
 import ErrorPage from "./components/Containers/ErrorPage";
 import Gallery from "./components/Gallery/Gallery";
+import CreateItem from "./components/CreateItem/CreateItem";
 import "./App.css";
 function App() {
   const login = () => setIsLoggedIn(true);
@@ -15,7 +16,10 @@ function App() {
         path: "/",
         element: <RootLayout />,
         errorElement: <ErrorPage />,
-        children: [{ path: "", element: <Gallery /> }],
+        children: [
+          { path: "", element: <Gallery /> },
+          { path: "/create", element: <CreateItem /> },
+        ],
       },
     ]);
   const routerIsLoggedOut = () =>
@@ -24,7 +28,10 @@ function App() {
         path: "/",
         element: <RootLayout />,
         errorElement: <ErrorPage />,
-        children: [{ path: "", element: <Gallery /> }],
+        children: [
+          { path: "", element: <Gallery /> },
+          { path: "/create", element: <CreateItem /> },
+        ],
       },
     ]);
   const [isLoggedIn, setIsLoggedIn] = useState(AuthContext);
