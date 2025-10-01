@@ -185,7 +185,7 @@ ALTER TABLE `commentaires`
 --
 ALTER TABLE `idees`
   ADD CONSTRAINT `fk_idees_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
@@ -224,3 +224,4 @@ INSERT INTO idees (user_id, titre, description, photo, date) VALUES
 (1, 'tiramisu', 'Description for tiramisu', '/pins/tiramisu.jpg', CURDATE()),
 (1, 'tiramisuCup', 'Description for tiramisuCup', '/pins/tiramisuCup.jpg', CURDATE()),
 (1, 'tonkatsu', 'Description for tonkatsu', '/pins/tonkatsu.jpg', CURDATE());
+COMMIT;
