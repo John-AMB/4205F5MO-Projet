@@ -15,7 +15,7 @@ const GalleryItem = ({ item }) => {
 
   return (
     <div className="galleryItem" style={{ gridRowEnd: `span ${span}` }}>
-      <img ref={ref} src={item.photo} />
+      <img ref={ref} src={item.photo} alt={item.titre} />
       <div className="overlayIcons">
         <button ref={buttonRef} onClick={() => setOpen((prev) => !prev)}>
           <img src="/general/more.svg" alt="options" />

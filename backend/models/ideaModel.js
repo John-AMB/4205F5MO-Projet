@@ -12,10 +12,11 @@ const getIdeaById = (id, callback) => {
 };
 
 // Créer une nouvelle idée
+// Créer une nouvelle idée
 const createIdea = (idea, callback) => {
   db.query(
-    "INSERT INTO idees (user_id, titre, description, photo, date) VALUES (?, ?, ?, ?, ?)",
-    [idea.user_id, idea.titre, idea.description, idea.photo, idea.date],
+    "INSERT INTO idees (user_id, titre, description, photo, date) VALUES (?, ?, ?, ?, CURDATE())",
+    [idea.user_id, idea.titre, idea.description, idea.photo],
     callback
   );
 };
@@ -23,8 +24,8 @@ const createIdea = (idea, callback) => {
 // Mettre à jour une idée
 const updateIdea = (id, idea, callback) => {
   db.query(
-    "UPDATE idees SET titre = ?, description = ?, photo = ?, date = ? WHERE id = ?",
-    [idea.titre, idea.description, idea.photo, idea.date, id],
+    "UPDATE idees SET titre = ?, description = ?, photo = ? WHERE id = ?",
+    [idea.titre, idea.description, idea.photo, id],
     callback
   );
 };

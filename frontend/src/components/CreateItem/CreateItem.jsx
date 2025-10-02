@@ -1,27 +1,68 @@
-const CreateItem = () => {
+import { useState } from "react";
+import "./CreateItem.css";
+
+const AddIdea = () => {
+  const [titre, setTitre] = useState("");
+  const [description, setDescription] = useState("");
+  const [photo, setPhoto] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("user_id", 1);
+    formData.append("titre", titre);
+    formData.append("description", description);
+    if (photo) formData.append("photo", photo); // photo is File object from input
+
+    try {
+      const res = await fetch("http://localhost:3001/ideas", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        setMessage("Idea added successfully!");
+        setTitre("");
+        setDescription("");
+        setPhoto(null);
+      } else {
+        setMessage("Error: " + data.error);
+      }
+    } catch (err) {
+      setMessage(err.message);
+    }
+  };
+
   return (
-    <div className="container-form">
-      <img src="../../../public/general/logo.png" alt="Logo" />
-      <div>
-        <h1>add</h1>
-      </div>
-      <form className="form">
-        <div className="input-field">
-          <h3>title</h3>
-          <input id="title" type="text" name="title" required />
-        </div>
-        <div className="input-field">
-          <h3>description</h3>
-          <textarea name="description" required />
-        </div>
-        <div className="input-field">
-          <input type="file" name="photo" />
-        </div>
-        <div className="btn-container">
-          <button className="btn">save</button>
-        </div>
+    <div className="add-idea-container">
+      <h2>Add a New Idea</h2>
+      <form className="add-idea-form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Titre"
+          value={titre}
+          onChange={(e) => setTitre(e.target.value)}
+          required
+        />
+        <textarea
+          placeholder="Description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          required
+        />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={(e) => setPhoto(e.target.files[0])}
+        />
+        <button type="submit">➕ Add Idea</button>
       </form>
+      {message && <p className="message">{message}</p>}
     </div>
   );
 };
-export default CreateItem;
+
+export default AddIdea;
