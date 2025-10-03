@@ -20,7 +20,7 @@ const getIdeaById = (req, res) => {
     res.json(results[0]);
   });
 };
-g;
+
 const uploadFromBuffer = (buffer) => {
   return new Promise((resolve, reject) => {
     const stream = cloudinary.uploader.upload_stream((error, result) => {
