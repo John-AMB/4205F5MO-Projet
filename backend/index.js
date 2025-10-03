@@ -7,8 +7,9 @@ app.use(cors());
 app.use(express.json()); //traducteur: le frontend comm en JSON, cekui-ci le traduit en un fformat que Node/Exoress peut comprendre
 
 const userRoutes = require("./routes/userRoutes");
+const ideasRoute = require("./routes/ideaRoutes");
 app.use("/users", userRoutes); //quand une requete commence avec /users, utiliser les routes de userRoutes
-
+app.use("/ideas", ideasRoute);
 //start backend
 app.listen(3001, () => {
   console.log("Backend: http://localhost:3001");
