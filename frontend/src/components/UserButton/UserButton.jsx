@@ -27,9 +27,15 @@ const UserButton = () => {
       )}
     </div>
   ) : (
-    <Link to="/inscription" className="loginLink">
-      Login / Sign Up
-    </Link>
+    <>
+      <Link to="/inscription" className="loginLink">
+        Sign Up
+      </Link>
+
+      <Link to="/login" className="loginLink">
+        Login
+      </Link>
+    </>
   );
 };
 export default UserButton;

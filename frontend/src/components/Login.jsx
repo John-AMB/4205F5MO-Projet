@@ -1,10 +1,12 @@
 import React, { useState, useContext } from "react";
 import "../styles/Login.css";
 import { AuthContext } from "./AuthContext/auth-context";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [formData, setFormData] = useState({ username: "", password: "" });
   const { login } = useContext(AuthContext);
+  const navigate = useNavigate(); //pour rediriger user vers leur page
 
   const handleChange = (e) => {
     //e = input change char
@@ -32,6 +34,7 @@ function Login() {
           // si data.user exists/true
           login(data.user); //passe les infos utilisateur au context
           alert("Connexion réussie!");
+          navigate(`/user/${data.user.id}`); //redirige vers la page d'utilisateur
         } else {
           alert(data.message || "Erreur de connexion");
         }
