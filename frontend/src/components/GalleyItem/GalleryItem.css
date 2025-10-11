@@ -65,7 +65,7 @@
   text-align: left;
   border-radius: 8px;
   background-color: white;
-  z-index: 1000;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   font-size: 15px;
