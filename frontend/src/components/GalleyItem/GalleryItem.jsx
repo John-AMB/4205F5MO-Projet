@@ -22,7 +22,22 @@ const GalleryItem = ({ item }) => {
     }
     setOpen((prev) => !prev);
   };
-  const deleteRecette = async () => {};
+  const deleteRecette = async (id) => {
+    if (!window.confirm("Are you sure you want to delete this idea?")) return;
+    try {
+      const res = await fetch(`http://localhost:3001/ideas/${id}`, {
+        method: "DELETE",
+      });
+      if (res.ok) {
+        window.location.reload();
+      } else {
+        const data = await res.json();
+        alert("❌ Error: " + data.error);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
   const handleEditClick = () => {};
   return (
     <div className="galleryItem" style={{ gridRowEnd: `span ${span}` }}>
