@@ -1,28 +1,35 @@
-// Ce fichier gere les requetes de base de donnees
-// Vue -> Model -> Controller
-const db = require("../db"); // import de db.js la connexion -> db cweeterie
+// models/userModel.js
+const supabase = require("../supabaseClient");
 
-//prend tt les users
-const getAllUsers = (callback) => {
-  db.query("SELECT * FROM users", callback);
+// Get all users
+const getAllUsers = async () => {
+  const { data, error } = await supabase.from("users").select("*");
+  if (error) throw error;
+  return data;
 };
 
-//callback = assurez que la page fonctionne meme si les requetes de db prennent du temps a s'exec
-//un seul user en utilisant id
-const getUserById = (id, callback) => {
-  db.query("SELECT username, bio FROM users WHERE id = ?", [id], callback);
+// Get one user by id
+const getUserById = async (id) => {
+  const { data, error } = await supabase
+    .from("users")
+    .select("id, username, bio")
+    .eq("id", id)
+    .single();
+  if (error) throw error;
+  return data;
 };
 
-//Inserer une user dans le database
-const createUser = (user, callback) => {
-  db.query(
-    "INSERT INTO users (username, password, bio) VALUES (?, ?, ?)",
-    [user.username, user.password, user.bio],
-    callback
-  );
+// Create a user
+const createUser = async ({ username, password, bio }) => {
+  const { data, error } = await supabase
+    .from("users")
+    .insert({ username, password, bio })
+    .select()
+    .single();
+  if (error) throw error;
+  return data;
 };
 
-//les fichiers qui importent userModel.js a access:
 module.exports = {
   getAllUsers,
   getUserById,

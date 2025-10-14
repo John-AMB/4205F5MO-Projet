@@ -1,6 +1,7 @@
 const express = require("express"); // RESTful API
 const cors = require("cors"); // autroriser le frontend sur localhost:5137 a communiquer avec le backend sur localhost:3001
-require("dotenv").config(); //.env = pr que les infos sensibles de la database soient stockees en dehors du code
+require("dotenv").config({ path: ".env.production" });
+//.env = pr que les infos sensibles de la database soient stockees en dehors du code
 
 const app = express();
 app.use(cors());

@@ -2,25 +2,8 @@
 const streamifier = require("streamifier");
 const IdeasModel = require("../models/ideaModel");
 const cloudinary = require("../cloudinaryConfig");
-// GET /ideas
-const getAllIdeas = (req, res) => {
-  IdeasModel.getAllIdeas((err, results) => {
-    if (err) return res.status(500).json({ error: err });
-    res.json(results);
-  });
-};
 
-// GET /ideas/:id
-const getIdeaById = (req, res) => {
-  const id = req.params.id;
-  IdeasModel.getIdeaById(id, (err, results) => {
-    if (err) return res.status(500).json({ error: err });
-    if (results.length === 0)
-      return res.status(404).json({ message: "Idea not found" });
-    res.json(results[0]);
-  });
-};
-
+// Helper: upload image buffer to Cloudinary
 const uploadFromBuffer = (buffer) => {
   return new Promise((resolve, reject) => {
     const stream = cloudinary.uploader.upload_stream((error, result) => {
@@ -30,12 +13,38 @@ const uploadFromBuffer = (buffer) => {
     streamifier.createReadStream(buffer).pipe(stream);
   });
 };
+
+// GET /ideas
+const getAllIdeas = async (req, res) => {
+  try {
+    const ideas = await IdeasModel.getAllIdeas();
+    res.json(ideas);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+// GET /ideas/:id
+const getIdeaById = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const idea = await IdeasModel.getIdeaById(id);
+
+    if (!idea) {
+      return res.status(404).json({ message: "Idea not found" });
+    }
+
+    res.json(idea);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
 // POST /ideas
 const createIdea = async (req, res) => {
   try {
     let photoUrl = null;
 
-    // If the user uploaded an image
     if (req.file) {
       const result = await uploadFromBuffer(req.file.buffer);
       photoUrl = result.secure_url;
@@ -45,36 +54,39 @@ const createIdea = async (req, res) => {
       user_id: req.body.user_id,
       titre: req.body.titre,
       description: req.body.description,
-      photo: photoUrl, // this will always be a proper URL or null
+      photo: photoUrl,
     };
 
-    IdeasModel.createIdea(newIdea, (err, data) => {
-      if (err) return res.status(500).json({ error: err });
-      res.status(201).json({ message: "Idea created", id: data.insertId });
-    });
+    const createdIdea = await IdeasModel.createIdea(newIdea);
+    res.status(201).json({ message: "Idea created", id: createdIdea.id });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Failed to upload image" });
+    res.status(500).json({ error: err.message || "Failed to create idea" });
   }
 };
 
 // PUT /ideas/:id
-const updateIdea = (req, res) => {
-  const id = req.params.id;
-  const idea = req.body;
-  IdeasModel.updateIdea(id, idea, (err, results) => {
-    if (err) return res.status(500).json({ error: err });
-    res.json({ message: "Idea updated" });
-  });
+const updateIdea = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const idea = req.body;
+
+    const updatedIdea = await IdeasModel.updateIdea(id, idea);
+    res.json({ message: "Idea updated", idea: updatedIdea });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
 
 // DELETE /ideas/:id
-const deleteIdea = (req, res) => {
-  const id = req.params.id;
-  IdeasModel.deleteIdea(id, (err, results) => {
-    if (err) return res.status(500).json({ error: err });
+const deleteIdea = async (req, res) => {
+  try {
+    const id = req.params.id;
+    await IdeasModel.deleteIdea(id);
     res.json({ message: "Idea deleted" });
-  });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
 
 module.exports = {
