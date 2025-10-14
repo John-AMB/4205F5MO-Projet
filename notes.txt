@@ -1,0 +1,3 @@
+Run npm run dev → loads .env.development
+
+Run npm start → loads .env.production
