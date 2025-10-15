@@ -19,11 +19,7 @@ const Gallery = () => {
   return (
     <div className="gallery">
       {ideas.map((item) => (
-        <GalleryItem
-          key={item.id}
-          item={item}
-          refreshIdeas={fetchIdeas} // ✅ pass it here
-        />
+        <GalleryItem key={item.id} item={item} refreshIdeas={fetchIdeas} />
       ))}
     </div>
   );

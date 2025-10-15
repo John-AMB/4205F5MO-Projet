@@ -3,11 +3,23 @@ const cors = require("cors");
 require("dotenv").config({ path: ".env.production" });
 
 const app = express();
-
+const allowedOrigins = [
+  "https://four205f5mo-projet.onrender.com", // production
+  "http://localhost:5173", // local dev
+];
 // Enable CORS only for your frontend
 app.use(
   cors({
-    origin: "https://four205f5mo-projet.onrender.com",
+    origin: function (origin, callback) {
+      // allow requests with no origin (like Postman)
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
