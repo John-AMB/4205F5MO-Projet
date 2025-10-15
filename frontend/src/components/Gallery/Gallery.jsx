@@ -1,32 +1,21 @@
-// src/components/Gallery/Gallery.jsx
+import { useEffect, useState } from "react";
 import GalleryItem from "../GalleyItem/GalleryItem";
 import "./Gallery.css";
-import { useEffect, useState } from "react";
 
 const Gallery = () => {
   const [ideas, setIdeas] = useState([]);
-  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
-    const fetchIdeas = async () => {
-      try {
-        const response = await fetch(`${API_URL}/ideas`);
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        setIdeas(data);
-      } catch (err) {
-        console.error("Failed to fetch ideas:", err);
-      }
-    };
+    const backendUrl =
+      import.meta.env.REACT_APP_API_URL === "production"
+        ? "https://fmmzudwexljnklpqliby.supabase.co"
+        : "http://localhost:3001";
 
-    fetchIdeas();
-  }, [API_URL]);
-
-  if (ideas.length === 0) {
-    return <p className="gallery-empty">No ideas yet.</p>;
-  }
+    fetch(`${backendUrl}/ideas`)
+      .then((res) => res.json())
+      .then((data) => setIdeas(data))
+      .catch((err) => console.error("❌ Frontend fetch error:", err));
+  }, []);
 
   return (
     <div className="gallery">
