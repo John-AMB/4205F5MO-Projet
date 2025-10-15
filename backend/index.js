@@ -12,6 +12,7 @@ const ideasRoute = require("./routes/ideaRoutes");
 app.use("/users", userRoutes); //quand une requete commence avec /users, utiliser les routes de userRoutes
 app.use("/ideas", ideasRoute);
 //start backend
-app.listen(3001, () => {
-  console.log("Backend: http://localhost:3001");
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`✅ Backend running on port ${PORT}`);
 });
