@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./GalleryItem.css";
 import UserOptionsPortal from "../UserOptionsPortal/UserOptionsPortal";
 
-const GalleryItem = ({ item }) => {
+const GalleryItem = ({ item, refreshIdeas }) => {
   const [open, setOpen] = useState(false);
   const buttonRef = useRef();
   const ref = useRef();
@@ -14,8 +14,7 @@ const GalleryItem = ({ item }) => {
 
   useEffect(() => {
     const height = ref.current.clientHeight;
-    const spanRows = Math.ceil(height / 10);
-    setSpan(spanRows);
+    setSpan(Math.ceil(height / 10));
   }, []);
 
   const toggleOptions = () => {
@@ -29,49 +28,46 @@ const GalleryItem = ({ item }) => {
     setOpen((prev) => !prev);
   };
 
-  // 🗑️ Delete recipe
-  const deleteRecette = async (id) => {
+  const deleteIdea = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3001/ideas/${id}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/ideas/${id}`, {
         method: "DELETE",
       });
+
       if (res.ok) {
-        window.location.reload();
+        refreshIdeas(); // Refresh parent list
       } else {
         console.error("Delete failed");
       }
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error(err);
     }
   };
 
-  // ✏️ Edit recipe (show form)
-  const handleEditClick = () => {
-    setEditing(true);
-    setOpen(false);
-  };
-
-  // ✅ Submit update
   const handleUpdateSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`http://localhost:3001/ideas/${item.id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          titre: newTitle,
-          description: newDescription,
-          photo: item.photo,
-        }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/ideas/${item.id}`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            titre: newTitle,
+            description: newDescription,
+            photo: item.photo,
+          }),
+        }
+      );
 
       if (res.ok) {
-        window.location.reload();
+        setEditing(false);
+        refreshIdeas(); // Refresh list
       } else {
         console.error("Update failed");
       }
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error(err);
     }
   };
 
@@ -88,19 +84,12 @@ const GalleryItem = ({ item }) => {
         <UserOptionsPortal>
           <div
             className="userOptions"
-            style={{
-              position: "absolute",
-              top: coords.top,
-              left: coords.left,
-            }}
+            style={{ position: "absolute", top: coords.top, left: coords.left }}
           >
-            <div
-              className="optionFormat"
-              onClick={() => deleteRecette(item.id)}
-            >
+            <div className="optionFormat" onClick={() => deleteIdea(item.id)}>
               Delete Pin
             </div>
-            <div className="optionFormat" onClick={handleEditClick}>
+            <div className="optionFormat" onClick={() => setEditing(true)}>
               Modify Pin
             </div>
           </div>

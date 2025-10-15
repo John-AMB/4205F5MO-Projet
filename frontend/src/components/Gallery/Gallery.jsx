@@ -5,22 +5,25 @@ import "./Gallery.css";
 const Gallery = () => {
   const [ideas, setIdeas] = useState([]);
 
-  useEffect(() => {
-    const backendUrl =
-      import.meta.env.REACT_APP_API_URL === "production"
-        ? "https://fmmzudwexljnklpqliby.supabase.co"
-        : "http://localhost:3001";
-
-    fetch(`${backendUrl}/ideas`)
+  const fetchIdeas = () => {
+    fetch(`${import.meta.env.VITE_API_URL}/ideas`)
       .then((res) => res.json())
       .then((data) => setIdeas(data))
-      .catch((err) => console.error("❌ Frontend fetch error:", err));
+      .catch(console.error);
+  };
+
+  useEffect(() => {
+    fetchIdeas();
   }, []);
 
   return (
     <div className="gallery">
       {ideas.map((item) => (
-        <GalleryItem key={item.id} item={item} />
+        <GalleryItem
+          key={item.id}
+          item={item}
+          refreshIdeas={fetchIdeas} // ✅ pass it here
+        />
       ))}
     </div>
   );
