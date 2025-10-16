@@ -2,25 +2,30 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext/auth-context";
 import "./UserButton.css";
+
 const UserButton = () => {
-  const { isLoggedIn, logout } = useContext(AuthContext);
+  const { isLoggedIn, user } = useContext(AuthContext);
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
-  const handleLogout = () => {
-    logout();
-    navigate("/");
-  };
+
   return isLoggedIn ? (
     <div className="userButton">
-      <img src="/general/noAvatar.png" alt="avatar" />
       <img
-        onClick={() => setOpen((prev) => !prev)}
+        src="/general/noAvatar.png"
+        alt="avatar"
+        className="profilePic"
+        onClick={() => navigate(`/user/${user.id}`)}
+      />
+
+      <img
         src="/general/arrow.svg"
         alt="toggle"
+        onClick={() => setOpen((prev) => !prev)}
       />
+
       {open && (
         <div className="userOptions">
-          <div className="uo" onClick={handleLogout}>
+          <div className="uo" onClick={() => navigate("/logout")}>
             Logout
           </div>
         </div>

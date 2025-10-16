@@ -1,8 +1,5 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { AuthContext } from "./components/AuthContext/auth-context";
-//import { createBrowserRouter, RouterProvider } from "react-router-dom";
-//import { useState } from "react";
 
 import UserProfile from "./components/userProfile.jsx";
 import Inscription from "./components/Inscription.jsx";
@@ -11,6 +8,7 @@ import ErrorPage from "./components/Containers/ErrorPage";
 import Gallery from "./components/Gallery/Gallery";
 import CreateItem from "./components/CreateItem/CreateItem.jsx";
 import Login from "./components/Login.jsx";
+import Logout from "./components/Logout.jsx";
 
 function App() {
   return (
@@ -22,6 +20,7 @@ function App() {
         {/*Au cas que URL est /user/:userId-> montre UserProfile*/}
         <Route path="/inscription" element={<Inscription />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
       </Route>
     </Routes>
   );

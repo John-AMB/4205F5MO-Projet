@@ -18,28 +18,32 @@ function Login() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); //Le formulaire essaie de recharger la page lorsque la personne le soumet.La méthode preventDefault() empeche cela.
 
-    fetch("http://localhost:3001/users/login", {
-      //appel POST /users/login route dans
-      method: "POST",
-      headers: { "Content-Type": "application/json" }, //body sera donc dans le format JSON
-      body: JSON.stringify(formData), //body: formData -> transform -> JSON
-    })
-      .then((res) => res.json()) //message de backend, s'il y a d'erreur ou succes
-      .then((data) => {
-        //object dans le message de backend
-        if (data.user) {
-          // si data.user exists/true
-          login(data.user); //passe les infos utilisateur au context
-          alert("Connexion réussie!");
-          navigate(`/user/${data.user.id}`); //redirige vers la page d'utilisateur
-        } else {
-          alert(data.message || "Erreur de connexion");
-        }
-      })
-      .catch((err) => console.error(err));
+    try {
+      const res = await fetch("http://localhost:3001/users/login", {
+        //appel POST /users/login route dans
+        method: "POST",
+        headers: { "Content-Type": "application/json" }, //body sera donc dans le format JSON
+        body: JSON.stringify(formData), //body: formData -> transform -> JSON
+      });
+
+      //object dans le message de backend
+      const data = await res.json();
+
+      // si data.user exists/true
+      if (data.user) {
+        login(data.user); // isLoggedIn = true, passe les infos utilisateur au context
+
+        navigate(`/user/${data.user.id}`); //redirige vers la page d'utilisateur
+      } else {
+        alert(data.message || "Erreur de connexion");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Erreur lors de la connexion");
+    }
   };
 
   return (
@@ -57,6 +61,7 @@ function Login() {
             required
           />
         </label>
+
         <label>
           Mot de passe
           <input
@@ -67,6 +72,7 @@ function Login() {
             required
           />
         </label>
+
         <button type="submit">Se connecter</button>
       </form>
     </div>

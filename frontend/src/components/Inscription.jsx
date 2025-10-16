@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Inscription.css";
+import { useNavigate } from "react-router-dom";
 
 function Inscription() {
   const [formData, setFormData] = useState({
@@ -7,6 +8,7 @@ function Inscription() {
     password: "",
     bio: "",
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     //e = input change char
@@ -32,6 +34,8 @@ function Inscription() {
         //object dans le message de backend
         console.log("Utilisateur créé:", data);
         alert("Compte créé avec succès !");
+
+        navigate(`/login`);
       })
       .catch((err) => console.error(err));
   };
