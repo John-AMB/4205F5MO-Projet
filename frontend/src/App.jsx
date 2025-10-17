@@ -9,7 +9,7 @@ import Gallery from "./components/Gallery/Gallery";
 import CreateItem from "./components/CreateItem/CreateItem.jsx";
 import Login from "./components/Login.jsx";
 import Logout from "./components/Logout.jsx";
-import ChangePassword from "./components/ChangePassword/changePassword.jsx";
+import ChangePassword from "./components/ModificationProfile/ChangePassword/ChangePassword.jsx";
 
 function App() {
   return (

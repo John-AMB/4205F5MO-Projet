@@ -1,7 +1,7 @@
 import "./ChangePassword.css";
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../AuthContext/auth-context";
+import { AuthContext } from "../../AuthContext/auth-context";
 
 const ChangePassword = () => {
   const { user } = useContext(AuthContext);
