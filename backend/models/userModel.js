@@ -31,10 +31,29 @@ const findByUsernameAndPassword = (username, password, callback) => {
   );
 };
 
+//verifie si l'ancien mot de passe correspond au mot de passe que l'utilisateur a entre
+const verifyOldPassword = (userId, oldPassword, callback) => {
+  db.query(
+    "SELECT * FROM users WHERE id = ? AND password = ?",
+    [userId, oldPassword],
+    callback
+  );
+};
+
+//met a jour le mot de passe de l'utilisateur
+const updatePassword = (userId, newPassword, callback) =>
+  db.query(
+    "UPDATE users SET password = ? WHERE id = ?",
+    [newPassword, userId],
+    callback
+  );
+
 //les fichiers qui importent userModel.js a access:
 module.exports = {
   getAllUsers,
   getUserById,
   createUser,
   findByUsernameAndPassword,
+  verifyOldPassword,
+  updatePassword,
 };

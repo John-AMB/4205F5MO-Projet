@@ -71,9 +71,42 @@ const loginUser = (req, res) => {
   });
 };
 
+const changePassword = (req, res) => {
+  const { userId, oldPassword, newPassword } = req.body;
+
+  //check si les champs requis sont fournis
+  if (!userId || !oldPassword || !newPassword) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Champs requis manquants" });
+  }
+
+  //verifie si l'ancien mot de passe correspond au mot de passe stocke dans la db
+  User.verifyOldPassword(userId, oldPassword, (err, results) => {
+    if (err) return res.status(500).json(err);
+
+    if (results.length === 0) {
+      //ancien mot de passe incorrect
+      return res
+        .status(401)
+        .json({ success: false, message: "Ancien mot de passe incorrect" });
+    }
+
+    //update le mot de passe
+    User.updatePassword(userId, newPassword, (err) => {
+      if (err) return res.status(500).json({ success: false, message: err });
+      res.json({
+        success: true,
+        message: "Mot de passe mis à jour avec succès",
+      });
+    });
+  });
+};
+
 module.exports = {
   getUsers,
   getUser,
   createUser,
   loginUser,
+  changePassword,
 };

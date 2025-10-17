@@ -15,4 +15,7 @@ router.post("/", userController.createUser);
 // POST /users/login
 router.post("/login", userController.loginUser);
 
+// POST /users/change-password
+router.post("/change-password", userController.changePassword);
+
 module.exports = router;

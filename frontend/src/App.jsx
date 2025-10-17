@@ -9,6 +9,7 @@ import Gallery from "./components/Gallery/Gallery";
 import CreateItem from "./components/CreateItem/CreateItem.jsx";
 import Login from "./components/Login.jsx";
 import Logout from "./components/Logout.jsx";
+import ChangePassword from "./components/ChangePassword/changePassword.jsx";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/inscription" element={<Inscription />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
+        <Route path="/change-password" element={<ChangePassword />} />
       </Route>
     </Routes>
   );

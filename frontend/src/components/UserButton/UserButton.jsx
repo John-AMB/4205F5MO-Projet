@@ -28,6 +28,9 @@ const UserButton = () => {
           <div className="uo" onClick={() => navigate("/logout")}>
             Logout
           </div>
+          <div className="uo" onClick={() => navigate("/change-password")}>
+            Change Password
+          </div>
         </div>
       )}
     </div>
