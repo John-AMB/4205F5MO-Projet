@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext/auth-context";
 import "./UserButton.css";
@@ -8,13 +8,33 @@ const UserButton = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
+  //
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      //si le dropdown existe et que le clic n'est pas a l'interieur, on ferme le menu
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return isLoggedIn ? (
-    <div className="userButton">
+    <div className="userButton" ref={menuRef}>
       <img
         src="/general/noAvatar.png"
         alt="avatar"
         className="profilePic"
-        onClick={() => navigate(`/user/${user.id}`)}
+        onClick={() => {
+          navigate(`/user/${user.id}`);
+          setOpen(false);
+        }}
       />
 
       <img
@@ -25,10 +45,22 @@ const UserButton = () => {
 
       {open && (
         <div className="userOptions">
-          <div className="uo" onClick={() => navigate("/logout")}>
+          <div
+            className="uo"
+            onClick={() => {
+              navigate("/logout");
+              setOpen(false);
+            }}
+          >
             Logout
           </div>
-          <div className="uo" onClick={() => navigate("/change-password")}>
+          <div
+            className="uo"
+            onClick={() => {
+              navigate("/change-password");
+              setOpen(false);
+            }}
+          >
             Change Password
           </div>
         </div>
@@ -46,4 +78,5 @@ const UserButton = () => {
     </>
   );
 };
+
 export default UserButton;
