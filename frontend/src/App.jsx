@@ -10,6 +10,7 @@ import CreateItem from "./components/CreateItem/CreateItem.jsx";
 import Login from "./components/Login.jsx";
 import Logout from "./components/Logout.jsx";
 import ChangePassword from "./components/ModificationProfile/ChangePassword/ChangePassword.jsx";
+import ModificationProfile from "./components/ModificationProfile/ModificationProfile.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/change-password" element={<ChangePassword />} />
+        <Route path="/modification" element={<ModificationProfile />} />
       </Route>
     </Routes>
   );

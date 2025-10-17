@@ -48,20 +48,20 @@ const UserButton = () => {
           <div
             className="uo"
             onClick={() => {
+              navigate("/modification");
+              setOpen(false);
+            }}
+          >
+            Options
+          </div>
+          <div
+            className="uo"
+            onClick={() => {
               navigate("/logout");
               setOpen(false);
             }}
           >
             Logout
-          </div>
-          <div
-            className="uo"
-            onClick={() => {
-              navigate("/change-password");
-              setOpen(false);
-            }}
-          >
-            Change Password
           </div>
         </div>
       )}
