@@ -17,7 +17,7 @@ const AddIdea = () => {
     formData.append("description", description);
     if (photo) formData.append("photo", photo);
 
-    const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
+    const backendUrl = import.meta.env.VITE_API_URL || "https://your-backend-name.onrender.com";
 
     try {
       const res = await fetch(`${backendUrl}/ideas`, {

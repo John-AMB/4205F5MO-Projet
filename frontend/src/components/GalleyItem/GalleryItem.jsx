@@ -30,7 +30,8 @@ const GalleryItem = ({ item, refreshIdeas }) => {
 
   const deleteIdea = async (id) => {
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/ideas/${id}`, {
+      const apiUrl = import.meta.env.VITE_API_URL || "https://your-backend-name.onrender.com";
+      const res = await fetch(`${apiUrl}/ideas/${id}`, {
         method: "DELETE",
       });
 
@@ -47,8 +48,9 @@ const GalleryItem = ({ item, refreshIdeas }) => {
   const handleUpdateSubmit = async (e) => {
     e.preventDefault();
     try {
+      const apiUrl = import.meta.env.VITE_API_URL || "https://your-backend-name.onrender.com";
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/ideas/${item.id}`,
+        `${apiUrl}/ideas/${item.id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

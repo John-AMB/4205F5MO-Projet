@@ -6,7 +6,8 @@ const Gallery = () => {
   const [ideas, setIdeas] = useState([]);
 
   const fetchIdeas = () => {
-    fetch(`${import.meta.env.VITE_API_URL}/ideas`)
+    const apiUrl = import.meta.env.VITE_API_URL || "https://your-backend-name.onrender.com";
+    fetch(`${apiUrl}/ideas`)
       .then((res) => res.json())
       .then((data) => setIdeas(data))
       .catch(console.error);
