@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import "./GalleryItem.css";
 import UserOptionsPortal from "../UserOptionsPortal/UserOptionsPortal";
 import EditIdeaPortal from "../EditIdeaPortal/EditIdeaPortal";
-
+import { useNavigate } from "react-router-dom";
 const GalleryItem = ({ item, refreshIdeas }) => {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const buttonRef = useRef();
   const ref = useRef();
@@ -112,7 +113,12 @@ const GalleryItem = ({ item, refreshIdeas }) => {
 
   return (
     <div className="galleryItem" style={{ gridRowEnd: `span ${span}` }}>
-      <img ref={ref} src={item.photo} alt={item.titre} />
+      <img
+        ref={ref}
+        src={item.photo}
+        alt={item.titre}
+        onClick={() => navigate(`/idea/${item.id}`)}
+      />
 
       <div className="overlayIcons">
         <button ref={buttonRef} onClick={toggleOptions}>

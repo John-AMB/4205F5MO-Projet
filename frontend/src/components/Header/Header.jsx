@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="trois">
-        <img href="/" src="/general/logo.png" className="logo" onClick={"/"} />
+        <img href="/" src="/general/logo.png" className="logo" />
         <Link className="home" to="/">
           Home
         </Link>

@@ -10,6 +10,7 @@ import RootLayout from "./components/Containers/Roots";
 import ErrorPage from "./components/Containers/ErrorPage";
 import Gallery from "./components/Gallery/Gallery";
 import CreateItem from "./components/CreateItem/CreateItem.jsx";
+import SingleItem from "./components/SingleItem/SingleItem.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/" element={<RootLayout />}>
         <Route path="/" element={<Gallery />} />
         <Route path="/create" element={<CreateItem />} />
+        <Route path="/idea/:id" element={<SingleItem />} />
         <Route path="/user/:userId" element={<UserProfile />} />
         {/*Au cas que URL est /user/:userId-> montre UserProfile*/}
         <Route path="/inscription" element={<Inscription />} />
