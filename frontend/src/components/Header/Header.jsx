@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="trois">
-        <img href="/" src="/general/logo.png" className="logo" />
+        <img href="/" src="/general/logo.png" className="logo" onClick={"/"} />
         <Link className="home" to="/">
           Home
         </Link>
@@ -21,7 +21,7 @@ const Header = () => {
         </div>
       </form>
       <UserButton />
-      <LanguageSwitcher />
+      {/*<LanguageSwitcher />*/}
     </header>
   );
 };

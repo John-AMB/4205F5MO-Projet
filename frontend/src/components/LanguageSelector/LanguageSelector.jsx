@@ -1,7 +1,9 @@
+import "./LanguageSelector.css";
+
 export default function LanguageSwitcher() {
   return (
     <div>
-      <button>Enlgish</button>
+      <button className="language-icon ">Enlgish</button>
     </div>
   );
 }
