@@ -11,6 +11,7 @@ import Login from "./components/Login.jsx";
 import Logout from "./components/Logout.jsx";
 import ChangePassword from "./components/ModificationProfile/ChangePassword/ChangePassword.jsx";
 import ModificationProfile from "./components/ModificationProfile/ModificationProfile.jsx";
+import ChangeBio from "./components/ModificationProfile/ChangeBio/ChangeBio.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/change-password" element={<ChangePassword />} />
+        <Route path="/change-bio" element={<ChangeBio />} />
         <Route path="/modification" element={<ModificationProfile />} />
       </Route>
     </Routes>

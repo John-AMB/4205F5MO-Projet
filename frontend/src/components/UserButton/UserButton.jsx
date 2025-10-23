@@ -48,6 +48,15 @@ const UserButton = () => {
           <div
             className="uo"
             onClick={() => {
+              navigate(`/user/${user.id}`);
+              setOpen(false);
+            }}
+          >
+            Profile
+          </div>
+          <div
+            className="uo"
+            onClick={() => {
               navigate("/modification");
               setOpen(false);
             }}

@@ -22,7 +22,12 @@ const ProfileOptions = () => {
               Change Password
             </button>
 
-            <button className="optionBtn">Edit Profile</button>
+            <button
+              className="optionBtn"
+              onClick={() => navigate("/change-bio")}
+            >
+              Edit Bio
+            </button>
 
             <button className="optionBtn delete">Delete Account</button>
           </div>

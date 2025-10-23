@@ -48,6 +48,11 @@ const updatePassword = (userId, newPassword, callback) =>
     callback
   );
 
+//met a jour la bio de l'utilisateur
+const updateBio = (userId, newBio, callback) => {
+  db.query("UPDATE users SET bio = ? WHERE id = ?", [newBio, userId], callback);
+};
+
 //les fichiers qui importent userModel.js a access:
 module.exports = {
   getAllUsers,
@@ -56,4 +61,5 @@ module.exports = {
   findByUsernameAndPassword,
   verifyOldPassword,
   updatePassword,
+  updateBio,
 };

@@ -18,4 +18,7 @@ router.post("/login", userController.loginUser);
 // POST /users/change-password
 router.post("/change-password", userController.changePassword);
 
+// PUT /users/change-bio
+router.put("/change-bio", userController.changeBio);
+
 module.exports = router;

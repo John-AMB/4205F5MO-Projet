@@ -103,10 +103,34 @@ const changePassword = (req, res) => {
   });
 };
 
+const changeBio = (req, res) => {
+  const { userId, bio } = req.body;
+
+  // Check if userId and bio are provided
+  if (!userId || bio == undefined) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Champs requis manquants" });
+  }
+
+  // Update the user's bio in the database
+  User.updateBio(userId, bio, (err) => {
+    if (err) {
+      console.error(err);
+      return res
+        .status(500)
+        .json({ success: false, message: "Database erreur" });
+    }
+
+    res.json({ success: true, message: "Bio mise à jour avec succès" });
+  });
+};
+
 module.exports = {
   getUsers,
   getUser,
   createUser,
   loginUser,
   changePassword,
+  changeBio,
 };
