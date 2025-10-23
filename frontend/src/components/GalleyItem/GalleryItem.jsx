@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./GalleryItem.css";
 import UserOptionsPortal from "../UserOptionsPortal/UserOptionsPortal";
+import EditIdeaPortal from "../EditIdeaPortal/EditIdeaPortal";
 
 const GalleryItem = ({ item, refreshIdeas }) => {
   const [open, setOpen] = useState(false);
@@ -9,14 +10,46 @@ const GalleryItem = ({ item, refreshIdeas }) => {
   const [span, setSpan] = useState(0);
   const [coords, setCoords] = useState({ top: 0, left: 0 });
   const [editing, setEditing] = useState(false);
+  const [closing, setClosing] = useState(false);
   const [newTitle, setNewTitle] = useState(item.titre);
   const [newDescription, setNewDescription] = useState(item.description);
+
+  const optionsRef = useRef();
+  const editRef = useRef();
 
   useEffect(() => {
     const height = ref.current.clientHeight;
     setSpan(Math.ceil(height / 10));
   }, []);
 
+  // Handle outside click for user options
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        optionsRef.current &&
+        !optionsRef.current.contains(e.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(e.target)
+      ) {
+        setOpen(false);
+      }
+    };
+    if (open) document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [open]);
+
+  // Handle outside click for edit form
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (editRef.current && !editRef.current.contains(e.target)) {
+        closeEditPortal();
+      }
+    };
+    if (editing) document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [editing]);
+
+  // Open/close options
   const toggleOptions = () => {
     if (buttonRef.current) {
       const rect = buttonRef.current.getBoundingClientRect();
@@ -28,22 +61,21 @@ const GalleryItem = ({ item, refreshIdeas }) => {
     setOpen((prev) => !prev);
   };
 
+  // Delete idea
   const deleteIdea = async (id) => {
     try {
       const res = await fetch(`${import.meta.env.VITE_API_URL}/ideas/${id}`, {
         method: "DELETE",
       });
 
-      if (res.ok) {
-        refreshIdeas(); // Refresh parent list
-      } else {
-        console.error("Delete failed");
-      }
+      if (res.ok) refreshIdeas();
+      else console.error("Delete failed");
     } catch (err) {
       console.error(err);
     }
   };
 
+  // Update idea
   const handleUpdateSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -61,19 +93,27 @@ const GalleryItem = ({ item, refreshIdeas }) => {
       );
 
       if (res.ok) {
-        setEditing(false);
-        refreshIdeas(); // Refresh list
-      } else {
-        console.error("Update failed");
-      }
+        closeEditPortal();
+        refreshIdeas();
+      } else console.error("Update failed");
     } catch (err) {
       console.error(err);
     }
   };
 
+  // Close portal with animation
+  const closeEditPortal = () => {
+    setClosing(true);
+    setTimeout(() => {
+      setEditing(false);
+      setClosing(false);
+    }, 300); // match CSS animation duration
+  };
+
   return (
     <div className="galleryItem" style={{ gridRowEnd: `span ${span}` }}>
       <img ref={ref} src={item.photo} alt={item.titre} />
+
       <div className="overlayIcons">
         <button ref={buttonRef} onClick={toggleOptions}>
           <img src="/general/more.svg" alt="options" />
@@ -83,8 +123,13 @@ const GalleryItem = ({ item, refreshIdeas }) => {
       {open && (
         <UserOptionsPortal>
           <div
+            ref={optionsRef}
             className="userOptions"
-            style={{ position: "absolute", top: coords.top, left: coords.left }}
+            style={{
+              position: "absolute",
+              top: coords.top,
+              left: coords.left,
+            }}
           >
             <div className="optionFormat" onClick={() => deleteIdea(item.id)}>
               Delete Pin
@@ -97,27 +142,37 @@ const GalleryItem = ({ item, refreshIdeas }) => {
       )}
 
       {editing && (
-        <div className="editFormOverlay">
-          <form className="editForm" onSubmit={handleUpdateSubmit}>
-            <input
-              type="text"
-              value={newTitle}
-              onChange={(e) => setNewTitle(e.target.value)}
-              placeholder="New title"
-            />
-            <textarea
-              value={newDescription}
-              onChange={(e) => setNewDescription(e.target.value)}
-              placeholder="New description"
-            />
-            <div className="editActions">
-              <button type="submit">Save</button>
-              <button type="button" onClick={() => setEditing(false)}>
-                Cancel
-              </button>
-            </div>
-          </form>
-        </div>
+        <EditIdeaPortal>
+          <div
+            className={`pageDimmer ${closing ? "fadeOut" : "fadeIn"}`}
+            onClick={closeEditPortal}
+          ></div>
+          <div
+            ref={editRef}
+            className={`editFormOverlay ${closing ? "slideOut" : "slideIn"}`}
+          >
+            <h2>Modify idea</h2>
+            <form className="editForm" onSubmit={handleUpdateSubmit}>
+              <input
+                type="text"
+                value={newTitle}
+                onChange={(e) => setNewTitle(e.target.value)}
+                placeholder="New title"
+              />
+              <textarea
+                value={newDescription}
+                onChange={(e) => setNewDescription(e.target.value)}
+                placeholder="New description"
+              />
+              <div className="editActions">
+                <button type="submit">Save</button>
+                <button type="button" onClick={closeEditPortal}>
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </EditIdeaPortal>
       )}
     </div>
   );
