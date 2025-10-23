@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./CreateItem.css";
+import { useNavigate } from "react-router-dom";
 
 const AddIdea = () => {
   const [titre, setTitre] = useState("");
   const [description, setDescription] = useState("");
   const [photo, setPhoto] = useState(null);
   const [message, setMessage] = useState("");
-
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage("Uploading...");
@@ -32,6 +33,7 @@ const AddIdea = () => {
         setTitre("");
         setDescription("");
         setPhoto(null);
+        setTimeout(() => navigate("/"), 500);
       } else {
         setMessage("❌ Error: " + (data.error || "Unknown error"));
       }

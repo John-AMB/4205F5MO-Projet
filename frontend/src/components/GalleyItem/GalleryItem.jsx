@@ -68,7 +68,7 @@ const GalleryItem = ({ item, refreshIdeas }) => {
       const res = await fetch(`${import.meta.env.VITE_API_URL}/ideas/${id}`, {
         method: "DELETE",
       });
-
+      alert("are you sure you want to delete this idea?");
       if (res.ok) refreshIdeas();
       else console.error("Delete failed");
     } catch (err) {
