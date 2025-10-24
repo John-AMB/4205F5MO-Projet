@@ -29,6 +29,8 @@ const ProfileOptions = () => {
               Edit Bio
             </button>
 
+            <button className="optionBtn">Change Profile Picture</button>
+
             <button className="optionBtn delete">Delete Account</button>
           </div>
         </div>
