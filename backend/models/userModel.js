@@ -66,6 +66,11 @@ const updateProfilePhoto = (userId, photoUrl, callback) => {
   );
 };
 
+//supprime un user
+const deleteUser = (userId, callback) => {
+  db.query("DELETE FROM users WHERE id = ?", [userId], callback);
+};
+
 //les fichiers qui importent userModel.js a access:
 module.exports = {
   getAllUsers,
@@ -76,4 +81,5 @@ module.exports = {
   updatePassword,
   updateBio,
   updateProfilePhoto,
+  deleteUser,
 };

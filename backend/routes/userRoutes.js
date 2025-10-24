@@ -31,5 +31,7 @@ router.put(
   upload.single("photo"),
   userController.changeProfilePhoto
 );
+// DELETE /users/delete-account
+router.delete("/delete-account", userController.deleteAccount);
 
 module.exports = router;

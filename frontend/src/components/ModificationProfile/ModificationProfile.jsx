@@ -36,7 +36,12 @@ const ProfileOptions = () => {
               Change Password
             </button>
 
-            <button className="optionBtn delete">Delete Account</button>
+            <button
+              className="optionBtn delete"
+              onClick={() => navigate("/delete-account")}
+            >
+              Delete Account
+            </button>
           </div>
         </div>
       ) : (

@@ -172,6 +172,50 @@ const changeBio = (req, res) => {
   });
 };
 
+const deleteAccount = (req, res) => {
+  const { userId, username, confirmUsername } = req.body;
+
+  //assure que tous les champs requis sont fournis
+  if (!userId || !username || !confirmUsername) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Champs requis manquants" });
+  }
+
+  //verifie que les noms d'utilisateur correspondent
+  if (username !== confirmUsername) {
+    return res.status(400).json({
+      success: false,
+      message: "Les noms d'utilisateur ne correspondent pas",
+    });
+  }
+
+  //verifie que le nom d'utilisateur correspond a l'id de l'utilisateur
+  User.getUserById(userId, (err, results) => {
+    if (err) return res.status(500).json(err);
+    if (results.length === 0)
+      return res
+        .status(404)
+        .json({ success: false, message: "Utilisateur non trouvé" });
+
+    const dbUser = results[0];
+    if (dbUser.username !== username) {
+      return res
+        .status(403)
+        .json({ success: false, message: "Nom d'utilisateur incorrect" });
+    }
+
+    //supprime l'utilisateur
+    User.deleteUser(userId, (err) => {
+      if (err) return res.status(500).json(err);
+      res.json({
+        success: true,
+        message: "Compte supprimé avec succès",
+      });
+    });
+  });
+};
+
 module.exports = {
   getUsers,
   getUser,
@@ -180,4 +224,5 @@ module.exports = {
   changePassword,
   changeBio,
   changeProfilePhoto,
+  deleteAccount,
 };
