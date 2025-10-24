@@ -64,3 +64,13 @@
     display: none;
   }
 }
+
+.profilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border-color: green;
+  border-width: 2px;
+  border-style: solid;
+}
