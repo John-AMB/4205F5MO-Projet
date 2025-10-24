@@ -1,5 +1,46 @@
 //gere la logique et les reponses
 const User = require("../models/userModel");
+const streamifier = require("streamifier");
+const cloudinary = require("../cloudinaryConfig");
+
+const uploadFromBuffer = (buffer) => {
+  return new Promise((resolve, reject) => {
+    const stream = cloudinary.uploader.upload_stream((error, result) => {
+      if (result) resolve(result);
+      else reject(error);
+    });
+    streamifier.createReadStream(buffer).pipe(stream);
+  });
+};
+
+const changeProfilePhoto = async (req, res) => {
+  try {
+    const userId = req.body.userId;
+    if (!userId) {
+      return res.status(400).json({ error: "User ID requis" });
+    }
+
+    let photoUrl = null;
+
+    if (req.file) {
+      const result = await uploadFromBuffer(req.file.buffer);
+      photoUrl = result.secure_url;
+    } else {
+      return res.status(400).json({ error: "No file uploaded" });
+    }
+
+    User.updateProfilePhoto(userId, photoUrl, (err, results) => {
+      if (err) return res.status(500).json({ error: err });
+      res.json({
+        message: "Profile photo updated successfully",
+        photo: photoUrl,
+      });
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Failed to upload profile photo" });
+  }
+};
 
 //tout les utilisateurs
 const getUsers = (req, res) => {
@@ -133,4 +174,5 @@ module.exports = {
   loginUser,
   changePassword,
   changeBio,
+  changeProfilePhoto,
 };

@@ -10,7 +10,11 @@ const getAllUsers = (callback) => {
 //callback = assurez que la page fonctionne meme si les requetes de db prennent du temps a s'exec
 //un seul user en utilisant id
 const getUserById = (id, callback) => {
-  db.query("SELECT username, bio FROM users WHERE id = ?", [id], callback);
+  db.query(
+    "SELECT username, bio,photo FROM users WHERE id = ?",
+    [id],
+    callback
+  );
 };
 
 //Inserer une user dans le database
@@ -53,6 +57,15 @@ const updateBio = (userId, newBio, callback) => {
   db.query("UPDATE users SET bio = ? WHERE id = ?", [newBio, userId], callback);
 };
 
+//met a jour la photo de profil de l'utilisateur
+const updateProfilePhoto = (userId, photoUrl, callback) => {
+  db.query(
+    "UPDATE users SET photo = ? WHERE id = ?",
+    [photoUrl, userId],
+    callback
+  );
+};
+
 //les fichiers qui importent userModel.js a access:
 module.exports = {
   getAllUsers,
@@ -62,4 +75,5 @@ module.exports = {
   verifyOldPassword,
   updatePassword,
   updateBio,
+  updateProfilePhoto,
 };

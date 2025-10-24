@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/UserProfile.css";
 
@@ -12,16 +12,26 @@ function UserProfile() {
 
     fetch(`http://localhost:3001/users/${userId}`) //prend les info de user avec userId
       .then((res) => res.json())
-      .then((data) => setUser(data)); //stocke les info de user dans le db dans const user
+      .then((data) => {
+        console.log(data);
+        setUser(data);
+      }) //stocke les info de user dans le db dans const user
+      .catch((err) => console.error(err));
   }, [userId]); //si userId change -> useEffect est appele encore
 
   if (!user) return <p>Loading...</p>;
+
+  const profilePhoto = user.photo || "/general/noAvatar.png"; // fallback to default
 
   return (
     <div className="user-profile-container">
       {/* espace reserve pr photo dans le futur) */}
       <div className="user-profile-left">
-        <div className="user-profile-pic">Photo</div>
+        <img
+          src={profilePhoto}
+          className="user-profile-pic"
+          alt={`${user.username}'s profile`}
+        />
       </div>
 
       {/* username + bio */}

@@ -29,7 +29,12 @@ const ProfileOptions = () => {
               Edit Bio
             </button>
 
-            <button className="optionBtn">Change Profile Picture</button>
+            <button
+              className="optionBtn"
+              onClick={() => navigate("/change-photo")}
+            >
+              Change Profile Picture
+            </button>
 
             <button className="optionBtn delete">Delete Account</button>
           </div>
