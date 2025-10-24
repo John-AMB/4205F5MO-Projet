@@ -29,7 +29,7 @@ const Gallery = () => {
             <GalleryItem key={item.id} item={item} refreshIdeas={fetchIdeas} />
           ))
         ) : (
-          <p className="noResult">No results found.</p>
+          <p className="noResults">No results found :(</p>
         )}
       </div>
     </>
