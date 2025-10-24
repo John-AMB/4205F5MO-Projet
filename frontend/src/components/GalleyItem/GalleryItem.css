@@ -1,8 +1,7 @@
+/* Gallery Item */
 .galleryItem {
   display: flex;
   position: relative;
-  z-index: 1;
-  overflow: visible;
   padding-top: 18px;
   overflow: visible;
 }
@@ -13,42 +12,30 @@
   object-fit: cover;
 }
 
-.overlay,
-.saveButton,
 .overlayIcons {
   display: none;
 }
 
-.galleryItem:hover img {
-  filter: brightness(90%);
-}
 .galleryItem:hover .overlayIcons {
-  display: block;
+  display: flex;
   position: absolute;
   bottom: 16px;
   right: 16px;
-  display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .overlayIcons button {
   width: 32px;
-  height: 40px;
+  height: 32px;
   border-radius: 100%;
   background-color: white;
+  border: none;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  z-index: 10;
-}
-
-.overlayIcons button img {
-  width: 20px;
-  height: 20px;
+  opacity: 80%;
 }
 
 .overlayIcons button:hover {
@@ -56,15 +43,12 @@
   filter: brightness(100%);
 }
 
+/* User options */
 .userOptions {
   color: black;
-  position: absolute;
-  right: 0;
-  top: 120%;
-  text-align: left;
   border-radius: 8px;
   background-color: white;
-  z-index: 1000;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   font-size: 15px;
@@ -78,6 +62,122 @@
   cursor: pointer;
 }
 
-.menuWrapper {
-  position: relative;
+/* Edit portal */
+.editFormOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 2px 0 8000px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.pageDimmer {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.editFormOverlay.slideIn {
+  animation: slideIn 0.3s forwards;
+}
+
+.editFormOverlay.slideOut {
+  animation: slideOut 0.3s forwards;
+}
+
+.pageDimmer.fadeIn {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.pageDimmer.fadeOut {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Edit form */
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 100px;
+}
+
+.editForm input,
+.editForm textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.editForm textarea {
+  height: 150px;
+  margin-top: 40px;
+}
+
+.editActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  position: absolute;
+  top: 90%;
+  left: 60%;
+}
+
+.editActions button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.editActions button[type="submit"] {
+  background-color: #e60023;
+  color: white;
+}
+
+.editActions button[type="submit"]:hover {
+  background-color: #cc001f;
+}
+
+.editActions button[type="button"] {
+  background-color: #f1f1f1;
+}
+
+.editActions button[type="button"]:hover {
+  background-color: #ddd;
 }

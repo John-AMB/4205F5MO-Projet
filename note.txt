@@ -1,5 +1,8 @@
 backend run:
 cd .\backend\
+Run npm run dev → loads .env.development
+Run npm start → loads .env.production
+not:
 node index.js
 
 frontend run:

@@ -2,7 +2,11 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import UserButton from "../UserButton/UserButton";
 import LanguageSwitcher from "../LanguageSelector/LanguageSelector";
-const Header = () => {
+const Header = ({ onSearchChange }) => {
+  const handleSearch = (e) => {
+    onSearchChange(e.target.value);
+  };
+
   return (
     <header className="header">
       <div className="trois">
@@ -17,11 +21,11 @@ const Header = () => {
       <form className="search">
         <div className="form">
           <img src="/general/search.svg" alt="Search Icon" />
-          <input type="text" placeholder="search" />
+          <input type="text" placeholder="Search" onChange={handleSearch} />
         </div>
       </form>
       <UserButton />
-      <LanguageSwitcher />
+      {/*<LanguageSwitcher />*/}
     </header>
   );
 };

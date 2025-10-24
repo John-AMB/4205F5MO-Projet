@@ -1,4 +1,4 @@
-//gere la logique et les reponses
+// controllers/userController.js
 const User = require("../models/userModel");
 const streamifier = require("streamifier");
 const cloudinary = require("../cloudinaryConfig");
@@ -42,46 +42,45 @@ const changeProfilePhoto = async (req, res) => {
   }
 };
 
-//tout les utilisateurs
-const getUsers = (req, res) => {
-  User.getAllUsers((err, results) => {
-    if (err) return res.status(500).json(err);
-    res.json(results);
-  });
+// Get all users
+const getUsers = async (req, res) => {
+  try {
+    const users = await User.getAllUsers();
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
 
-//un seul utilisateur
-const getUser = (req, res) => {
-  const id = req.params.id; //req.params-> id:'5', req.params.id->'5'
-
-  User.getUserById(id, (err, results) => {
-    if (err) return res.status(500).json(err);
-
-    if (results.length === 0)
+// Get one user
+const getUser = async (req, res) => {
+  const id = req.params.id;
+  try {
+    const user = await User.getUserById(id);
+    if (!user)
       return res.status(404).json({ message: "Utilisateur non trouvé" });
-
-    res.json(results[0]);
-  });
+    res.json(user);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
 
-//methode qui creer une user
-const createUser = (req, res) => {
+// Create a user
+const createUser = async (req, res) => {
   const { username, password, bio } = req.body;
 
-  //lorsque username OU password = null
   if (!username || !password) {
     return res
       .status(400)
       .json({ message: "Nom d'utilisateur et mot de passe requis" });
   }
 
-  User.createUser({ username, password, bio }, (err, results) => {
-    if (err) return res.status(500).json(err);
-    res.json({
-      message: "Utilisateur créé sans problème",
-      id: results.insertId, //lorsqu'on veut rediriger le id de notre nouveau compte a frontend, futur addition
-    });
-  });
+  try {
+    const newUser = await User.createUser({ username, password, bio });
+    res.status(201).json({ message: "Utilisateur créé", user: newUser });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
 
 //methode qui connecte une user

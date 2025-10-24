@@ -1,20 +1,38 @@
+import { useEffect, useState } from "react";
 import GalleryItem from "../GalleyItem/GalleryItem";
 import "./Gallery.css";
-import { useEffect, useState } from "react";
+import Header from "../Header/Header";
 const Gallery = () => {
   const [ideas, setIdeas] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:3001/ideas")
+  const [searchTerm, setSearchTerm] = useState("");
+  const fetchIdeas = () => {
+    fetch(`${import.meta.env.VITE_API_URL}/ideas`)
       .then((res) => res.json())
       .then((data) => setIdeas(data))
-      .catch((err) => console.error(err));
+      .catch(console.error);
+  };
+
+  useEffect(() => {
+    fetchIdeas();
   }, []);
+  const filteredIdeas = ideas.filter(
+    (idea) =>
+      idea.titre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      idea.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   return (
-    <div className="gallery">
-      {ideas.map((item) => (
-        <GalleryItem key={item.id} item={item} />
-      ))}
-    </div>
+    <>
+      <Header onSearchChange={setSearchTerm} />
+      <div className="gallery">
+        {filteredIdeas.length > 0 ? (
+          filteredIdeas.map((item) => (
+            <GalleryItem key={item.id} item={item} refreshIdeas={fetchIdeas} />
+          ))
+        ) : (
+          <p className="noResult">No results found.</p>
+        )}
+      </div>
+    </>
   );
 };
 

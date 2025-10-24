@@ -3,3 +3,9 @@
   column-gap: 16px;
   margin-top: 200px;
 }
+.noResults {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: #666;
+}

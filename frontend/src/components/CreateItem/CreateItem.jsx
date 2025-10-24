@@ -6,7 +6,7 @@ import "./CreateItem.css";
 const AddIdea = () => {
   const [titre, setTitre] = useState("");
   const [description, setDescription] = useState("");
-  const [photo, setPhoto] = useState("");
+  const [photo, setPhoto] = useState(null);
   const [message, setMessage] = useState("");
 
   const { isLoggedIn } = useContext(AuthContext);
@@ -14,30 +14,35 @@ const AddIdea = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setMessage("Uploading...");
 
     const formData = new FormData();
     formData.append("user_id", 1);
     formData.append("titre", titre);
     formData.append("description", description);
-    if (photo) formData.append("photo", photo); // photo is File object from input
+    if (photo) formData.append("photo", photo);
+
+    const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
     try {
-      const res = await fetch("http://localhost:3001/ideas", {
+      const res = await fetch(`${backendUrl}/ideas`, {
         method: "POST",
         body: formData,
       });
 
       const data = await res.json();
+
       if (res.ok) {
-        setMessage("Idea added successfully!");
+        setMessage("✅ Idea added successfully!");
         setTitre("");
         setDescription("");
         setPhoto(null);
+        setTimeout(() => navigate("/"), 500);
       } else {
-        setMessage("Error: " + data.error);
+        setMessage(" Error: " + (data.error || "Unknown error"));
       }
     } catch (err) {
-      setMessage(err.message);
+      setMessage(" Network or server error: " + err.message);
     }
   };
 

@@ -1,0 +1,219 @@
+.singleItem-container {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.singleItem-card {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Image section */
+.singleItem-imageWrapper {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+.singleItem-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  max-height: 80vh;
+}
+
+/* Text section */
+.singleItem-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.singleItem-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.singleItem-description {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Small states */
+.singleItem-loading,
+.singleItem-error {
+  text-align: center;
+  font-size: 20px;
+  color: #666;
+  margin-top: 100px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .singleItem-card {
+    flex-direction: column;
+    gap: 20px;
+    max-width: 95%;
+  }
+
+  .singleItem-imageWrapper {
+    background: none;
+  }
+
+  .singleItem-image {
+    max-height: 60vh;
+    border-radius: 0;
+  }
+
+  .singleItem-details {
+    padding: 20px;
+  }
+}
+/* 🔙 Back button (top-left corner) */
+.singleItem-backBtn {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  background: white;
+  border: none;
+  font-size: 20px;
+
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+}
+
+.singleItem-backBtn:hover {
+  transform: translateX(-3px);
+  background-color: #f2f2f2;
+}
+
+/* 🔗 Open in new tab icon */
+.singleItem-openNew {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.singleItem-openNewTwo {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  position: absolute;
+}
+.singleItem-openNewTwo:hover {
+  cursor: pointer;
+  background-color: white;
+  transform: scale(1.1);
+}
+.singleItem-openNew:hover {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.singleItem-openIcon {
+  width: 22px;
+  height: 22px;
+  pointer-events: none; /* prevents the icon from blocking the click */
+}
+
+/* Make sure the image wrapper is positioned relative for the icon */
+.singleItem-imageWrapper {
+  position: relative;
+}
+/* ===== ICONS OVER IMAGE ===== */
+.singleItem-imageWrapper {
+  position: relative;
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* ===== 3 dots in top right of the text section ===== */
+.singleItem-details {
+  position: relative;
+}
+
+.singleItem-options {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.singleItem-options:hover {
+  background-color: white;
+  transform: scale(1.08);
+}
+
+.singleItem-options img {
+  width: 20px;
+  height: 20px;
+}

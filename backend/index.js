@@ -1,16 +1,38 @@
-const express = require("express"); // RESTful API
-const cors = require("cors"); // autroriser le frontend sur localhost:5137 a communiquer avec le backend sur localhost:3001
-require("dotenv").config(); //.env = pr que les infos sensibles de la database soient stockees en dehors du code
+const express = require("express");
+const cors = require("cors");
+require("dotenv").config({ path: ".env.production" });
 
 const app = express();
-app.use(cors());
-app.use(express.json()); //traducteur: le frontend comm en JSON, cekui-ci le traduit en un fformat que Node/Exoress peut comprendre
+const allowedOrigins = [
+  "https://four205f5mo-projet.onrender.com", // production
+  "http://localhost:5173", // local dev
+];
+// Enable CORS only for your frontend
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // allow requests with no origin (like Postman)
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
+
+app.use(express.json());
 
 const userRoutes = require("./routes/userRoutes");
 const ideasRoute = require("./routes/ideaRoutes");
-app.use("/users", userRoutes); //quand une requete commence avec /users, utiliser les routes de userRoutes
+
+app.use("/users", userRoutes);
 app.use("/ideas", ideasRoute);
-//start backend
-app.listen(3001, () => {
-  console.log("Backend: http://localhost:3001");
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`✅ Backend running on port ${PORT}`);
 });
