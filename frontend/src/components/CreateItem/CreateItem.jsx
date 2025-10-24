@@ -35,10 +35,10 @@ const AddIdea = () => {
         setPhoto(null);
         setTimeout(() => navigate("/"), 500);
       } else {
-        setMessage("❌ Error: " + (data.error || "Unknown error"));
+        setMessage(" Error: " + (data.error || "Unknown error"));
       }
     } catch (err) {
-      setMessage("❌ Network or server error: " + err.message);
+      setMessage(" Network or server error: " + err.message);
     }
   };
 
