@@ -106,7 +106,12 @@ const loginUser = (req, res) => {
     const user = results[0];
     res.json({
       message: "Connexion réussie",
-      user: { id: user.id, username: user.username, bio: user.bio },
+      user: {
+        id: user.id,
+        username: user.username,
+        bio: user.bio,
+        photo: user.photo,
+      },
       //passe les infos utilisateur a frontend. stocked dans le res
     });
   });

@@ -28,7 +28,7 @@ const UserButton = () => {
   return isLoggedIn ? (
     <div className="userButton" ref={menuRef}>
       <img
-        src="/general/noAvatar.png"
+        src={user.photo ? user.photo : "/general/noAvatar.png"}
         alt="avatar"
         className="profilePic"
         onClick={() => {
@@ -36,13 +36,12 @@ const UserButton = () => {
           setOpen(false);
         }}
       />
-
+      {console.log(user)}
       <img
         src="/general/arrow.svg"
         alt="toggle"
         onClick={() => setOpen((prev) => !prev)}
       />
-
       {open && (
         <div className="userOptions">
           <div

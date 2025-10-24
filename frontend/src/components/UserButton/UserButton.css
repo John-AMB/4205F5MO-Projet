@@ -70,4 +70,7 @@
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
+  border-color: green;
+  border-width: 1px;
+  border-style: solid;
 }
