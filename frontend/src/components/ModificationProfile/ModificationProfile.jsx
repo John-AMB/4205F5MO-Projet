@@ -17,13 +17,6 @@ const ProfileOptions = () => {
           <div className="optionsList">
             <button
               className="optionBtn"
-              onClick={() => navigate("/change-password")}
-            >
-              Change Password
-            </button>
-
-            <button
-              className="optionBtn"
               onClick={() => navigate("/change-bio")}
             >
               Edit Bio
@@ -34,6 +27,13 @@ const ProfileOptions = () => {
               onClick={() => navigate("/change-photo")}
             >
               Change Profile Picture
+            </button>
+
+            <button
+              className="optionBtn"
+              onClick={() => navigate("/change-password")}
+            >
+              Change Password
             </button>
 
             <button className="optionBtn delete">Delete Account</button>

@@ -13,7 +13,6 @@ function UserProfile() {
     fetch(`http://localhost:3001/users/${userId}`) //prend les info de user avec userId
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setUser(data);
       }) //stocke les info de user dans le db dans const user
       .catch((err) => console.error(err));

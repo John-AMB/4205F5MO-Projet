@@ -36,7 +36,6 @@ const UserButton = () => {
           setOpen(false);
         }}
       />
-      {console.log(user)}
       <img
         src="/general/arrow.svg"
         alt="toggle"
