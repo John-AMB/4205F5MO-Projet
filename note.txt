@@ -18,6 +18,10 @@ ctrl+c = arreter les processus.
 Vite/frontend -> port 5173 -> localhost:5173
 React/backend -> port 3001 -> localhost:3001
 
+Creer une nouvelle branche:
+git branch nomdeBranch
+git checkout nomdeBranch - switch to it
+
 Git pushes:
 git add .
 git commit -m "msg" //-m = message

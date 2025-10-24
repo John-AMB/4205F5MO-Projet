@@ -68,3 +68,21 @@
 .message:before {
   content: "💡 ";
 }
+
+.add-idea-container button {
+  padding: 10px 24px;
+  margin: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.add-idea-container button {
+  background-color: #27ae60; /* green for login */
+  color: white;
+}
+.add-idea-container button :hover {
+  background-color: #219150;
+}
