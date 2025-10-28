@@ -16,8 +16,13 @@ const SingleItem = () => {
   }, [id]);
 
   const handleDownload = () => {
+    const downloadUrl = idea.photo.replace(
+      "/upload/",
+      "/upload/fl_attachment/"
+    );
+
     const link = document.createElement("a");
-    link.href = idea.photo;
+    link.href = downloadUrl;
     link.download = `${idea.titre}.jpg`;
     link.click();
   };
