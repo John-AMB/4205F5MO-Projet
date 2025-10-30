@@ -12,7 +12,7 @@ const getAllUsers = async () => {
 const getUserById = async (id) => {
   const { data, error } = await supabase
     .from("users")
-    .select("id, username, bio")
+    .select("id, username, bio, photo")
     .eq("id", id)
     .single();
   if (error) throw error;
