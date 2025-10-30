@@ -8,6 +8,8 @@ function Login() {
   const { login } = useContext(AuthContext);
   const navigate = useNavigate(); //pour rediriger user vers leur page
 
+  const backendUrl =
+    import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
   const handleChange = (e) => {
     //e = input change char
     //Enregistrez les entrees utilisateur dans leur champ input.name respectif et permettez a
@@ -22,7 +24,7 @@ function Login() {
     e.preventDefault(); //Le formulaire essaie de recharger la page lorsque la personne le soumet.La méthode preventDefault() empeche cela.
 
     try {
-      const res = await fetch("http://localhost:3001/users/login", {
+      const res = await fetch(`${backendUrl}/users/login`, {
         //appel POST /users/login route dans
         method: "POST",
         headers: { "Content-Type": "application/json" }, //body sera donc dans le format JSON
@@ -32,17 +34,22 @@ function Login() {
       //object dans le message de backend
       const data = await res.json();
 
+      if (!res.ok) {
+        //erreur 4xx ou 5xx
+        throw new Error(data.message || "Erreur de connexion");
+      }
+
       // si data.user exists/true
       if (data.user) {
         login(data.user); // isLoggedIn = true, passe les infos utilisateur au context
 
         navigate(`/user/${data.user.id}`); //redirige vers la page d'utilisateur
       } else {
-        alert(data.message || "Erreur de connexion");
+        alert("Utilisateur introuvable ou mot de passe incorrect");
       }
     } catch (err) {
-      console.error(err);
-      alert("Erreur lors de la connexion");
+      console.error("Login error:", err);
+      alert(err.message || "Erreur lors de la connexion");
     }
   };
 

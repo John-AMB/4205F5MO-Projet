@@ -19,16 +19,6 @@ const getUserById = async (id) => {
   return data;
 };
 
-// //callback = assurez que la page fonctionne meme si les requetes de db prennent du temps a s'exec
-// //un seul user en utilisant id
-// const getUserById = (id, callback) => {
-//   db.query(
-//     "SELECT username, bio,photo FROM users WHERE id = ?",
-//     [id],
-//     callback
-//   );
-// };
-
 // Create a user
 const createUser = async ({ username, password, bio }) => {
   const { data, error } = await supabase
@@ -41,48 +31,69 @@ const createUser = async ({ username, password, bio }) => {
 };
 
 //verifie si le username et password correspondent a un user dans le database -> un user existant
-const findByUsernameAndPassword = (username, password, callback) => {
-  db.query(
-    "SELECT * FROM users WHERE username = ? AND password = ?",
-    [username, password],
-    callback
-  );
+const findByUsernameAndPassword = (username, password) => {
+  const { data, error } = supabase
+    .from("users")
+    .select("*")
+    .eq("username", username)
+    .eq("password", password)
+    .single();
+  if (error) throw error;
+  return data;
 };
 
 //verifie si l'ancien mot de passe correspond au mot de passe que l'utilisateur a entre
-const verifyOldPassword = (userId, oldPassword, callback) => {
-  db.query(
-    "SELECT * FROM users WHERE id = ? AND password = ?",
-    [userId, oldPassword],
-    callback
-  );
+const verifyOldPassword = (userId, oldPassword) => {
+  const { data, error } = supabase
+    .from("users")
+    .select("*")
+    .eq("id", userId)
+    .eq("password", oldPassword)
+    .single();
+  if (error) throw error;
+  return data;
 };
 
 //met a jour le mot de passe de l'utilisateur
-const updatePassword = (userId, newPassword, callback) =>
-  db.query(
-    "UPDATE users SET password = ? WHERE id = ?",
-    [newPassword, userId],
-    callback
-  );
+const updatePassword = (userId, newPassword) => {
+  const { data, error } = supabase
+    .from("users")
+    .update({ password: newPassword })
+    .select()
+    .single();
+  if (error) throw error;
+  return data;
+};
 
 //met a jour la bio de l'utilisateur
-const updateBio = (userId, newBio, callback) => {
-  db.query("UPDATE users SET bio = ? WHERE id = ?", [newBio, userId], callback);
+const updateBio = (userId, newBio) => {
+  const { data, error } = supabase
+    .from("users")
+    .update({ bio: newBio })
+    .eq("id", userId)
+    .select()
+    .single();
+  if (error) throw error;
+  return data;
 };
 
 //met a jour la photo de profil de l'utilisateur
-const updateProfilePhoto = (userId, photoUrl, callback) => {
-  db.query(
-    "UPDATE users SET photo = ? WHERE id = ?",
-    [photoUrl, userId],
-    callback
-  );
+const updateProfilePhoto = (userId, photoUrl) => {
+  const { data, error } = supabase
+    .from("users")
+    .update({ photo: photoUrl })
+    .eq("id", userId)
+    .select()
+    .single();
+  if (error) throw error;
+  return data;
 };
 
 //supprime un user
-const deleteUser = (userId, callback) => {
-  db.query("DELETE FROM users WHERE id = ?", [userId], callback);
+const deleteUser = async (userId) => {
+  const { data, error } = supabase.from("users").delete().eq("id", userId);
+  if (error) throw error;
+  return data;
 };
 
 //les fichiers qui importent userModel.js a access:

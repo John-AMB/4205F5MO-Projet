@@ -15,30 +15,27 @@ const uploadFromBuffer = (buffer) => {
 
 const changeProfilePhoto = async (req, res) => {
   try {
-    const userId = req.body.userId;
+    const { userId } = req.body;
     if (!userId) {
       return res.status(400).json({ error: "User ID requis" });
     }
 
     let photoUrl = null;
 
-    if (req.file) {
-      const result = await uploadFromBuffer(req.file.buffer);
-      photoUrl = result.secure_url;
-    } else {
-      return res.status(400).json({ error: "No file uploaded" });
-    }
+    if (!req.file) return res.status(400).json({ error: "No file uploaded" });
 
-    User.updateProfilePhoto(userId, photoUrl, (err, results) => {
-      if (err) return res.status(500).json({ error: err });
-      res.json({
-        message: "Profile photo updated successfully",
-        photo: photoUrl,
-      });
+    const result = await uploadFromBuffer(req.file.buffer);
+    const updatedUser = await User.updateProfilePhoto(
+      userId,
+      result.secure_url
+    );
+
+    res.json({
+      message: "Photo de profil mise à jour avec succès",
+      user: updatedUser,
     });
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Failed to upload profile photo" });
+    res.status(500).json({ error: err.message });
   }
 };
 
@@ -84,7 +81,7 @@ const createUser = async (req, res) => {
 };
 
 //methode qui connecte une user
-const loginUser = (req, res) => {
+const loginUser = async (req, res) => {
   const { username, password } = req.body;
 
   //lorsque username OU password = null
@@ -94,29 +91,22 @@ const loginUser = (req, res) => {
       .json({ message: "Nom d'utilisateur et mot de passe requis" });
   }
 
-  //methode dans userModel.js
-  User.findByUsernameAndPassword(username, password, (err, results) => {
-    if (err) return res.status(500).json(err);
-
-    if (results.length === 0) {
+  try {
+    //methode dans userModel.js
+    const user = await User.findByUsernameAndPassword(username, password);
+    if (!user) {
       return res.status(401).json({ message: "Identifiants incorrects" });
     }
-
-    const user = results[0];
     res.json({
       message: "Connexion réussie",
-      user: {
-        id: user.id,
-        username: user.username,
-        bio: user.bio,
-        photo: user.photo,
-      },
-      //passe les infos utilisateur a frontend. stocked dans le res
+      user,
     });
-  });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
 
-const changePassword = (req, res) => {
+const changePassword = async (req, res) => {
   const { userId, oldPassword, newPassword } = req.body;
 
   //check si les champs requis sont fournis
@@ -125,30 +115,26 @@ const changePassword = (req, res) => {
       .status(400)
       .json({ success: false, message: "Champs requis manquants" });
   }
-
-  //verifie si l'ancien mot de passe correspond au mot de passe stocke dans la db
-  User.verifyOldPassword(userId, oldPassword, (err, results) => {
-    if (err) return res.status(500).json(err);
-
-    if (results.length === 0) {
-      //ancien mot de passe incorrect
+  try {
+    //verifie si l'ancien mot de passe correspond au mot de passe stocke dans la db
+    const user = await User.verifyOldPassword(userId, oldPassword);
+    if (!user) {
       return res
         .status(401)
         .json({ success: false, message: "Ancien mot de passe incorrect" });
     }
 
-    //update le mot de passe
-    User.updatePassword(userId, newPassword, (err) => {
-      if (err) return res.status(500).json({ success: false, message: err });
-      res.json({
-        success: true,
-        message: "Mot de passe mis à jour avec succès",
-      });
+    await User.updatePassword(userId, newPassword);
+    res.json({
+      success: true,
+      message: "Mot de passe mis à jour avec succès",
     });
-  });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
 };
 
-const changeBio = (req, res) => {
+const changeBio = async (req, res) => {
   const { userId, bio } = req.body;
 
   // Check if userId and bio are provided
@@ -157,21 +143,20 @@ const changeBio = (req, res) => {
       .status(400)
       .json({ success: false, message: "Champs requis manquants" });
   }
-
-  // Update the user's bio in the database
-  User.updateBio(userId, bio, (err) => {
-    if (err) {
-      console.error(err);
-      return res
-        .status(500)
-        .json({ success: false, message: "Database erreur" });
-    }
-
-    res.json({ success: true, message: "Bio mise à jour avec succès" });
-  });
+  try {
+    // Update the user's bio in the database
+    const updatedUser = await User.updateBio(userId, bio);
+    res.json({
+      success: true,
+      user: updatedUser,
+      message: "Bio mise à jour avec succès",
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
 };
 
-const deleteAccount = (req, res) => {
+const deleteAccount = async (req, res) => {
   const { userId, username, confirmUsername } = req.body;
 
   //assure que tous les champs requis sont fournis
@@ -189,30 +174,29 @@ const deleteAccount = (req, res) => {
     });
   }
 
-  //verifie que le nom d'utilisateur correspond a l'id de l'utilisateur
-  User.getUserById(userId, (err, results) => {
-    if (err) return res.status(500).json(err);
-    if (results.length === 0)
+  try {
+    //verifie que le nom d'utilisateur correspond a l'id de l'utilisateur
+    const user = await User.getUserById(userId);
+    if (!user) {
       return res
         .status(404)
         .json({ success: false, message: "Utilisateur non trouvé" });
-
-    const dbUser = results[0];
-    if (dbUser.username !== username) {
+    }
+    if (user.username !== username) {
       return res
         .status(403)
         .json({ success: false, message: "Nom d'utilisateur incorrect" });
     }
 
     //supprime l'utilisateur
-    User.deleteUser(userId, (err) => {
-      if (err) return res.status(500).json(err);
-      res.json({
-        success: true,
-        message: "Compte supprimé avec succès",
-      });
+    await User.deleteUser(userId);
+    res.json({
+      success: true,
+      message: "Compte supprimé avec succès",
     });
-  });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
 };
 
 module.exports = {
