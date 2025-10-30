@@ -10,6 +10,8 @@ function Inscription() {
   });
   const navigate = useNavigate();
 
+  const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
+
   const handleChange = (e) => {
     //e = input change char
     //Enregistrez les entrees utilisateur dans leur champ input.name respectif et permettez a
@@ -20,32 +22,38 @@ function Inscription() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); //Le formulaire essaie de recharger la page lorsque la personne le soumet.La méthode preventDefault() empeche cela.
 
-    fetch("http://localhost:3001/users", {
-      //appel POST /users route dans
-      method: "POST",
-      headers: { "Content-Type": "application/json" }, //body sera donc dans le format JSON
-      body: JSON.stringify(formData), //body: formData -> transform -> JSON
-    })
-      .then((res) => res.json()) //message de backend, s'il y a d'erreur ou succes
-      .then((data) => {
-        //object dans le message de backend
-        console.log("Utilisateur créé:", data);
-        alert("Compte créé avec succès !");
+    try {
+      const res = await fetch(`${backendUrl}/users`, {
+        //appel POST /users route dans
+        method: "POST",
+        headers: { "Content-Type": "application/json" }, //body sera donc dans le format JSON
+        body: JSON.stringify(formData), //body: formData -> transform -> JSON
+      });
 
-        navigate(`/login`);
-      })
-      .catch((err) => console.error(err));
+      const data = await res.json();
+
+      if (!res.ok) {
+        //erreur 4xx ou 5xx a
+        throw new Error(data.message || "Erreur lors de la création du compte");
+      }
+      alert("Compte créé avec succès !");
+
+      navigate("/login");
+    } catch (err) {
+      console.error("Erreur lors de la création du compte:", err);
+      alert(err.message || "Erreur lors de la création du compte");
+    }
   };
 
   return (
     <div className="inscription-container">
-      <h2>Créer un compte</h2>
+      <h2>Create an account</h2>
       <form onSubmit={handleSubmit} className="inscription-form">
         <label>
-          Nom d’utilisateur
+          Username
           <input
             type="text"
             name="username"
@@ -56,7 +64,7 @@ function Inscription() {
         </label>
 
         <label>
-          Mot de passe
+          Password
           <input
             type="password"
             name="password"
@@ -76,7 +84,7 @@ function Inscription() {
           />
         </label>
 
-        <button type="submit">S’inscrire</button>
+        <button type="submit">Sign Up</button>
       </form>
     </div>
   );
