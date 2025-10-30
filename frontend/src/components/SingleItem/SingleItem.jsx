@@ -4,50 +4,93 @@ import "./SingleItem.css";
 
 const SingleItem = () => {
   const { id } = useParams();
-  const [idea, setIdea] = useState(null);
   const navigate = useNavigate();
+
+  const [idea, setIdea] = useState(null);
   const [likes, setLikes] = useState(0);
   const [liked, setLiked] = useState(false);
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
   const [showAllComments, setShowAllComments] = useState(false);
 
+  // Fetch idea, comments and likes
   useEffect(() => {
     if (!id) return;
+
+    // Fetch idea details
     fetch(`http://localhost:3001/ideas/${id}`)
       .then((res) => res.json())
-      .then((data) => {
-        setIdea(data);
-        setLikes(data.likes || 0);
-      })
+      .then((data) => setIdea(data))
       .catch(console.error);
+
+    // Fetch comments
+    fetch(`http://localhost:3001/ideas/comments/${id}`)
+      .then((res) => res.json())
+      .then((data) => setComments(Array.isArray(data) ? data : []))
+      .catch(console.error);
+
+    // Fetch likes count
+    fetch(`http://localhost:3001/ideas/likes/${id}`)
+      .then((res) => res.json())
+      .then((data) => setLikes(data.likes))
+      .catch(console.error);
+
+    // Optionally: fetch if the current user has already liked this idea
+    // Here we use a placeholder user_id = 1 for now
+    fetch(`http://localhost:3001/ideas/likes/${id}/user/1`)
+      .then((res) => res.json())
+      .then((data) => setLiked(data.liked))
+      .catch(() => setLiked(false));
   }, [id]);
 
+  // Handle like toggle
+  const handleLike = async () => {
+    try {
+      const res = await fetch(`http://localhost:3001/ideas/likes/${id}`, {
+        method: "POST",
+      });
+      //const data = await res.json();
+
+      // Re-fetch the actual likes count from backend
+      const likesRes = await fetch(`http://localhost:3001/ideas/likes/${id}`);
+      const likesData = await likesRes.json();
+
+      setLiked((prev) => !prev); // toggle local like state
+      setLikes(likesData.likes || 0); // update count from backend
+    } catch (err) {
+      console.error("Error toggling like:", err);
+    }
+  };
+
+  // Add new comment
+  const handleAddComment = async () => {
+    if (newComment.trim() === "") return;
+
+    try {
+      const res = await fetch(`http://localhost:3001/ideas/comments`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ idee_id: id, content: newComment }),
+      });
+      const data = await res.json();
+
+      setComments([...comments, data]);
+      setNewComment("");
+    } catch (err) {
+      console.error("Error adding comment:", err);
+    }
+  };
+
+  // Download image
   const handleDownload = () => {
     const downloadUrl = idea.photo.replace(
       "/upload/",
       "/upload/fl_attachment/"
     );
-
     const link = document.createElement("a");
     link.href = downloadUrl;
     link.download = `${idea.titre}.jpg`;
     link.click();
-  };
-
-  // ❤️ Like toggle
-  const handleLike = () => {
-    setLiked(!liked);
-    setLikes((prev) => (liked ? prev - 1 : prev + 1));
-  };
-  const handleAddComment = () => {
-    if (newComment.trim() === "") return;
-    const comment = {
-      id: Date.now(),
-      text: newComment,
-    };
-    setComments([...comments, comment]);
-    setNewComment("");
   };
 
   if (!idea) return <div className="singleItem-error">Idea not found</div>;
@@ -58,7 +101,7 @@ const SingleItem = () => {
         <div className="singleItem-card">
           {/* ===== LEFT IMAGE SIDE ===== */}
           <div className="singleItem-imageWrapper">
-            {/* ♥️ Like button */}
+            {/* ❤️ Like button */}
             <button
               className={`heart-btn ${liked ? "liked" : ""}`}
               onClick={handleLike}
@@ -111,23 +154,21 @@ const SingleItem = () => {
                 {likes} {likes === 1 ? "like" : "likes"}
               </span>
             </div>
+
             {/* ===== COMMENTS SECTION ===== */}
             <div className="comments-section">
               <h3>Comments</h3>
 
-              {/* If there are more than 4 comments, show only the first 4 unless expanded */}
               {comments.length === 0 ? (
                 <p className="no-comments">No comments yet.</p>
               ) : (
                 <>
                   <div className="comments-list">
-                    {" "}
-                    {/* <-- THIS is scrollable */}
                     {comments
                       .slice(0, showAllComments ? comments.length : 4)
                       .map((c) => (
                         <div key={c.id} className="comment">
-                          {c.text}
+                          {c.content}
                         </div>
                       ))}
                   </div>
@@ -145,7 +186,7 @@ const SingleItem = () => {
                 </>
               )}
 
-              {/* Comment input always at bottom */}
+              {/* Comment input */}
               <div className="comment-input">
                 <input
                   type="text"
