@@ -17,27 +17,28 @@ const SingleItem = () => {
   useEffect(() => {
     if (!id) return;
 
+    const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
+
     // Fetch idea details
-    fetch(`http://localhost:3001/ideas/${id}`)
+    fetch(`${backendUrl}/ideas/${id}`)
       .then((res) => res.json())
       .then((data) => setIdea(data))
       .catch(console.error);
 
     // Fetch comments
-    fetch(`http://localhost:3001/ideas/comments/${id}`)
+    fetch(`${backendUrl}/ideas/comments/${id}`)
       .then((res) => res.json())
       .then((data) => setComments(Array.isArray(data) ? data : []))
       .catch(console.error);
 
     // Fetch likes count
-    fetch(`http://localhost:3001/ideas/likes/${id}`)
+    fetch(`${backendUrl}/ideas/likes/${id}`)
       .then((res) => res.json())
       .then((data) => setLikes(data.likes))
       .catch(console.error);
 
-    // Optionally: fetch if the current user has already liked this idea
-    // Here we use a placeholder user_id = 1 for now
-    fetch(`http://localhost:3001/ideas/likes/${id}/user/1`)
+    // Check if user liked
+    fetch(`${backendUrl}/ideas/likes/${id}/user/1`)
       .then((res) => res.json())
       .then((data) => setLiked(data.liked))
       .catch(() => setLiked(false));
@@ -45,18 +46,17 @@ const SingleItem = () => {
 
   // Handle like toggle
   const handleLike = async () => {
+    const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
     try {
-      await fetch(`http://localhost:3001/ideas/likes/${id}`, {
+      await fetch(`${backendUrl}/ideas/likes/${id}`, {
         method: "POST",
       });
-      //const data = await res.json();
 
-      // Re-fetch the actual likes count from backend
-      const likesRes = await fetch(`http://localhost:3001/ideas/likes/${id}`);
+      const likesRes = await fetch(`${backendUrl}/ideas/likes/${id}`);
       const likesData = await likesRes.json();
 
-      setLiked((prev) => !prev); // toggle local like state
-      setLikes(likesData.likes || 0); // update count from backend
+      setLiked((prev) => !prev);
+      setLikes(likesData.likes || 0);
     } catch (err) {
       console.error("Error toggling like:", err);
     }
@@ -65,9 +65,10 @@ const SingleItem = () => {
   // Add new comment
   const handleAddComment = async () => {
     if (newComment.trim() === "") return;
+    const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
     try {
-      const res = await fetch(`http://localhost:3001/ideas/comments`, {
+      const res = await fetch(`${backendUrl}/ideas/comments`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ idee_id: id, content: newComment }),
