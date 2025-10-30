@@ -13,6 +13,8 @@ const DeleteAccount = () => {
 
   const navigate = useNavigate();
 
+  const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
+
   const handleDelete = async () => {
     setError("");
     setMessage("");
@@ -27,7 +29,7 @@ const DeleteAccount = () => {
 
     //envoie la requete de suppression au backend
     try {
-      const res = await fetch("http://localhost:3001/users/delete-account", {
+      const res = await fetch(`${backendUrl}/users/delete-account`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -40,14 +42,17 @@ const DeleteAccount = () => {
       //attend la reponse du backend
       const data = await res.json();
 
-      //handle la reponse
-      if (data.success) {
-        setMessage("Compte supprimé avec succès.");
-        logout(); // logout l'utilisateur apres la suppression -> authcontext = false
-        setTimeout(() => navigate("/"), 1500);
-      } else {
-        setError(data.message || "Une erreur est survenue.");
+      if (!res.ok) {
+        throw new Error(
+          data.message || "Erreur lors de la suppression du compte"
+        );
       }
+
+      //handle la reponse
+
+      setMessage("Compte supprimé avec succès.");
+      logout(); // logout l'utilisateur apres la suppression -> authcontext = false
+      setTimeout(() => navigate("/"), 1500);
     } catch (err) {
       setError("Erreur du serveur : " + err.message);
     } finally {
