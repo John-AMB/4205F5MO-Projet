@@ -77,7 +77,7 @@ const SingleItem = () => {
       setComments([...comments, data]);
       setNewComment("");
     } catch (err) {
-      console.error("Error adding comment:", err);
+      console.error("Error adding your comment:", err);
     }
   };
 
