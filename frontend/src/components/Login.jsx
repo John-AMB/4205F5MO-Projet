@@ -8,8 +8,7 @@ function Login() {
   const { login } = useContext(AuthContext);
   const navigate = useNavigate(); //pour rediriger user vers leur page
 
-  const backendUrl =
-    import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
+  const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
   const handleChange = (e) => {
     //e = input change char
     //Enregistrez les entrees utilisateur dans leur champ input.name respectif et permettez a

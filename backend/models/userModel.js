@@ -31,8 +31,8 @@ const createUser = async ({ username, password, bio }) => {
 };
 
 //verifie si le username et password correspondent a un user dans le database -> un user existant
-const findByUsernameAndPassword = (username, password) => {
-  const { data, error } = supabase
+const findByUsernameAndPassword = async (username, password) => {
+  const { data, error } = await supabase
     .from("users")
     .select("*")
     .eq("username", username)
@@ -43,8 +43,8 @@ const findByUsernameAndPassword = (username, password) => {
 };
 
 //verifie si l'ancien mot de passe correspond au mot de passe que l'utilisateur a entre
-const verifyOldPassword = (userId, oldPassword) => {
-  const { data, error } = supabase
+const verifyOldPassword = async (userId, oldPassword) => {
+  const { data, error } = await supabase
     .from("users")
     .select("*")
     .eq("id", userId)
@@ -55,10 +55,11 @@ const verifyOldPassword = (userId, oldPassword) => {
 };
 
 //met a jour le mot de passe de l'utilisateur
-const updatePassword = (userId, newPassword) => {
-  const { data, error } = supabase
+const updatePassword = async (userId, newPassword) => {
+  const { data, error } = await supabase
     .from("users")
     .update({ password: newPassword })
+    .eq("id", userId)
     .select()
     .single();
   if (error) throw error;
@@ -66,8 +67,8 @@ const updatePassword = (userId, newPassword) => {
 };
 
 //met a jour la bio de l'utilisateur
-const updateBio = (userId, newBio) => {
-  const { data, error } = supabase
+const updateBio = async (userId, newBio) => {
+  const { data, error } = await supabase
     .from("users")
     .update({ bio: newBio })
     .eq("id", userId)
@@ -78,8 +79,8 @@ const updateBio = (userId, newBio) => {
 };
 
 //met a jour la photo de profil de l'utilisateur
-const updateProfilePhoto = (userId, photoUrl) => {
-  const { data, error } = supabase
+const updateProfilePhoto = async (userId, photoUrl) => {
+  const { data, error } = await supabase
     .from("users")
     .update({ photo: photoUrl })
     .eq("id", userId)
@@ -91,7 +92,10 @@ const updateProfilePhoto = (userId, photoUrl) => {
 
 //supprime un user
 const deleteUser = async (userId) => {
-  const { data, error } = supabase.from("users").delete().eq("id", userId);
+  const { data, error } = await supabase
+    .from("users")
+    .delete()
+    .eq("id", userId);
   if (error) throw error;
   return data;
 };
