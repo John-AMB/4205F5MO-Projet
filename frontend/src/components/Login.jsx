@@ -35,7 +35,7 @@ function Login() {
       const data = await res.json();
 
       if (!res.ok) {
-        //erreur 4xx ou 5xx
+        //erreur 4xx ou 5xx a
         throw new Error(data.message || "Erreur de connexion");
       }
 
