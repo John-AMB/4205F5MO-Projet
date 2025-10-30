@@ -28,9 +28,11 @@ app.use(express.json());
 
 const userRoutes = require("./routes/userRoutes");
 const ideasRoute = require("./routes/ideaRoutes");
+const commentsLikesRoutes = require("./routes/commentsLikesRoutes");
 
 app.use("/users", userRoutes);
 app.use("/ideas", ideasRoute);
+app.use("/ideas", commentsLikesRoutes);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, "0.0.0.0", () => {
