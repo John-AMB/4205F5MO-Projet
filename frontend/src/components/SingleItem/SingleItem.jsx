@@ -46,7 +46,7 @@ const SingleItem = () => {
   // Handle like toggle
   const handleLike = async () => {
     try {
-      const res = await fetch(`http://localhost:3001/ideas/likes/${id}`, {
+      await fetch(`http://localhost:3001/ideas/likes/${id}`, {
         method: "POST",
       });
       //const data = await res.json();
