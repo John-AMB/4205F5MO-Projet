@@ -4,11 +4,14 @@ import { AuthContext } from "../../AuthContext/auth-context";
 import { Link, useNavigate } from "react-router-dom";
 
 const ChangePhoto = () => {
-  const { isLoggedIn, user } = useContext(AuthContext);
+  const { isLoggedIn, user, updateUser } = useContext(AuthContext);
   const [photo, setPhoto] = useState(null);
   const [preview, setPreview] = useState(null);
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
   const handleFileChange = (e) => {
     const file = e.target.files[0]; //get le premier fichier
@@ -30,22 +33,29 @@ const ChangePhoto = () => {
     formData.append("userId", user.id);
     formData.append("photo", photo);
 
+    setLoading(true);
+    setMessage("");
+
     try {
-      const response = await fetch("http://localhost:3001/users/change-photo", {
+      const response = await fetch(`${backendUrl}/users/change-photo`, {
         method: "PUT",
         body: formData,
       });
 
       const data = await response.json();
-      if (response.ok) {
-        setMessage("Profile photo updated successfully!");
-        setTimeout(() => navigate(`/user/${user.id}`), 1500);
-      } else {
-        setMessage(`Error: ${data.error || "Failed to update photo."}`);
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to update photo.");
       }
+
+      updateUser({ photo: data.photo || preview }); //met a jour le context avec la nouvelle photo
+
+      setMessage("Profile photo updated successfully!");
+      setTimeout(() => navigate(`/user/${user.id}`), 1500);
     } catch (error) {
       console.error("Error:", error);
-      setMessage("Failed to upload photo. Please try again.");
+      setMessage(error.message || "Failed to upload photo. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -81,8 +91,8 @@ const ChangePhoto = () => {
           onChange={handleFileChange}
           className="file-input"
         />
-        <button type="submit" className="submit-btn">
-          Upload
+        <button type="submit" className="submit-btn" disabled={loading}>
+          {loading ? "Uploading..." : "Upload"}
         </button>
       </form>
       {message && <p className="message">{message}</p>}
