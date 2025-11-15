@@ -158,4 +158,50 @@ describe("Ideas Controller", () => {
     expect(IdeasModel.deleteIdea).toHaveBeenCalledWith(1);
     expect(res.json).toHaveBeenCalledWith({ message: "Idea deleted" });
   });
+  // ------------------------------
+  // getAllIdeas error
+  //-------------------------------
+  test("getAllIdeas → handles error", async () => {
+    const errorMessage = "DB error";
+    IdeasModel.getAllIdeas.mockRejectedValue(new Error(errorMessage));
+
+    await getAllIdeas(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(500);
+    expect(res.json).toHaveBeenCalledWith({ error: errorMessage });
+  });
+
+  // ------------------------------
+  // getIdeaById error
+  //-------------------------------
+  test("getIdeaById → handles error", async () => {
+    const errorMessage = "DB error";
+    req.params.id = 1;
+    IdeasModel.getIdeaById.mockRejectedValue(new Error(errorMessage));
+
+    await getIdeaById(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(500);
+    expect(res.json).toHaveBeenCalledWith({ error: errorMessage });
+  });
+  const cloudinary = require("../../cloudinaryConfig");
+  const streamifier = require("streamifier");
+
+  // ------------------------------
+  // cloudinary error
+  //-------------------------------
+  test("createIdea → fails if Cloudinary upload fails", async () => {
+    req.file = { buffer: Buffer.from("mock") };
+    req.body = { user_id: "abc", titre: "Fail", description: "Fail" };
+
+    // Simulate Cloudinary failure
+    cloudinary.uploader.upload_stream.mockImplementation((cb) =>
+      cb(new Error("Upload failed"))
+    );
+
+    await createIdea(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(500);
+    expect(res.json).toHaveBeenCalledWith({ error: "Upload failed" });
+  });
 });
