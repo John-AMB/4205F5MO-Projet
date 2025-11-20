@@ -55,9 +55,9 @@ describe("Ideas Controller", () => {
     expect(res.json).toHaveBeenCalledWith(mockData);
   });
 
-  // -------------------------------
+  // ------------------------------
   // GET IDEA BY ID
-  // -------------------------------
+  // ------------------------------
   test("getIdeaById → returns idea if found", async () => {
     req.params.id = 1;
     const mockIdea = { id: 1, titre: "Test" };
