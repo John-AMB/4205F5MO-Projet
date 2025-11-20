@@ -204,4 +204,30 @@ describe("Ideas Controller", () => {
     expect(res.status).toHaveBeenCalledWith(500);
     expect(res.json).toHaveBeenCalledWith({ error: "Upload failed" });
   });
+  // ------------------------------
+  // update error
+  //-------------------------------
+  test("updateIdea → handles error", async () => {
+    req.params.id = 1;
+    req.body = { titre: "Test" };
+    IdeasModel.updateIdea.mockRejectedValue(new Error("Update error"));
+
+    await updateIdea(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(500);
+    expect(res.json).toHaveBeenCalledWith({ error: "Update error" });
+  });
+
+  // ------------------------------
+  // delete error
+  //-------------------------------
+  test("deleteIdea → handles error", async () => {
+    req.params.id = 1;
+    IdeasModel.deleteIdea.mockRejectedValue(new Error("Delete error"));
+
+    await deleteIdea(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(500);
+    expect(res.json).toHaveBeenCalledWith({ error: "Delete error" });
+  });
 });
