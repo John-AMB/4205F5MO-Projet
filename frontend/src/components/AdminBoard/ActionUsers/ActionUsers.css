@@ -84,3 +84,18 @@
     height: 45px;
   }
 }
+
+.delete-btn {
+  background-color: #ff4b4b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #e53935;
+}

@@ -12,28 +12,17 @@ function ActionUsers() {
 
   const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
-  // 🟥 SECURITY CHECK: Only admin can access
   useEffect(() => {
-    if (!isLoggedIn) {
-      navigate("/login");
-      return;
-    }
-
-    if (user.role !== "admin") {
-      navigate(`/user/${user.id}`);
-      return;
-    }
+    if (!isLoggedIn) navigate("/login");
+    else if (user.role !== "admin") navigate(`/user/${user.id}`);
   }, [isLoggedIn, user, navigate]);
 
-  // Fetch all users
   useEffect(() => {
     const fetchUsers = async () => {
       try {
         const res = await fetch(`${backendUrl}/users`);
-
         if (!res.ok)
           throw new Error("Erreur lors du chargement des utilisateurs");
-
         const data = await res.json();
         setUsers(data);
       } catch (err) {
@@ -42,9 +31,32 @@ function ActionUsers() {
         setLoading(false);
       }
     };
-
     fetchUsers();
   }, []);
+
+  const handleDelete = async (userId, username) => {
+    const confirm = window.confirm(
+      `Are you sure you want to delete user "${username}"? This cannot be undone.`
+    );
+    if (!confirm) return;
+
+    try {
+      const res = await fetch(`${backendUrl}/users/delete-account`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userId, username, confirmUsername: username }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || "Delete failed");
+
+      setUsers(users.filter((u) => u.id !== userId));
+      alert(`User "${username}" deleted successfully`);
+    } catch (err) {
+      console.error("Delete error:", err);
+      alert(err.message || "Error deleting user");
+    }
+  };
 
   if (loading) return <p className="loading">Getting users..</p>;
 
@@ -60,6 +72,7 @@ function ActionUsers() {
             <th>Username</th>
             <th>Role</th>
             <th>Bio</th>
+            <th>Actions</th>
           </tr>
         </thead>
 
@@ -91,6 +104,18 @@ function ActionUsers() {
               </td>
 
               <td>{u.bio || "—"}</td>
+
+              {/* Delete button */}
+              <td>
+                {u.id !== user.id && ( //prevent admin from deleting self
+                  <button
+                    className="delete-btn"
+                    onClick={() => handleDelete(u.id, u.username)}
+                  >
+                    Delete
+                  </button>
+                )}
+              </td>
             </tr>
           ))}
         </tbody>
