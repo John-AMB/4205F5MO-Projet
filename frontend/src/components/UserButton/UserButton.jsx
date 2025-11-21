@@ -66,7 +66,7 @@ const UserButton = () => {
             <div
               className="uo admin-link"
               onClick={() => {
-                navigate("/admin");
+                navigate("/AdminBoard");
                 setOpen(false);
               }}
             >
