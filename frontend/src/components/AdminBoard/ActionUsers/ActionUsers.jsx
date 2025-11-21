@@ -1,20 +1,38 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../AuthContext/auth-context";
 import "./ActionUsers.css";
 
 function ActionUsers() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const { isLoggedIn, user } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
+  // 🟥 SECURITY CHECK: Only admin can access
+  useEffect(() => {
+    if (!isLoggedIn) {
+      navigate("/login");
+      return;
+    }
+
+    if (user.role !== "admin") {
+      navigate(`/user/${user.id}`);
+      return;
+    }
+  }, [isLoggedIn, user, navigate]);
+
+  // Fetch all users
   useEffect(() => {
     const fetchUsers = async () => {
       try {
         const res = await fetch(`${backendUrl}/users`);
 
-        if (!res.ok) {
+        if (!res.ok)
           throw new Error("Erreur lors du chargement des utilisateurs");
-        }
 
         const data = await res.json();
         setUsers(data);
@@ -58,7 +76,11 @@ function ActionUsers() {
                 />
               </td>
 
-              <td>{u.username}</td>
+              <td>
+                <Link to={`/user/${u.id}`} className="user-link">
+                  {u.username}
+                </Link>
+              </td>
 
               <td>
                 <span
