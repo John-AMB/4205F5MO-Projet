@@ -7,6 +7,8 @@ const ChangePassword = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
+
   const [formData, setFormData] = useState({
     oldPassword: "",
     newPassword: "",
@@ -29,7 +31,7 @@ const ChangePassword = () => {
     }
 
     try {
-      const res = await fetch(`http://localhost:3001/users/change-password`, {
+      const res = await fetch(`${backendUrl}/users/change-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" }, //body sera donc dans le format JSON
         body: JSON.stringify({
@@ -42,15 +44,15 @@ const ChangePassword = () => {
       //object dans le message de backend
       const data = await res.json();
 
-      if (data.success) {
-        alert("Password updated successfully!");
-        navigate(`/user/${user.id}`);
-      } else {
-        alert(data.message || "Error updating password");
+      if (!res.ok) {
+        throw new Error(data.message || "Error updating password");
       }
+
+      alert("Password updated successfully!");
+      navigate(`/user/${user.id}`);
     } catch (err) {
       console.error(err);
-      alert("Server error");
+      alert(err.message || "Server error");
     }
   };
 

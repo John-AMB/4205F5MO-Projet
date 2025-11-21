@@ -6,17 +6,23 @@ function UserProfile() {
   const { userId } = useParams(); // prend le userId <- URL: <Route path="/user/:userId" element={<UserProfile />}
   const [user, setUser] = useState(null);
 
+  const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
+
   useEffect(() => {
     //fonctionne apres useState
     if (!userId) return; //lorsque userId retourne null, renvoi null
 
-    fetch(`http://localhost:3001/users/${userId}`) //prend les info de user avec userId
-      .then((res) => res.json())
-      .then((data) => {
+    const fetchUser = async () => {
+      try {
+        const response = await fetch(`${backendUrl}/users/${userId}`);
+        const data = await response.json();
         setUser(data);
-      }) //stocke les info de user dans le db dans const user
-      .catch((err) => console.error(err));
-  }, [userId]); //si userId change -> useEffect est appele encore
+      } catch (error) {
+        console.error("Error fetching user:", error);
+      }
+    };
+    fetchUser();
+  }, [userId, backendUrl]); //si userId change -> useEffect est appele encore
 
   if (!user) return <p>Loading...</p>;
 
