@@ -32,7 +32,10 @@ const AdminBoard = () => {
         <p>Admin Actions:</p>
 
         <div className="optionsList">
-          <button className="optionBtn" onClick={() => navigate("/all-users")}>
+          <button
+            className="optionBtn"
+            onClick={() => navigate("/ActionUsers")}
+          >
             See all Users
           </button>
         </div>
