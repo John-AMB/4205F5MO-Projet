@@ -33,35 +33,45 @@ const SingleItem = () => {
       .then((data) => setComments(Array.isArray(data) ? data : []))
       .catch(console.error);
 
-    // Fetch likes count
+    // Fetch like count
     fetch(`${backendUrl}/ideas/likes/${id}`)
       .then((res) => res.json())
       .then((data) => setLikes(data.likes))
       .catch(console.error);
 
-    // Check if user liked
-    fetch(`${backendUrl}/ideas/likes/${id}/user/1`)
-      .then((res) => res.json())
-      .then((data) => setLiked(data.liked))
-      .catch(() => setLiked(false));
-  }, [id]);
+    // Check if THIS user liked
+    if (isLoggedIn && user?.id) {
+      fetch(`${backendUrl}/ideas/likes/${id}/user/${user.id}`)
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("CHECK LIKED =>", data);
+          setLiked(data.liked);
+        })
+        .catch(() => setLiked(false));
+    } else {
+      setLiked(false);
+    }
+  }, [id, isLoggedIn, user]);
 
   // Handle like toggle
   const handleLike = async () => {
     if (!isLoggedIn) {
       navigate("/login");
     } else {
+      console.log("User ID sent to backend:", user?.id);
+
       const backendUrl =
         import.meta.env.VITE_API_URL || "http://localhost:3001";
       try {
         await fetch(`${backendUrl}/ideas/likes/${id}`, {
           method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ user_id: user.id }),
         });
 
         const likesRes = await fetch(`${backendUrl}/ideas/likes/${id}`);
         const likesData = await likesRes.json();
 
-        setLiked((prev) => !prev);
         setLikes(likesData.likes || 0);
       } catch (err) {
         console.error("Error toggling like:", err);
@@ -80,7 +90,11 @@ const SingleItem = () => {
         const res = await fetch(`${backendUrl}/ideas/comments`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ idee_id: id, content: newComment }),
+          body: JSON.stringify({
+            idee_id: id,
+            content: newComment,
+            user_id: user.id,
+          }),
         });
         const data = await res.json();
 
