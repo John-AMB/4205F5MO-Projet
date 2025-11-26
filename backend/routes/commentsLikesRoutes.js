@@ -70,9 +70,9 @@ router.get("/likes/:idee_id", async (req, res) => {
   }
 });
 
-/* =======================
+/* ======================
    CHECK IF USER LIKED
-   ======================= */
+   ====================== */
 router.get("/likes/:idee_id/user/:user_id", async (req, res) => {
   const { idee_id, user_id } = req.params;
 
