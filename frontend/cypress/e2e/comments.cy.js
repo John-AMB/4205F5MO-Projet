@@ -7,10 +7,11 @@ describe("E2E — Comment Feature", () => {
     cy.get('input[name="password"]').type("123456");
 
     cy.contains("Se connecter").click();
+    cy.url().should("include", "/user");
   });
 
   it("allows a logged-in user to post a comment", () => {
-    cy.visit("http://localhost:5173/idea/1");
+    cy.visit("http://localhost:5173/idea/53");
 
     cy.get(".comment-input input").type("Cypress test comment");
 

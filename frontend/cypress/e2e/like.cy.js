@@ -2,7 +2,6 @@
 
 describe("Like system", () => {
   beforeEach(() => {
-    // 1. LOGIN
     cy.visit("http://localhost:5173/login");
     cy.get('input[name="username"]').type("testuser");
     cy.get('input[name="password"]').type("123456");
