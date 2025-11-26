@@ -3,6 +3,9 @@ import "./GalleryItem.css";
 import UserOptionsPortal from "../UserOptionsPortal/UserOptionsPortal";
 import EditIdeaPortal from "../EditIdeaPortal/EditIdeaPortal";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../AuthContext/auth-context";
+import { useContext } from "react";
+
 const GalleryItem = ({ item, refreshIdeas }) => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -14,6 +17,8 @@ const GalleryItem = ({ item, refreshIdeas }) => {
   const [closing, setClosing] = useState(false);
   const [newTitle, setNewTitle] = useState(item.titre);
   const [newDescription, setNewDescription] = useState(item.description);
+  const { user, isLoggedIn } = useContext(AuthContext);
+  const isOwner = isLoggedIn && user.id === item.user_id;
 
   const optionsRef = useRef();
   const editRef = useRef();
@@ -121,12 +126,14 @@ const GalleryItem = ({ item, refreshIdeas }) => {
       />
 
       <div className="overlayIcons">
-        <button ref={buttonRef} onClick={toggleOptions}>
-          <img src="/general/more.svg" alt="options" />
-        </button>
+        {isOwner && (
+          <button ref={buttonRef} onClick={toggleOptions}>
+            <img src="/general/more.svg" alt="options" />
+          </button>
+        )}
       </div>
 
-      {open && (
+      {open && isOwner && (
         <UserOptionsPortal>
           <div
             ref={optionsRef}
