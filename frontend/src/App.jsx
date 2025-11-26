@@ -15,6 +15,8 @@ import ModificationProfile from "./components/ModificationProfile/ModificationPr
 import ChangeBio from "./components/ModificationProfile/ChangeBio/ChangeBio.jsx";
 import ChangeProfilePhoto from "./components/ModificationProfile/ChangePhoto/ChangePhoto.jsx";
 import DeleteAccount from "./components/ModificationProfile/SupprimeAccount/SupprimeAccount.jsx";
+import AdminBoard from "./components/AdminBoard/AdminBoard.jsx";
+import ActionUsers from "./components/AdminBoard/ActionUsers/ActionUsers.jsx";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
         <Route path="/modification" element={<ModificationProfile />} />
         <Route path="/change-photo" element={<ChangeProfilePhoto />} />
         <Route path="/delete-account" element={<DeleteAccount />} />
+        <Route path="/AdminBoard" element={<AdminBoard />} />
+        <Route path="/ActionUsers" element={<ActionUsers />} />
       </Route>
     </Routes>
   );

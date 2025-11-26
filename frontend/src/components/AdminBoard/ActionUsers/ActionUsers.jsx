@@ -1,0 +1,127 @@
+import { useEffect, useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../AuthContext/auth-context";
+import "./ActionUsers.css";
+
+function ActionUsers() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const { isLoggedIn, user } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
+
+  useEffect(() => {
+    if (!isLoggedIn) navigate("/login");
+    else if (user.role !== "admin") navigate(`/user/${user.id}`);
+  }, [isLoggedIn, user, navigate]);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const res = await fetch(`${backendUrl}/users`);
+        if (!res.ok)
+          throw new Error("Erreur lors du chargement des utilisateurs");
+        const data = await res.json();
+        setUsers(data);
+      } catch (err) {
+        console.error("Fetch error:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchUsers();
+  }, []);
+
+  const handleDelete = async (userId, username) => {
+    const confirm = window.confirm(
+      `Are you sure you want to delete user "${username}"? This cannot be undone.`
+    );
+    if (!confirm) return;
+
+    try {
+      const res = await fetch(`${backendUrl}/users/delete-account`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userId, username, confirmUsername: username }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || "Delete failed");
+
+      setUsers(users.filter((u) => u.id !== userId));
+      alert(`User "${username}" deleted successfully`);
+    } catch (err) {
+      console.error("Delete error:", err);
+      alert(err.message || "Error deleting user");
+    }
+  };
+
+  if (loading) return <p className="loading">Getting users..</p>;
+
+  return (
+    <div className="users-container">
+      <h2 className="title">User list</h2>
+
+      <table className="users-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Photo</th>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Bio</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {users.map((u) => (
+            <tr key={u.id}>
+              <td>{u.id}</td>
+
+              <td>
+                <img
+                  src={u.photo || "/general/noAvatar.png"}
+                  alt="profil"
+                  className="user-photo"
+                />
+              </td>
+
+              <td>
+                <Link to={`/user/${u.id}`} className="user-link">
+                  {u.username}
+                </Link>
+              </td>
+
+              <td>
+                <span
+                  className={u.role === "admin" ? "badge-admin" : "badge-user"}
+                >
+                  {u.role}
+                </span>
+              </td>
+
+              <td>{u.bio || "—"}</td>
+
+              {/* Delete button */}
+              <td>
+                {u.id !== user.id && ( //prevent admin from deleting self
+                  <button
+                    className="delete-btn"
+                    onClick={() => handleDelete(u.id, u.username)}
+                  >
+                    Delete
+                  </button>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export default ActionUsers;
