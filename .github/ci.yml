@@ -7,6 +7,7 @@ on:
     branches: [main]
 
 jobs:
+  # ===== CYPRESS JEST UNIT TESTS =====
   backend-tests:
     name: Backend Jest Tests
     runs-on: ubuntu-latest
@@ -27,7 +28,7 @@ jobs:
       - name: Run Jest tests + coverage
         working-directory: ./backend
         run: npm test -- --coverage
-
+  # ===== CYPRESS E2E TESTS =====
   frontend-tests:
     name: Cypress E2E Tests
     runs-on: ubuntu-latest
