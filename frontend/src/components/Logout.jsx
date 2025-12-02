@@ -17,7 +17,7 @@ const Logout = () => {
   };
 
   return (
-    <div className="logout-container">
+    <div className="project-container">
       <h2>Are you sure you want to log out?</h2>
       <button onClick={handleConfirm}>Yes, log out</button>
       <button onClick={handleCancel}>Cancel</button>

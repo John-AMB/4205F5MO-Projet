@@ -1,24 +1,14 @@
 /* logout.css */
 
-.logout-container {
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: 200px;
-}
 
-.logout-container h2 {
+
+.project-container h2 {
   font-size: 1.6rem;
   margin-bottom: 24px;
   color: #333;
 }
 
-.logout-container button {
+.project-container button {
   padding: 10px 24px;
   margin: 8px;
   border: none;
@@ -28,20 +18,20 @@
   transition: all 0.2s ease;
 }
 
-.logout-container button:first-of-type {
+.project-container button:first-of-type {
   background-color: #e74c3c; /* red for confirm */
   color: white;
 }
 
-.logout-container button:first-of-type:hover {
+.project-container button:first-of-type:hover {
   background-color: #c0392b;
 }
 
-.logout-container button:last-of-type {
+.project-container button:last-of-type {
   background-color: #bdc3c7; /* grey for cancel */
   color: #2c3e50;
 }
 
-.logout-container button:last-of-type:hover {
+.project-container button:last-of-type:hover {
   background-color: #95a5a6;
 }

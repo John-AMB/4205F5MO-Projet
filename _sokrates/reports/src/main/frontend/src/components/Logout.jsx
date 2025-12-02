@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthContext/auth-context";
 import "../styles/Logout.css";
-
+import "../styles/global.css"
 const Logout = () => {
   const { logout } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const Logout = () => {
   };
 
   return (
-    <div className="logout-container">
+    <div >
       <h2>Are you sure you want to log out?</h2>
       <button onClick={handleConfirm}>Yes, log out</button>
       <button onClick={handleCancel}>Cancel</button>
