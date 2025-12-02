@@ -1,0 +1,124 @@
+<html>
+<head>
+    <title>backend/controllers/ideaController.js</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">backend/controllers/ideaController.js (<b>78</b> lines of code) (<a href="ideaController.js">raw</a>):</h3>
+<div id="editor">// ideasController.js
+const streamifier = require(&quot;streamifier&quot;);
+const IdeasModel = require(&quot;../models/ideaModel&quot;);
+const cloudinary = require(&quot;../cloudinaryConfig&quot;);
+
+// Helper: upload image buffer to Cloudinary
+const uploadFromBuffer = (buffer) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    const stream = cloudinary.uploader.upload_stream((error, result) =&gt; {
+      if (result) resolve(result);
+      else reject(error);
+    });
+    streamifier.createReadStream(buffer).pipe(stream);
+  });
+};
+
+// GET /ideas
+const getAllIdeas = async (req, res) =&gt; {
+  try {
+    const ideas = await IdeasModel.getAllIdeas();
+    res.json(ideas);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+// GET /ideas/:id
+const getIdeaById = async (req, res) =&gt; {
+  try {
+    const id = req.params.id;
+    const idea = await IdeasModel.getIdeaById(id);
+
+    if (!idea) {
+      return res.status(404).json({ message: &quot;Idea not found&quot; });
+    }
+
+    res.json(idea);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+// POST /ideas
+const createIdea = async (req, res) =&gt; {
+  try {
+    let photoUrl = null;
+
+    if (req.file) {
+      const result = await uploadFromBuffer(req.file.buffer);
+      photoUrl = result.secure_url;
+    }
+
+    const newIdea = {
+      user_id: req.body.user_id,
+      titre: req.body.titre,
+      description: req.body.description,
+      photo: photoUrl,
+    };
+
+    const createdIdea = await IdeasModel.createIdea(newIdea);
+    res.status(201).json({ message: &quot;Idea created&quot;, id: createdIdea.id });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: err.message || &quot;Failed to create idea&quot; });
+  }
+};
+
+// PUT /ideas/:id
+const updateIdea = async (req, res) =&gt; {
+  try {
+    const id = req.params.id;
+    const idea = req.body;
+
+    const updatedIdea = await IdeasModel.updateIdea(id, idea);
+    res.json({ message: &quot;Idea updated&quot;, idea: updatedIdea });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+// DELETE /ideas/:id
+const deleteIdea = async (req, res) =&gt; {
+  try {
+    const id = req.params.id;
+    await IdeasModel.deleteIdea(id);
+    res.json({ message: &quot;Idea deleted&quot; });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+module.exports = {
+  getAllIdeas,
+  getIdeaById,
+  createIdea,
+  updateIdea,
+  deleteIdea,
+};
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/javascript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

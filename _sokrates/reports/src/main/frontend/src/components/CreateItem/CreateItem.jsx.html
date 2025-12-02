@@ -1,0 +1,119 @@
+<html>
+<head>
+    <title>frontend/src/components/CreateItem/CreateItem.jsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">frontend/src/components/CreateItem/CreateItem.jsx (<b>80</b> lines of code) (<a href="CreateItem.jsx">raw</a>):</h3>
+<div id="editor">import { useState, useContext } from &quot;react&quot;;
+import { AuthContext } from &quot;../AuthContext/auth-context&quot;;
+import { useNavigate } from &quot;react-router-dom&quot;;
+import &quot;./CreateItem.css&quot;;
+
+const AddIdea = () =&gt; {
+  const [titre, setTitre] = useState(&quot;&quot;);
+  const [description, setDescription] = useState(&quot;&quot;);
+  const [photo, setPhoto] = useState(null);
+  const [message, setMessage] = useState(&quot;&quot;);
+
+  const { isLoggedIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) =&gt; {
+    e.preventDefault();
+    setMessage(&quot;Uploading...&quot;);
+
+    const formData = new FormData();
+    formData.append(&quot;user_id&quot;, 1);
+    formData.append(&quot;titre&quot;, titre);
+    formData.append(&quot;description&quot;, description);
+    if (photo) formData.append(&quot;photo&quot;, photo);
+
+    const backendUrl = import.meta.env.VITE_API_URL || &quot;http://localhost:3001&quot;;
+
+    try {
+      const res = await fetch(`${backendUrl}/ideas`, {
+        method: &quot;POST&quot;,
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setMessage(&quot;✅ Idea added successfully!&quot;);
+        setTitre(&quot;&quot;);
+        setDescription(&quot;&quot;);
+        setPhoto(null);
+        setTimeout(() =&gt; navigate(&quot;/&quot;), 500);
+      } else {
+        setMessage(&quot; Error: &quot; + (data.error || &quot;Unknown error&quot;));
+      }
+    } catch (err) {
+      setMessage(&quot; Network or server error: &quot; + err.message);
+    }
+  };
+
+  const handleLogin = () =&gt; {
+    navigate(&quot;/login&quot;); //redirige vers login
+  };
+
+  const handleSignup = () =&gt; {
+    navigate(&quot;/inscription&quot;); //redirige vers inscription
+  };
+
+  return isLoggedIn ? (
+    &lt;div className=&quot;add-idea-container&quot;&gt;
+      &lt;h2&gt;Add a New Idea&lt;/h2&gt;
+      &lt;form className=&quot;add-idea-form&quot; onSubmit={handleSubmit}&gt;
+        &lt;input
+          type=&quot;text&quot;
+          placeholder=&quot;Titre&quot;
+          value={titre}
+          onChange={(e) =&gt; setTitre(e.target.value)}
+          required
+        /&gt;
+        &lt;textarea
+          placeholder=&quot;Description&quot;
+          value={description}
+          onChange={(e) =&gt; setDescription(e.target.value)}
+          required
+        /&gt;
+        &lt;input
+          type=&quot;file&quot;
+          accept=&quot;image/*&quot;
+          onChange={(e) =&gt; setPhoto(e.target.files[0])}
+        /&gt;
+        &lt;button type=&quot;submit&quot;&gt;➕ Add Idea&lt;/button&gt;
+      &lt;/form&gt;
+      {message &amp;&amp; &lt;p className=&quot;message&quot;&gt;{message}&lt;/p&gt;}
+    &lt;/div&gt;
+  ) : (
+    &lt;div className=&quot;add-idea-container&quot;&gt;
+      &lt;h2&gt;You must be logged in to access this feature&lt;/h2&gt;
+
+      &lt;button onClick={handleLogin}&gt;Login&lt;/button&gt;
+      &lt;button onClick={handleSignup}&gt;Signup&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default AddIdea;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/html");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

@@ -1,0 +1,5211 @@
+{
+  "metadata" : {
+    "name" : "4205f5mo-projet",
+    "description" : "",
+    "tooltip" : "",
+    "logoLink" : "",
+    "links" : [ ]
+  },
+  "metricsList" : {
+    "metrics" : [ {
+      "id" : "TOTAL_NUMBER_OF_FILES",
+      "value" : 6054,
+      "description" : "Total number of files in the source folder"
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN",
+      "value" : 60,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN",
+      "value" : 3306,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN_EXT_JSX",
+      "value" : 24,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN_EXT_JSX",
+      "value" : 1319,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN_EXT_CSS",
+      "value" : 18,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN_EXT_CSS",
+      "value" : 1174,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN_EXT_JS",
+      "value" : 15,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN_EXT_JS",
+      "value" : 620,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN_EXT_SQL",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN_EXT_SQL",
+      "value" : 175,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN_EXT_HTML",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN_EXT_HTML",
+      "value" : 18,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_TEST",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_TEST",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "TEST_VS_MAIN_LINES_OF_CODE_PERCENTAGE",
+      "value" : 0.0,
+      "description" : "Test / main code ratio"
+    }, {
+      "id" : "NUMBER_OF_FILES_GENERATED",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_GENERATED",
+      "value" : 4255,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_GENERATED_EXT_JSON",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_GENERATED_EXT_JSON",
+      "value" : 4255,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_BUILD_AND_DEPLOYMENT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_BUILD_AND_DEPLOYMENT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_OTHER",
+      "value" : 10,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_OTHER",
+      "value" : 4404,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_OTHER_EXT_JSON",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_OTHER_EXT_JSON",
+      "value" : 4346,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_OTHER_EXT_TXT",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_OTHER_EXT_TXT",
+      "value" : 31,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_OTHER_EXT_SVG",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_OTHER_EXT_SVG",
+      "value" : 20,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_OTHER_EXT_MD",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_OTHER_EXT_MD",
+      "value" : 7,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_BACKEND",
+      "value" : 11,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_BACKEND",
+      "value" : 558,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_BACKEND_EXT_JS",
+      "value" : 11,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_BACKEND_EXT_JS",
+      "value" : 558,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_DATABASE",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_DATABASE",
+      "value" : 175,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_DATABASE_EXT_SQL",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_DATABASE_EXT_SQL",
+      "value" : 175,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_FRONTEND",
+      "value" : 47,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_FRONTEND",
+      "value" : 2573,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_FRONTEND_EXT_JSX",
+      "value" : 24,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_FRONTEND_EXT_JSX",
+      "value" : 1319,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_FRONTEND_EXT_CSS",
+      "value" : 18,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_FRONTEND_EXT_CSS",
+      "value" : 1174,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_FRONTEND_EXT_JS",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_FRONTEND_EXT_JS",
+      "value" : 62,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_FRONTEND_EXT_HTML",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_FRONTEND_EXT_HTML",
+      "value" : 18,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_DEPENDENCY_LINKS_DECOMPOSITION_PRIMARY",
+      "value" : 0,
+      "description" : "Number of anchor dependencies"
+    }, {
+      "id" : "NUMBER_OF_DEPENDENCIES_DECOMPOSITION_PRIMARY",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_PLACES_WITH_CYCLIC_DEPENDENCIES_DECOMPOSITION_PRIMARY",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_TODOS",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_TODOS",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED",
+      "value" : 60,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED",
+      "value" : 3306,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED_EXT_JSX",
+      "value" : 24,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED_EXT_JSX",
+      "value" : 1319,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED_EXT_CSS",
+      "value" : 18,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED_EXT_CSS",
+      "value" : 1174,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED_EXT_JS",
+      "value" : 15,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED_EXT_JS",
+      "value" : 620,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED_EXT_SQL",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED_EXT_SQL",
+      "value" : 175,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED_EXT_HTML",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED_EXT_HTML",
+      "value" : 18,
+      "description" : null
+    }, {
+      "id" : "NEGLIGIBLE_RISK_FILE_SIZE_COUNT",
+      "value" : 54,
+      "description" : "Number of  files with 100 or less lines of code"
+    }, {
+      "id" : "LOW_RISK_FILE_SIZE_COUNT",
+      "value" : 5,
+      "description" : "Number of  files with 100 to 200 lines of code"
+    }, {
+      "id" : "MEDIUM_RISK_FILE_SIZE_COUNT",
+      "value" : 1,
+      "description" : "Number of  files with 200 to 500 lines of code"
+    }, {
+      "id" : "HIGH_RISK_FILE_SIZE_COUNT",
+      "value" : 0,
+      "description" : "Number of  files with 500 to 1000 lines of code"
+    }, {
+      "id" : "VERY_HIGH_RISK_FILE_SIZE_COUNT",
+      "value" : 0,
+      "description" : "Number of  files with more than 1000 lines of code"
+    }, {
+      "id" : "NEGLIGIBLE_RISK_FILE_SIZE_LOC",
+      "value" : 2218,
+      "description" : "Lines of code in  files with 100 or less lines of code"
+    }, {
+      "id" : "LOW_RISK_FILE_SIZE_LOC",
+      "value" : 794,
+      "description" : "Lines of code in  files with 100 to 200 lines of code"
+    }, {
+      "id" : "MEDIUM_RISK_FILE_SIZE_LOC",
+      "value" : 294,
+      "description" : "Lines of code in  files with 200 to 500 lines of code"
+    }, {
+      "id" : "HIGH_RISK_FILE_SIZE_LOC",
+      "value" : 0,
+      "description" : "Lines of code in  files with 500 to 1000 lines of code"
+    }, {
+      "id" : "VERY_HIGH_RISK_FILE_SIZE_LOC",
+      "value" : 0,
+      "description" : "Lines of code in  files with more than 1000 lines of code"
+    }, {
+      "id" : "NUMBER_OF_UNITS",
+      "value" : 5,
+      "description" : "Number of units"
+    }, {
+      "id" : "LINES_OF_CODE_IN_UNITS",
+      "value" : 63,
+      "description" : "Lines of code in units"
+    }, {
+      "id" : "LINES_OF_CODE_OUTSIDE_UNITS",
+      "value" : 3243,
+      "description" : "Lines of code in units"
+    }, {
+      "id" : "UNIT_SIZE_NEGLIGIBLE_RISK_LOC",
+      "value" : 19,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 30.158730158730158,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_NEGLIGIBLE_RISK_COUNT",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_MEDIUM_RISK_LOC",
+      "value" : 44,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_MEDIUM_RISK_PERCENTAGE",
+      "value" : 69.84126984126983,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_MEDIUM_RISK_COUNT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_NEGLIGIBLE_RISK_LOC",
+      "value" : 16,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 100.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_NEGLIGIBLE_RISK_COUNT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_NEGLIGIBLE_RISK_LOC",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 6.382978723404255,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_NEGLIGIBLE_RISK_COUNT",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_MEDIUM_RISK_LOC",
+      "value" : 44,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_MEDIUM_RISK_PERCENTAGE",
+      "value" : 93.61702127659575,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_MEDIUM_RISK_COUNT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_NEGLIGIBLE_RISK_LOC",
+      "value" : 19,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 30.158730158730158,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_NEGLIGIBLE_RISK_COUNT",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_MEDIUM_RISK_LOC",
+      "value" : 44,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_MEDIUM_RISK_PERCENTAGE",
+      "value" : 69.84126984126983,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_MEDIUM_RISK_COUNT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_NEGLIGIBLE_RISK_LOC",
+      "value" : 63,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 100.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_NEGLIGIBLE_RISK_COUNT",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_PLUS_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_PLUS_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_NEGLIGIBLE_RISK_LOC",
+      "value" : 16,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 100.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_NEGLIGIBLE_RISK_COUNT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_NEGLIGIBLE_RISK_LOC",
+      "value" : 47,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 100.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_NEGLIGIBLE_RISK_COUNT",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_NEGLIGIBLE_RISK_LOC",
+      "value" : 63,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 100.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_NEGLIGIBLE_RISK_COUNT",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATES",
+      "value" : 49,
+      "description" : "Number of duplicates"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_FILES_WITH_DUPLICATES",
+      "value" : 19,
+      "description" : "Number of files with duplicates"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES",
+      "value" : 250,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES",
+      "value" : 3152,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE",
+      "value" : 7.931472081218274,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "UNIT_DUPLICATES_COUNT",
+      "value" : 0,
+      "description" : "Unit duplicates"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_FRONTEND",
+      "value" : 196,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_FRONTEND",
+      "value" : 196,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_FRONTEND",
+      "value" : 100.0,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_BACKEND",
+      "value" : 54,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_BACKEND",
+      "value" : 54,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_BACKEND",
+      "value" : 100.0,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_DATABASE",
+      "value" : 0,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_DATABASE",
+      "value" : 0,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_DATABASE",
+      "value" : "NaN",
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_CSS",
+      "value" : 165,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_CSS",
+      "value" : 1174,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_CSS",
+      "value" : 14.054514480408859,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_JSX",
+      "value" : 31,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_JSX",
+      "value" : 1214,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_JSX",
+      "value" : 2.5535420098846786,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_JS",
+      "value" : 54,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_JS",
+      "value" : 574,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_JS",
+      "value" : 9.40766550522648,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "TOTAL_ANALYSIS_TIME_IN_MILLIS",
+      "value" : 5981,
+      "description" : "Total analysis time in milliseconds"
+    } ]
+  },
+  "controlResults" : {
+    "goalsAnalysisResults" : [ {
+      "metricsWithGoal" : {
+        "goal" : "Keep the system simple and easy to change",
+        "description" : "Aim at keeping the system size modest (less than 200,000 LOC is good), duplication low (less than 5% is good), files small (no files longer than 1000 LOC is good), and units simple (no units with more than 25 decision points is good).",
+        "controls" : [ {
+          "metric" : "LINES_OF_CODE_MAIN",
+          "description" : "Total number of lines of main code",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "200000",
+            "tolerance" : "20000"
+          }
+        }, {
+          "metric" : "DUPLICATION_PERCENTAGE",
+          "description" : "System duplication",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "5",
+            "tolerance" : "1"
+          }
+        }, {
+          "metric" : "VERY_HIGH_RISK_FILE_SIZE_COUNT",
+          "description" : "The number of very large files",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "0",
+            "tolerance" : "1"
+          }
+        }, {
+          "metric" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_COUNT",
+          "description" : "Number of very complex units",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "0",
+            "tolerance" : "1"
+          }
+        } ]
+      },
+      "controlStatuses" : [ {
+        "control" : {
+          "metric" : "LINES_OF_CODE_MAIN",
+          "description" : "Total number of lines of main code",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "200000",
+            "tolerance" : "20000"
+          }
+        },
+        "metric" : {
+          "id" : "LINES_OF_CODE_MAIN",
+          "value" : 3306,
+          "description" : null
+        },
+        "status" : "OK"
+      }, {
+        "control" : {
+          "metric" : "DUPLICATION_PERCENTAGE",
+          "description" : "System duplication",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "5",
+            "tolerance" : "1"
+          }
+        },
+        "metric" : {
+          "id" : "DUPLICATION_PERCENTAGE",
+          "value" : 7.931472081218274,
+          "description" : "Duplication percentage"
+        },
+        "status" : "FAILED"
+      }, {
+        "control" : {
+          "metric" : "VERY_HIGH_RISK_FILE_SIZE_COUNT",
+          "description" : "The number of very large files",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "0",
+            "tolerance" : "1"
+          }
+        },
+        "metric" : {
+          "id" : "VERY_HIGH_RISK_FILE_SIZE_COUNT",
+          "value" : 0,
+          "description" : "Number of  files with more than 1000 lines of code"
+        },
+        "status" : "OK"
+      }, {
+        "control" : {
+          "metric" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_COUNT",
+          "description" : "Number of very complex units",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "0",
+            "tolerance" : "1"
+          }
+        },
+        "metric" : {
+          "id" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_COUNT",
+          "value" : 0,
+          "description" : null
+        },
+        "status" : "OK"
+      } ]
+    } ]
+  },
+  "totalNumberOfFilesInScope" : 6054,
+  "mainAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 60,
+    "linesOfCode" : 3306,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.jsx",
+      "value" : 24,
+      "description" : [ ]
+    }, {
+      "name" : "  *.css",
+      "value" : 18,
+      "description" : [ ]
+    }, {
+      "name" : "  *.js",
+      "value" : 15,
+      "description" : [ ]
+    }, {
+      "name" : "  *.sql",
+      "value" : 2,
+      "description" : [ ]
+    }, {
+      "name" : "  *.html",
+      "value" : 1,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.jsx",
+      "value" : 1319,
+      "description" : [ ]
+    }, {
+      "name" : "  *.css",
+      "value" : 1174,
+      "description" : [ ]
+    }, {
+      "name" : "  *.js",
+      "value" : 620,
+      "description" : [ ]
+    }, {
+      "name" : "  *.sql",
+      "value" : 175,
+      "description" : [ ]
+    }, {
+      "name" : "  *.html",
+      "value" : 18,
+      "description" : [ ]
+    } ]
+  },
+  "testAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 0,
+    "linesOfCode" : 0,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ ],
+    "linesOfCodePerExtension" : [ ]
+  },
+  "generatedAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 2,
+    "linesOfCode" : 4255,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.json",
+      "value" : 2,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.json",
+      "value" : 4255,
+      "description" : [ ]
+    } ]
+  },
+  "buildAndDeployAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 0,
+    "linesOfCode" : 0,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ ],
+    "linesOfCodePerExtension" : [ ]
+  },
+  "otherAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 10,
+    "linesOfCode" : 4404,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.json",
+      "value" : 5,
+      "description" : [ ]
+    }, {
+      "name" : "  *.txt",
+      "value" : 1,
+      "description" : [ ]
+    }, {
+      "name" : "  *.svg",
+      "value" : 3,
+      "description" : [ ]
+    }, {
+      "name" : "  *.md",
+      "value" : 1,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.json",
+      "value" : 4346,
+      "description" : [ ]
+    }, {
+      "name" : "  *.txt",
+      "value" : 31,
+      "description" : [ ]
+    }, {
+      "name" : "  *.svg",
+      "value" : 20,
+      "description" : [ ]
+    }, {
+      "name" : "  *.md",
+      "value" : 7,
+      "description" : [ ]
+    } ]
+  },
+  "logicalDecompositionsAnalysisResults" : [ {
+    "key" : "primary",
+    "components" : [ {
+      "name" : "backend",
+      "filesCount" : 11,
+      "linesOfCode" : 558,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.js",
+        "value" : 11,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.js",
+        "value" : 558,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "database",
+      "filesCount" : 2,
+      "linesOfCode" : 175,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.sql",
+        "value" : 2,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.sql",
+        "value" : 175,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "frontend",
+      "filesCount" : 47,
+      "linesOfCode" : 2573,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.jsx",
+        "value" : 24,
+        "description" : [ ]
+      }, {
+        "name" : "  *.css",
+        "value" : 18,
+        "description" : [ ]
+      }, {
+        "name" : "  *.js",
+        "value" : 4,
+        "description" : [ ]
+      }, {
+        "name" : "  *.html",
+        "value" : 1,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.jsx",
+        "value" : 1319,
+        "description" : [ ]
+      }, {
+        "name" : "  *.css",
+        "value" : 1174,
+        "description" : [ ]
+      }, {
+        "name" : "  *.js",
+        "value" : 62,
+        "description" : [ ]
+      }, {
+        "name" : "  *.html",
+        "value" : 18,
+        "description" : [ ]
+      } ]
+    } ],
+    "componentDependencies" : [ ],
+    "componentDependenciesErrors" : [ ],
+    "logicalDecomposition" : {
+      "name" : "primary",
+      "scope" : "main",
+      "filters" : [ ],
+      "componentsFolderDepth" : 1,
+      "minComponentsCount" : 0,
+      "components" : [ {
+        "name" : "backend",
+        "sourceFileFilters" : [ {
+          "pathPattern" : "./backend/.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      }, {
+        "name" : "database",
+        "sourceFileFilters" : [ {
+          "pathPattern" : "./database/.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      }, {
+        "name" : "frontend",
+        "sourceFileFilters" : [ {
+          "pathPattern" : "./frontend/.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      } ],
+      "metaComponents" : [ ],
+      "groups" : [ ],
+      "includeRemainingFiles" : true,
+      "dependenciesFinder" : {
+        "useBuiltInDependencyFinders" : true,
+        "rules" : [ ],
+        "metaRules" : [ ]
+      },
+      "renderingOptions" : {
+        "orientation" : "TB",
+        "maxNumberOfDependencies" : 100,
+        "renderComponentsWithoutDependencies" : true,
+        "renderIndirectDependencies" : false,
+        "renderInternalIndirectDependencies" : false,
+        "reverseDirection" : false
+      },
+      "includeExternalComponents" : true,
+      "dependencyLinkThreshold" : 1,
+      "duplicationLinkThreshold" : 50,
+      "temporalLinkThreshold" : 1,
+      "maxSearchDepthLines" : 200
+    },
+    "fileCountPerComponent" : [ {
+      "name" : "backend",
+      "value" : 11,
+      "description" : [ ]
+    }, {
+      "name" : "database",
+      "value" : 2,
+      "description" : [ ]
+    }, {
+      "name" : "frontend",
+      "value" : 47,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerComponent" : [ {
+      "name" : "backend",
+      "value" : 558,
+      "description" : [ ]
+    }, {
+      "name" : "database",
+      "value" : 175,
+      "description" : [ ]
+    }, {
+      "name" : "frontend",
+      "value" : 2573,
+      "description" : [ ]
+    } ]
+  } ],
+  "concernsAnalysisResults" : [ {
+    "key" : "general",
+    "concerns" : [ {
+      "name" : "TODOs",
+      "filesCount" : 0,
+      "linesOfCode" : 0,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ ],
+      "linesOfCodePerExtension" : [ ]
+    }, {
+      "name" : "Unclassified",
+      "filesCount" : 60,
+      "linesOfCode" : 3306,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.jsx",
+        "value" : 24,
+        "description" : [ ]
+      }, {
+        "name" : "  *.css",
+        "value" : 18,
+        "description" : [ ]
+      }, {
+        "name" : "  *.js",
+        "value" : 15,
+        "description" : [ ]
+      }, {
+        "name" : "  *.sql",
+        "value" : 2,
+        "description" : [ ]
+      }, {
+        "name" : "  *.html",
+        "value" : 1,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.jsx",
+        "value" : 1319,
+        "description" : [ ]
+      }, {
+        "name" : "  *.css",
+        "value" : 1174,
+        "description" : [ ]
+      }, {
+        "name" : "  *.js",
+        "value" : 620,
+        "description" : [ ]
+      }, {
+        "name" : "  *.sql",
+        "value" : 175,
+        "description" : [ ]
+      }, {
+        "name" : "  *.html",
+        "value" : 18,
+        "description" : [ ]
+      } ]
+    } ],
+    "concernsGroup" : null,
+    "fileCountPerConcern" : [ {
+      "name" : "TODOs",
+      "value" : 0,
+      "description" : [ ]
+    }, {
+      "name" : "Unclassified",
+      "value" : 60,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerConcern" : [ {
+      "name" : "TODOs",
+      "value" : 0,
+      "description" : [ ]
+    }, {
+      "name" : "Unclassified",
+      "value" : 3306,
+      "description" : [ ]
+    } ]
+  } ],
+  "foundTags" : [ {
+    "tagRule" : {
+      "tag" : "travis",
+      "color" : "#7CB9E8",
+      "pathPatterns" : [ "(|.*/)[.]travis[.]ya?ml" ],
+      "excludePathPatterns" : [ ]
+    },
+    "evidence" : "backend/node_modules/generate-function/.travis.yml\nbackend/node_modules/pg-types/.travis.yml\nbackend/node_modules/typedarray/.travis.yml\nfrontend/node_modules/concat-map/.travis.yml\nfrontend/node_modules/deep-is/.travis.yml\nfrontend/node_modules/fast-json-stable-stringify/.travis.yml\nfrontend/node_modules/json-buffer/.travis.yml\nfrontend/node_modules/json-schema-traverse/.travis.yml\nfrontend/node_modules/json-stable-stringify-without-jsonify/.travis.yml"
+  }, {
+    "tagRule" : {
+      "tag" : "github actions",
+      "color" : "#7CB9E8",
+      "pathPatterns" : [ "(|.*/)[.]github[/]workflows[/].*" ],
+      "excludePathPatterns" : [ ]
+    },
+    "evidence" : "backend/node_modules/busboy/.github/workflows/ci.yml\nbackend/node_modules/busboy/.github/workflows/lint.yml\nbackend/node_modules/streamsearch/.github/workflows/ci.yml\nbackend/node_modules/streamsearch/.github/workflows/lint.yml"
+  }, {
+    "tagRule" : {
+      "tag" : "npm",
+      "color" : "#B9D9EB",
+      "pathPatterns" : [ "(|.*/)package[.]json" ],
+      "excludePathPatterns" : [ ]
+    },
+    "evidence" : "backend/node_modules/@epic-web/invariant/package.json\nbackend/node_modules/@supabase/auth-js/package.json\nbackend/node_modules/@supabase/functions-js/package.json\nbackend/node_modules/@supabase/node-fetch/package.json\nbackend/node_modules/@supabase/postgrest-js/package.json\nbackend/node_modules/@supabase/realtime-js/package.json\nbackend/node_modules/@supabase/storage-js/package.json\nbackend/node_modules/@supabase/supabase-js/package.json\nbackend/node_modules/@types/node/package.json\nbackend/node_modules/@types/phoenix/package.json\nbackend/node_modules/@types/ws/package.json\nbackend/node_modules/accepts/package.json\nbackend/node_modules/append-field/package.json\nbackend/node_modules/aws-ssl-profiles/package.json\nbackend/node_modules/body-parser/package.json\nbackend/node_modules/buffer-from/package.json\nbackend/node_modules/busboy/package.json\nbackend/node_modules/bytes/package.json\nbackend/node_modules/call-bind-apply-helpers/package.json\nbackend/node_modules/call-bound/package.json\n...\n(found 276 more files)"
+  }, {
+    "tagRule" : {
+      "tag" : "yarn",
+      "color" : "#B9D9EB",
+      "pathPatterns" : [ "(|.*/)[.]yarnrc", "(|.*/)yarn[.]lock" ],
+      "excludePathPatterns" : [ ]
+    },
+    "evidence" : "frontend/node_modules/uri-js/yarn.lock"
+  }, {
+    "tagRule" : {
+      "tag" : "dependabot",
+      "color" : "#B9D9EB",
+      "pathPatterns" : [ "(|.*/)dependabot[.]ya?ml" ],
+      "excludePathPatterns" : [ ]
+    },
+    "evidence" : "backend/node_modules/iconv-lite/.github/dependabot.yml"
+  }, {
+    "tagRule" : {
+      "tag" : "make",
+      "color" : "#B9D9EB",
+      "pathPatterns" : [ "(|.*/)Makefile" ],
+      "excludePathPatterns" : [ ]
+    },
+    "evidence" : "backend/node_modules/pg-types/Makefile\nbackend/node_modules/seq-queue/Makefile"
+  } ],
+  "filesAnalysisResults" : {
+    "overallFileSizeDistribution" : {
+      "key" : "",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 2218,
+      "lowRiskValue" : 794,
+      "mediumRiskValue" : 294,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 5,
+      "negligibleRiskCount" : 54,
+      "mediumRiskCount" : 1,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "totalCount" : 60,
+      "totalValue" : 3306,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 67.09013914095584,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 24.016938898971567,
+      "mediumRiskPercentage" : 8.892921960072595
+    },
+    "fileSizeDistributionPerExtension" : [ {
+      "key" : "js",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 449,
+      "lowRiskValue" : 171,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 1,
+      "negligibleRiskCount" : 14,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "totalCount" : 15,
+      "totalValue" : 620,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 72.41935483870968,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 27.580645161290324,
+      "mediumRiskPercentage" : 0.0
+    }, {
+      "key" : "sql",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 65,
+      "lowRiskValue" : 110,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 1,
+      "negligibleRiskCount" : 1,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "totalCount" : 2,
+      "totalValue" : 175,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 37.142857142857146,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 62.857142857142854,
+      "mediumRiskPercentage" : 0.0
+    }, {
+      "key" : "html",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 18,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 1,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "totalCount" : 1,
+      "totalValue" : 18,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0
+    }, {
+      "key" : "css",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 726,
+      "lowRiskValue" : 154,
+      "mediumRiskValue" : 294,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 1,
+      "negligibleRiskCount" : 16,
+      "mediumRiskCount" : 1,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "totalCount" : 18,
+      "totalValue" : 1174,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 61.83986371379898,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 13.117546848381602,
+      "mediumRiskPercentage" : 25.04258943781942
+    }, {
+      "key" : "jsx",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 960,
+      "lowRiskValue" : 359,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 2,
+      "negligibleRiskCount" : 22,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "totalCount" : 24,
+      "totalValue" : 1319,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 72.78241091736163,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 27.217589082638362,
+      "mediumRiskPercentage" : 0.0
+    } ],
+    "fileSizeDistributionPerLogicalDecomposition" : [ {
+      "name" : "primary",
+      "fileSizeDistributionPerComponent" : [ {
+        "key" : "backend",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 387,
+        "lowRiskValue" : 171,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 1,
+        "negligibleRiskCount" : 10,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "totalCount" : 11,
+        "totalValue" : 558,
+        "veryHighRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 69.35483870967742,
+        "highRiskPercentage" : 0.0,
+        "lowRiskPercentage" : 30.64516129032258,
+        "mediumRiskPercentage" : 0.0
+      }, {
+        "key" : "database",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 65,
+        "lowRiskValue" : 110,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 1,
+        "negligibleRiskCount" : 1,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "totalCount" : 2,
+        "totalValue" : 175,
+        "veryHighRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 37.142857142857146,
+        "highRiskPercentage" : 0.0,
+        "lowRiskPercentage" : 62.857142857142854,
+        "mediumRiskPercentage" : 0.0
+      }, {
+        "key" : "frontend",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 1766,
+        "lowRiskValue" : 513,
+        "mediumRiskValue" : 294,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 3,
+        "negligibleRiskCount" : 43,
+        "mediumRiskCount" : 1,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "totalCount" : 47,
+        "totalValue" : 2573,
+        "veryHighRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 68.63583365720949,
+        "highRiskPercentage" : 0.0,
+        "lowRiskPercentage" : 19.937815779246016,
+        "mediumRiskPercentage" : 11.426350563544501
+      } ]
+    } ],
+    "longestFiles" : [ {
+      "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+      "extension" : "css",
+      "linesOfCode" : 294,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/SingleItem/SingleItem.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 186,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/GalleyItem/GalleryItem.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 173,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend/controllers/userController.js",
+      "extension" : "js",
+      "linesOfCode" : 171,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/GalleyItem/GalleryItem.css",
+      "extension" : "css",
+      "linesOfCode" : 154,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "database/cweeterie_Old.sql",
+      "extension" : "sql",
+      "linesOfCode" : 110,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend/models/userModel.js",
+      "extension" : "js",
+      "linesOfCode" : 93,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 89,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 89,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 87,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend/routes/commentsLikesRoutes.js",
+      "extension" : "js",
+      "linesOfCode" : 83,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/UserButton/UserButton.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 82,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/CreateItem/CreateItem.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 80,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/Inscription.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 80,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend/controllers/ideaController.js",
+      "extension" : "js",
+      "linesOfCode" : 78,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+      "extension" : "css",
+      "linesOfCode" : 77,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/Login.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 76,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+      "extension" : "css",
+      "linesOfCode" : 75,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/UserButton/UserButton.css",
+      "extension" : "css",
+      "linesOfCode" : 66,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "database/cweeterie.sql",
+      "extension" : "sql",
+      "linesOfCode" : 65,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/Header/Header.css",
+      "extension" : "css",
+      "linesOfCode" : 64,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+      "extension" : "css",
+      "linesOfCode" : 62,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/styles/UserProfile.css",
+      "extension" : "css",
+      "linesOfCode" : 56,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 54,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+      "extension" : "css",
+      "linesOfCode" : 52,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/userProfile.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 46,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 45,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/styles/Inscription.css",
+      "extension" : "css",
+      "linesOfCode" : 44,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/styles/Login.css",
+      "extension" : "css",
+      "linesOfCode" : 44,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+      "extension" : "css",
+      "linesOfCode" : 39,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/styles/Logout.css",
+      "extension" : "css",
+      "linesOfCode" : 39,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/App.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 38,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend/models/ideaModel.js",
+      "extension" : "js",
+      "linesOfCode" : 37,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/Gallery/Gallery.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 37,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/LanguageSelector/LanguageSelector.css",
+      "extension" : "css",
+      "linesOfCode" : 37,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+      "extension" : "css",
+      "linesOfCode" : 33,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend/index.js",
+      "extension" : "js",
+      "linesOfCode" : 32,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 3,
+      "linesOfCodeInUnits" : 8
+    }, {
+      "relativePath" : "frontend/src/components/Header/Header.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 31,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/AuthContext/authProvider.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 29,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/eslint.config.js",
+      "extension" : "js",
+      "linesOfCode" : 28,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 22
+    }, {
+      "relativePath" : "frontend/src/components/usersTest.js",
+      "extension" : "js",
+      "linesOfCode" : 24,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 22
+    }, {
+      "relativePath" : "frontend/src/components/Logout.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 23,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend/routes/userRoutes.js",
+      "extension" : "js",
+      "linesOfCode" : 19,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/index.html",
+      "extension" : "html",
+      "linesOfCode" : 18,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend/supabaseClient.js",
+      "extension" : "js",
+      "linesOfCode" : 15,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/main.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 15,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/Gallery/Gallery.css",
+      "extension" : "css",
+      "linesOfCode" : 14,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/Containers/ErrorPage.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 13,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend/src/components/Containers/Roots.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 13,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend/routes/ideaRoutes.js",
+      "extension" : "js",
+      "linesOfCode" : 12,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    } ],
+    "filesWithMostUnits" : [ {
+      "relativePath" : "backend/index.js",
+      "extension" : "js",
+      "linesOfCode" : 32,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 3,
+      "linesOfCodeInUnits" : 8
+    }, {
+      "relativePath" : "backend/testDB.js",
+      "extension" : "js",
+      "linesOfCode" : 10,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 2,
+      "linesOfCodeInUnits" : 8
+    }, {
+      "relativePath" : "frontend/eslint.config.js",
+      "extension" : "js",
+      "linesOfCode" : 28,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 22
+    }, {
+      "relativePath" : "frontend/src/components/usersTest.js",
+      "extension" : "js",
+      "linesOfCode" : 24,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 22
+    }, {
+      "relativePath" : "frontend/vite.config.js",
+      "extension" : "js",
+      "linesOfCode" : 5,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 3
+    } ]
+  },
+  "filesHistoryAnalysisResults" : {
+    "overallFileLastModifiedDistribution" : null,
+    "overallFileFirstModifiedDistribution" : null,
+    "overallFileChangeDistribution" : null,
+    "overallContributorsCountDistribution" : null,
+    "filesWithoutCommitHistoryCount" : 0,
+    "filesWithoutCommitHistoryLinesOfCode" : 0,
+    "changeDistributionPerExtension" : [ ],
+    "lastModifiedDistributionPerExtension" : [ ],
+    "firstModifiedDistributionPerExtension" : [ ],
+    "changeDistributionPerLogicalDecomposition" : [ ],
+    "firstModifiedDistributionPerLogicalDecomposition" : [ ],
+    "lastModifiedDistributionPerLogicalDecomposition" : [ ],
+    "oldestFiles" : [ ],
+    "youngestFiles" : [ ],
+    "mostRecentlyChangedFiles" : [ ],
+    "mostPreviouslyChangedFiles" : [ ],
+    "mostChangedFiles" : [ ],
+    "filesWithMostContributors" : [ ],
+    "filesWithLeastContributors" : [ ],
+    "firstDate" : "",
+    "latestDate" : "",
+    "daysBetweenFirstAndLastDate" : 0,
+    "weeks" : 0,
+    "estimatedWorkindDays" : 0,
+    "activeDays" : 0,
+    "ageInDays" : 0,
+    "historyPerExtensionPerYear" : [ ]
+  },
+  "unitsAnalysisResults" : {
+    "totalNumberOfUnits" : 5,
+    "linesOfCodeInUnits" : 63,
+    "unitSizeRiskDistribution" : {
+      "key" : "",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 19,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 44,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 3,
+      "mediumRiskCount" : 2,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "totalCount" : 5,
+      "totalValue" : 63,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 30.158730158730158,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 69.84126984126983
+    },
+    "conditionalComplexityRiskDistribution" : {
+      "key" : "",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 63,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 5,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "totalCount" : 5,
+      "totalValue" : 63,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0
+    },
+    "unitSizeRiskDistributionPerExtension" : [ {
+      "key" : "js",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 19,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 44,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 3,
+      "mediumRiskCount" : 2,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "totalCount" : 5,
+      "totalValue" : 63,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 30.158730158730158,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 69.84126984126983
+    } ],
+    "unitSizeRiskDistributionPerComponent" : [ [ {
+      "key" : "backend",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 16,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 2,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "totalCount" : 2,
+      "totalValue" : 16,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0
+    }, {
+      "key" : "frontend",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 3,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 44,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 1,
+      "mediumRiskCount" : 2,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "totalCount" : 3,
+      "totalValue" : 47,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 6.382978723404255,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 93.61702127659575
+    } ] ],
+    "longestUnits" : [ {
+      "shortName" : "export default defineConfig()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend/eslint.config.js",
+        "extension" : "js",
+        "linesOfCode" : 28,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 22
+      },
+      "startLine" : 7,
+      "endLine" : 28,
+      "linesOfCode" : 22,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function Users()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend/src/components/usersTest.js",
+        "extension" : "js",
+        "linesOfCode" : 24,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 22
+      },
+      "startLine" : 3,
+      "endLine" : 27,
+      "linesOfCode" : 22,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "origin: function()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend/index.js",
+        "extension" : "js",
+        "linesOfCode" : 32,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 3,
+        "linesOfCodeInUnits" : 8
+      },
+      "startLine" : 13,
+      "endLine" : 22,
+      "linesOfCode" : 8,
+      "mcCabeIndex" : 3,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function testInsert()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend/testDB.js",
+        "extension" : "js",
+        "linesOfCode" : 10,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 2,
+        "linesOfCodeInUnits" : 8
+      },
+      "startLine" : 3,
+      "endLine" : 11,
+      "linesOfCode" : 8,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export default defineConfig()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend/vite.config.js",
+        "extension" : "js",
+        "linesOfCode" : 5,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 3
+      },
+      "startLine" : 5,
+      "endLine" : 7,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    } ],
+    "conditionalComplexityRiskDistributionPerExtension" : [ {
+      "key" : "js",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 63,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 5,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "totalCount" : 5,
+      "totalValue" : 63,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0
+    } ],
+    "conditionalComplexityRiskDistributionPerComponent" : [ [ {
+      "key" : "backend",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 16,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 2,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "totalCount" : 2,
+      "totalValue" : 16,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0
+    }, {
+      "key" : "frontend",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 47,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 3,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "totalCount" : 3,
+      "totalValue" : 47,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0,
+      "highRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 0.0,
+      "mediumRiskPercentage" : 0.0
+    } ] ],
+    "mostComplexUnits" : [ {
+      "shortName" : "origin: function()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend/index.js",
+        "extension" : "js",
+        "linesOfCode" : 32,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 3,
+        "linesOfCodeInUnits" : 8
+      },
+      "startLine" : 13,
+      "endLine" : 22,
+      "linesOfCode" : 8,
+      "mcCabeIndex" : 3,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function testInsert()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend/testDB.js",
+        "extension" : "js",
+        "linesOfCode" : 10,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 2,
+        "linesOfCodeInUnits" : 8
+      },
+      "startLine" : 3,
+      "endLine" : 11,
+      "linesOfCode" : 8,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export default defineConfig()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend/eslint.config.js",
+        "extension" : "js",
+        "linesOfCode" : 28,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 22
+      },
+      "startLine" : 7,
+      "endLine" : 28,
+      "linesOfCode" : 22,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function Users()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend/src/components/usersTest.js",
+        "extension" : "js",
+        "linesOfCode" : 24,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 22
+      },
+      "startLine" : 3,
+      "endLine" : 27,
+      "linesOfCode" : 22,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export default defineConfig()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend/vite.config.js",
+        "extension" : "js",
+        "linesOfCode" : 5,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 3
+      },
+      "startLine" : 5,
+      "endLine" : 7,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    } ]
+  },
+  "duplicationAnalysisResults" : {
+    "overallDuplication" : {
+      "key" : "system",
+      "numberOfDuplicates" : 49,
+      "cleanedLinesOfCode" : 3152,
+      "duplicatedLinesOfCode" : 250,
+      "numberOfFilesWithDuplicates" : 19,
+      "duplicationPercentage" : 7.931472081218274
+    },
+    "duplicationPerComponent" : [ [ {
+      "key" : "frontend",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 2454,
+      "duplicatedLinesOfCode" : 196,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 7.986960065199674
+    }, {
+      "key" : "backend",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 523,
+      "duplicatedLinesOfCode" : 54,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 10.325047801147228
+    }, {
+      "key" : "database",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 175,
+      "duplicatedLinesOfCode" : 0,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 0.0
+    } ] ],
+    "duplicationPerConcern" : [ ],
+    "duplicationPerExtension" : [ {
+      "key" : "css",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 1174,
+      "duplicatedLinesOfCode" : 165,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 14.054514480408859
+    }, {
+      "key" : "jsx",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 1214,
+      "duplicatedLinesOfCode" : 31,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 2.5535420098846786
+    }, {
+      "key" : "js",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 574,
+      "duplicatedLinesOfCode" : 54,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 9.40766550522648
+    } ],
+    "longestDuplicates" : [ {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 4,
+        "endLine" : 13,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+          "extension" : "css",
+          "linesOfCode" : 62,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 62,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 16.129032258064516
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+          "extension" : "css",
+          "linesOfCode" : 75,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 13.333333333333334
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend/controllers/ideaController.js",
+          "extension" : "js",
+          "linesOfCode" : 78,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 71,
+        "startLine" : 4,
+        "endLine" : 15,
+        "cleanedStartLine" : 3,
+        "cleanedEndLine" : 12,
+        "blockSize" : 10,
+        "percentage" : 14.084507042253522
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend/controllers/userController.js",
+          "extension" : "js",
+          "linesOfCode" : 171,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 152,
+        "startLine" : 4,
+        "endLine" : 14,
+        "cleanedStartLine" : 3,
+        "cleanedEndLine" : 12,
+        "blockSize" : 10,
+        "percentage" : 6.578947368421052
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+          "extension" : "css",
+          "linesOfCode" : 33,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 33,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 30.303030303030305
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+          "extension" : "css",
+          "linesOfCode" : 75,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 13.333333333333334
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 12.987012987012987
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 4,
+        "endLine" : 13,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 12.987012987012987
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 12.987012987012987
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 4,
+        "endLine" : 13,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+          "extension" : "css",
+          "linesOfCode" : 62,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 62,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 16.129032258064516
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+          "extension" : "css",
+          "linesOfCode" : 33,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 33,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 30.303030303030305
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 12.987012987012987
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+          "extension" : "css",
+          "linesOfCode" : 75,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 13.333333333333334
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+          "extension" : "css",
+          "linesOfCode" : 62,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 62,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 16.129032258064516
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+          "extension" : "css",
+          "linesOfCode" : 52,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 52,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 19.23076923076923
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+          "extension" : "css",
+          "linesOfCode" : 75,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 13.333333333333334
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+          "extension" : "css",
+          "linesOfCode" : 52,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 52,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 19.23076923076923
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+          "extension" : "css",
+          "linesOfCode" : 52,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 52,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 19.23076923076923
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+          "extension" : "css",
+          "linesOfCode" : 75,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 13.333333333333334
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 12.987012987012987
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+          "extension" : "css",
+          "linesOfCode" : 52,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 52,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 19.23076923076923
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+          "extension" : "css",
+          "linesOfCode" : 62,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 62,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 16.129032258064516
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 4,
+        "endLine" : 13,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+          "extension" : "css",
+          "linesOfCode" : 75,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 13.333333333333334
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+          "extension" : "css",
+          "linesOfCode" : 33,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 33,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 30.303030303030305
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+          "extension" : "css",
+          "linesOfCode" : 33,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 33,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 30.303030303030305
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 4,
+        "endLine" : 13,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+          "extension" : "css",
+          "linesOfCode" : 62,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 62,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 16.129032258064516
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+          "extension" : "css",
+          "linesOfCode" : 52,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 52,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 19.23076923076923
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+          "extension" : "css",
+          "linesOfCode" : 75,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 13.333333333333334
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+          "extension" : "css",
+          "linesOfCode" : 62,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 62,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 16.129032258064516
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 12.987012987012987
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+          "extension" : "css",
+          "linesOfCode" : 33,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 33,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 30.303030303030305
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+          "extension" : "css",
+          "linesOfCode" : 33,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 33,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 30.303030303030305
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 12.987012987012987
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+          "extension" : "css",
+          "linesOfCode" : 62,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 62,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 16.129032258064516
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 12.987012987012987
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+          "extension" : "css",
+          "linesOfCode" : 62,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 62,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 16.129032258064516
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+          "extension" : "css",
+          "linesOfCode" : 52,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 52,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 19.23076923076923
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+          "extension" : "css",
+          "linesOfCode" : 294,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 294,
+        "startLine" : 132,
+        "endLine" : 141,
+        "cleanedStartLine" : 111,
+        "cleanedEndLine" : 120,
+        "blockSize" : 10,
+        "percentage" : 3.401360544217687
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+          "extension" : "css",
+          "linesOfCode" : 294,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 294,
+        "startLine" : 147,
+        "endLine" : 157,
+        "cleanedStartLine" : 125,
+        "cleanedEndLine" : 134,
+        "blockSize" : 10,
+        "percentage" : 3.401360544217687
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+          "extension" : "css",
+          "linesOfCode" : 75,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 13.333333333333334
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 4,
+        "endLine" : 13,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+          "extension" : "css",
+          "linesOfCode" : 33,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 33,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 30.303030303030305
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 15,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 14,
+        "blockSize" : 10,
+        "percentage" : 22.727272727272727
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 4,
+        "endLine" : 13,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+          "extension" : "css",
+          "linesOfCode" : 52,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 52,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 19.23076923076923
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+          "extension" : "css",
+          "linesOfCode" : 33,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 33,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 30.303030303030305
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+          "extension" : "css",
+          "linesOfCode" : 52,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 52,
+        "startLine" : 2,
+        "endLine" : 11,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 19.23076923076923
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 4,
+        "endLine" : 13,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 11,
+        "blockSize" : 10,
+        "percentage" : 25.641025641025642
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 73,
+        "endLine" : 80,
+        "cleanedStartLine" : 63,
+        "cleanedEndLine" : 70,
+        "blockSize" : 8,
+        "percentage" : 10.38961038961039
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 22,
+        "endLine" : 29,
+        "cleanedStartLine" : 18,
+        "cleanedEndLine" : 25,
+        "blockSize" : 8,
+        "percentage" : 20.512820512820515
+      } ],
+      "blockSize" : 8
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 39,
+        "endLine" : 46,
+        "cleanedStartLine" : 34,
+        "cleanedEndLine" : 41,
+        "blockSize" : 8,
+        "percentage" : 18.181818181818183
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 39,
+        "endLine" : 46,
+        "cleanedStartLine" : 34,
+        "cleanedEndLine" : 41,
+        "blockSize" : 8,
+        "percentage" : 18.181818181818183
+      } ],
+      "blockSize" : 8
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend/controllers/ideaController.js",
+          "extension" : "js",
+          "linesOfCode" : 78,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 71,
+        "startLine" : 90,
+        "endLine" : 98,
+        "cleanedStartLine" : 64,
+        "cleanedEndLine" : 71,
+        "blockSize" : 8,
+        "percentage" : 11.267605633802816
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend/models/ideaModel.js",
+          "extension" : "js",
+          "linesOfCode" : 37,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 37,
+        "startLine" : 40,
+        "endLine" : 48,
+        "cleanedStartLine" : 30,
+        "cleanedEndLine" : 37,
+        "blockSize" : 8,
+        "percentage" : 21.62162162162162
+      } ],
+      "blockSize" : 8
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+          "extension" : "css",
+          "linesOfCode" : 294,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 294,
+        "startLine" : 179,
+        "endLine" : 187,
+        "cleanedStartLine" : 153,
+        "cleanedEndLine" : 160,
+        "blockSize" : 8,
+        "percentage" : 2.7210884353741496
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+          "extension" : "css",
+          "linesOfCode" : 294,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 294,
+        "startLine" : 248,
+        "endLine" : 256,
+        "cleanedStartLine" : 213,
+        "cleanedEndLine" : 220,
+        "blockSize" : 8,
+        "percentage" : 2.7210884353741496
+      } ],
+      "blockSize" : 8
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend/models/userModel.js",
+          "extension" : "js",
+          "linesOfCode" : 93,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 93,
+        "startLine" : 62,
+        "endLine" : 67,
+        "cleanedStartLine" : 49,
+        "cleanedEndLine" : 54,
+        "blockSize" : 6,
+        "percentage" : 6.451612903225806
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend/models/userModel.js",
+          "extension" : "js",
+          "linesOfCode" : 93,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 93,
+        "startLine" : 74,
+        "endLine" : 79,
+        "cleanedStartLine" : 59,
+        "cleanedEndLine" : 64,
+        "blockSize" : 6,
+        "percentage" : 6.451612903225806
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend/models/userModel.js",
+          "extension" : "js",
+          "linesOfCode" : 93,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 93,
+        "startLine" : 62,
+        "endLine" : 67,
+        "cleanedStartLine" : 49,
+        "cleanedEndLine" : 54,
+        "blockSize" : 6,
+        "percentage" : 6.451612903225806
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend/models/userModel.js",
+          "extension" : "js",
+          "linesOfCode" : 93,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 93,
+        "startLine" : 86,
+        "endLine" : 91,
+        "cleanedStartLine" : 69,
+        "cleanedEndLine" : 74,
+        "blockSize" : 6,
+        "percentage" : 6.451612903225806
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend/models/userModel.js",
+          "extension" : "js",
+          "linesOfCode" : 93,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 93,
+        "startLine" : 74,
+        "endLine" : 79,
+        "cleanedStartLine" : 59,
+        "cleanedEndLine" : 64,
+        "blockSize" : 6,
+        "percentage" : 6.451612903225806
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend/models/userModel.js",
+          "extension" : "js",
+          "linesOfCode" : 93,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 93,
+        "startLine" : 86,
+        "endLine" : 91,
+        "cleanedStartLine" : 69,
+        "cleanedEndLine" : 74,
+        "blockSize" : 6,
+        "percentage" : 6.451612903225806
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/Inscription.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 80,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 13,
+        "endLine" : 19,
+        "cleanedStartLine" : 11,
+        "cleanedEndLine" : 16,
+        "blockSize" : 6,
+        "percentage" : 8.0
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/Login.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 76,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 72,
+        "startLine" : 11,
+        "endLine" : 16,
+        "cleanedStartLine" : 9,
+        "cleanedEndLine" : 14,
+        "blockSize" : 6,
+        "percentage" : 8.333333333333334
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 89,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 83,
+        "startLine" : 64,
+        "endLine" : 72,
+        "cleanedStartLine" : 52,
+        "cleanedEndLine" : 57,
+        "blockSize" : 6,
+        "percentage" : 7.228915662650603
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/UserButton/UserButton.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 82,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 74,
+        "startLine" : 77,
+        "endLine" : 86,
+        "cleanedStartLine" : 67,
+        "cleanedEndLine" : 72,
+        "blockSize" : 6,
+        "percentage" : 8.108108108108109
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 54,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 47,
+        "endLine" : 54,
+        "cleanedStartLine" : 35,
+        "cleanedEndLine" : 40,
+        "blockSize" : 6,
+        "percentage" : 13.636363636363637
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/UserButton/UserButton.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 82,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 74,
+        "startLine" : 76,
+        "endLine" : 83,
+        "cleanedStartLine" : 66,
+        "cleanedEndLine" : 71,
+        "blockSize" : 6,
+        "percentage" : 8.108108108108109
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+          "extension" : "css",
+          "linesOfCode" : 294,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 294,
+        "startLine" : 29,
+        "endLine" : 34,
+        "cleanedStartLine" : 27,
+        "cleanedEndLine" : 32,
+        "blockSize" : 6,
+        "percentage" : 2.0408163265306123
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+          "extension" : "css",
+          "linesOfCode" : 294,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 294,
+        "startLine" : 252,
+        "endLine" : 257,
+        "cleanedStartLine" : 216,
+        "cleanedEndLine" : 221,
+        "blockSize" : 6,
+        "percentage" : 2.0408163265306123
+      } ],
+      "blockSize" : 6
+    } ],
+    "mostFrequentDuplicates" : [ {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend/models/userModel.js",
+          "extension" : "js",
+          "linesOfCode" : 93,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 93,
+        "startLine" : 62,
+        "endLine" : 67,
+        "cleanedStartLine" : 49,
+        "cleanedEndLine" : 54,
+        "blockSize" : 6,
+        "percentage" : 6.451612903225806
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend/models/userModel.js",
+          "extension" : "js",
+          "linesOfCode" : 93,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 93,
+        "startLine" : 74,
+        "endLine" : 79,
+        "cleanedStartLine" : 59,
+        "cleanedEndLine" : 64,
+        "blockSize" : 6,
+        "percentage" : 6.451612903225806
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend/models/userModel.js",
+          "extension" : "js",
+          "linesOfCode" : 93,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 93,
+        "startLine" : 86,
+        "endLine" : 91,
+        "cleanedStartLine" : 69,
+        "cleanedEndLine" : 74,
+        "blockSize" : 6,
+        "percentage" : 6.451612903225806
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 5,
+        "endLine" : 10,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 10,
+        "blockSize" : 6,
+        "percentage" : 7.792207792207792
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+          "extension" : "css",
+          "linesOfCode" : 33,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 33,
+        "startLine" : 5,
+        "endLine" : 10,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 10,
+        "blockSize" : 6,
+        "percentage" : 18.181818181818183
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 9,
+        "endLine" : 14,
+        "cleanedStartLine" : 8,
+        "cleanedEndLine" : 13,
+        "blockSize" : 6,
+        "percentage" : 13.636363636363637
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 7,
+        "endLine" : 12,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 10,
+        "blockSize" : 6,
+        "percentage" : 15.384615384615385
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+          "extension" : "css",
+          "linesOfCode" : 75,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 5,
+        "endLine" : 10,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 10,
+        "blockSize" : 6,
+        "percentage" : 8.0
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+          "extension" : "css",
+          "linesOfCode" : 52,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 52,
+        "startLine" : 5,
+        "endLine" : 10,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 10,
+        "blockSize" : 6,
+        "percentage" : 11.538461538461538
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 9,
+        "endLine" : 14,
+        "cleanedStartLine" : 8,
+        "cleanedEndLine" : 13,
+        "blockSize" : 6,
+        "percentage" : 13.636363636363637
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+          "extension" : "css",
+          "linesOfCode" : 62,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 62,
+        "startLine" : 5,
+        "endLine" : 10,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 10,
+        "blockSize" : 6,
+        "percentage" : 9.67741935483871
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 5,
+        "endLine" : 10,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 10,
+        "blockSize" : 6,
+        "percentage" : 15.384615384615385
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 6,
+        "endLine" : 11,
+        "cleanedStartLine" : 6,
+        "cleanedEndLine" : 11,
+        "blockSize" : 6,
+        "percentage" : 7.792207792207792
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+          "extension" : "css",
+          "linesOfCode" : 33,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 33,
+        "startLine" : 6,
+        "endLine" : 11,
+        "cleanedStartLine" : 6,
+        "cleanedEndLine" : 11,
+        "blockSize" : 6,
+        "percentage" : 18.181818181818183
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 10,
+        "endLine" : 15,
+        "cleanedStartLine" : 9,
+        "cleanedEndLine" : 14,
+        "blockSize" : 6,
+        "percentage" : 13.636363636363637
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 8,
+        "endLine" : 13,
+        "cleanedStartLine" : 6,
+        "cleanedEndLine" : 11,
+        "blockSize" : 6,
+        "percentage" : 15.384615384615385
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+          "extension" : "css",
+          "linesOfCode" : 75,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 6,
+        "endLine" : 11,
+        "cleanedStartLine" : 6,
+        "cleanedEndLine" : 11,
+        "blockSize" : 6,
+        "percentage" : 8.0
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+          "extension" : "css",
+          "linesOfCode" : 52,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 52,
+        "startLine" : 6,
+        "endLine" : 11,
+        "cleanedStartLine" : 6,
+        "cleanedEndLine" : 11,
+        "blockSize" : 6,
+        "percentage" : 11.538461538461538
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 10,
+        "endLine" : 15,
+        "cleanedStartLine" : 9,
+        "cleanedEndLine" : 14,
+        "blockSize" : 6,
+        "percentage" : 13.636363636363637
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+          "extension" : "css",
+          "linesOfCode" : 62,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 62,
+        "startLine" : 6,
+        "endLine" : 11,
+        "cleanedStartLine" : 6,
+        "cleanedEndLine" : 11,
+        "blockSize" : 6,
+        "percentage" : 9.67741935483871
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 6,
+        "endLine" : 11,
+        "cleanedStartLine" : 6,
+        "cleanedEndLine" : 11,
+        "blockSize" : 6,
+        "percentage" : 15.384615384615385
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 4,
+        "endLine" : 9,
+        "cleanedStartLine" : 4,
+        "cleanedEndLine" : 9,
+        "blockSize" : 6,
+        "percentage" : 7.792207792207792
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+          "extension" : "css",
+          "linesOfCode" : 33,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 33,
+        "startLine" : 4,
+        "endLine" : 9,
+        "cleanedStartLine" : 4,
+        "cleanedEndLine" : 9,
+        "blockSize" : 6,
+        "percentage" : 18.181818181818183
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 8,
+        "endLine" : 13,
+        "cleanedStartLine" : 7,
+        "cleanedEndLine" : 12,
+        "blockSize" : 6,
+        "percentage" : 13.636363636363637
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 6,
+        "endLine" : 11,
+        "cleanedStartLine" : 4,
+        "cleanedEndLine" : 9,
+        "blockSize" : 6,
+        "percentage" : 15.384615384615385
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+          "extension" : "css",
+          "linesOfCode" : 75,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 4,
+        "endLine" : 9,
+        "cleanedStartLine" : 4,
+        "cleanedEndLine" : 9,
+        "blockSize" : 6,
+        "percentage" : 8.0
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+          "extension" : "css",
+          "linesOfCode" : 52,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 52,
+        "startLine" : 4,
+        "endLine" : 9,
+        "cleanedStartLine" : 4,
+        "cleanedEndLine" : 9,
+        "blockSize" : 6,
+        "percentage" : 11.538461538461538
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 8,
+        "endLine" : 13,
+        "cleanedStartLine" : 7,
+        "cleanedEndLine" : 12,
+        "blockSize" : 6,
+        "percentage" : 13.636363636363637
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+          "extension" : "css",
+          "linesOfCode" : 62,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 62,
+        "startLine" : 4,
+        "endLine" : 9,
+        "cleanedStartLine" : 4,
+        "cleanedEndLine" : 9,
+        "blockSize" : 6,
+        "percentage" : 9.67741935483871
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 4,
+        "endLine" : 9,
+        "cleanedStartLine" : 4,
+        "cleanedEndLine" : 9,
+        "blockSize" : 6,
+        "percentage" : 15.384615384615385
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 3,
+        "endLine" : 8,
+        "cleanedStartLine" : 3,
+        "cleanedEndLine" : 8,
+        "blockSize" : 6,
+        "percentage" : 7.792207792207792
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+          "extension" : "css",
+          "linesOfCode" : 33,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 33,
+        "startLine" : 3,
+        "endLine" : 8,
+        "cleanedStartLine" : 3,
+        "cleanedEndLine" : 8,
+        "blockSize" : 6,
+        "percentage" : 18.181818181818183
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 7,
+        "endLine" : 12,
+        "cleanedStartLine" : 6,
+        "cleanedEndLine" : 11,
+        "blockSize" : 6,
+        "percentage" : 13.636363636363637
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 5,
+        "endLine" : 10,
+        "cleanedStartLine" : 3,
+        "cleanedEndLine" : 8,
+        "blockSize" : 6,
+        "percentage" : 15.384615384615385
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+          "extension" : "css",
+          "linesOfCode" : 75,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 3,
+        "endLine" : 8,
+        "cleanedStartLine" : 3,
+        "cleanedEndLine" : 8,
+        "blockSize" : 6,
+        "percentage" : 8.0
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+          "extension" : "css",
+          "linesOfCode" : 52,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 52,
+        "startLine" : 3,
+        "endLine" : 8,
+        "cleanedStartLine" : 3,
+        "cleanedEndLine" : 8,
+        "blockSize" : 6,
+        "percentage" : 11.538461538461538
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 7,
+        "endLine" : 12,
+        "cleanedStartLine" : 6,
+        "cleanedEndLine" : 11,
+        "blockSize" : 6,
+        "percentage" : 13.636363636363637
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+          "extension" : "css",
+          "linesOfCode" : 62,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 62,
+        "startLine" : 3,
+        "endLine" : 8,
+        "cleanedStartLine" : 3,
+        "cleanedEndLine" : 8,
+        "blockSize" : 6,
+        "percentage" : 9.67741935483871
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 3,
+        "endLine" : 8,
+        "cleanedStartLine" : 3,
+        "cleanedEndLine" : 8,
+        "blockSize" : 6,
+        "percentage" : 15.384615384615385
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+          "extension" : "css",
+          "linesOfCode" : 77,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 77,
+        "startLine" : 2,
+        "endLine" : 7,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 7,
+        "blockSize" : 6,
+        "percentage" : 7.792207792207792
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+          "extension" : "css",
+          "linesOfCode" : 33,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 33,
+        "startLine" : 2,
+        "endLine" : 7,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 7,
+        "blockSize" : 6,
+        "percentage" : 18.181818181818183
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Login.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 11,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 10,
+        "blockSize" : 6,
+        "percentage" : 13.636363636363637
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Logout.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 4,
+        "endLine" : 9,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 7,
+        "blockSize" : 6,
+        "percentage" : 15.384615384615385
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+          "extension" : "css",
+          "linesOfCode" : 75,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 75,
+        "startLine" : 2,
+        "endLine" : 7,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 7,
+        "blockSize" : 6,
+        "percentage" : 8.0
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+          "extension" : "css",
+          "linesOfCode" : 52,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 52,
+        "startLine" : 2,
+        "endLine" : 7,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 7,
+        "blockSize" : 6,
+        "percentage" : 11.538461538461538
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/styles/Inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 44,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 44,
+        "startLine" : 6,
+        "endLine" : 11,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 10,
+        "blockSize" : 6,
+        "percentage" : 13.636363636363637
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+          "extension" : "css",
+          "linesOfCode" : 62,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 62,
+        "startLine" : 2,
+        "endLine" : 7,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 7,
+        "blockSize" : 6,
+        "percentage" : 9.67741935483871
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+          "extension" : "css",
+          "linesOfCode" : 39,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 39,
+        "startLine" : 2,
+        "endLine" : 7,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 7,
+        "blockSize" : 6,
+        "percentage" : 15.384615384615385
+      } ],
+      "blockSize" : 6
+    } ]
+  },
+  "contributorsAnalysisResults" : {
+    "latestCommitDate" : "",
+    "contributors" : [ ],
+    "contributorsPerYear" : [ ],
+    "contributorsPerMonth" : [ ],
+    "contributorsPerDay" : [ ],
+    "contributorsPerWeek" : [ ],
+    "commitsPerExtensions" : [ ]
+  },
+  "numberOfExcludedFiles" : 5984,
+  "excludedExtensions" : {
+    "" : 267,
+    "npmignore" : 9,
+    "def" : 5,
+    "production" : 2,
+    "js" : 2911,
+    "iml" : 1,
+    "py" : 1,
+    "jst" : 25,
+    "ps1" : 13,
+    "exe" : 1,
+    "xml" : 5,
+    "md" : 384,
+    "markdown" : 6,
+    "json" : 354,
+    "lock" : 2,
+    "editorconfig" : 5,
+    "html" : 1,
+    "nix" : 1,
+    "map" : 651,
+    "jshintrc" : 3,
+    "flow" : 1,
+    "yaml" : 40,
+    "jpg" : 28,
+    "development" : 2,
+    "cts" : 36,
+    "svg" : 1,
+    "gitignore" : 1,
+    "babelrc" : 1,
+    "eslintrc" : 21,
+    "png" : 4,
+    "mts" : 47,
+    "cjs" : 28,
+    "nycrc" : 16,
+    "txt" : 7,
+    "node" : 2,
+    "bsd" : 2,
+    "gitkeep" : 3,
+    "mjs" : 44,
+    "php" : 1,
+    "cmd" : 13,
+    "ts" : 1039
+  },
+  "analysisStartTimeMs" : 1764701360745,
+  "maxLinesOfCode" : 4404,
+  "maxFileCount" : 60
+}

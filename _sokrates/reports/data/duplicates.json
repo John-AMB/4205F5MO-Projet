@@ -1,0 +1,1427 @@
+{
+  "title" : "Duplication",
+  "timestamp" : "2025-12-02 13:49:27",
+  "duplicates" : [ {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Logout.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 4,
+      "endLine" : 13,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+        "extension" : "css",
+        "linesOfCode" : 62,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 62,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+        "extension" : "css",
+        "linesOfCode" : 75,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 75,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "backend/controllers/ideaController.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 71,
+      "startLine" : 4,
+      "endLine" : 15,
+      "cleanedStartLine" : 3,
+      "cleanedEndLine" : 12
+    }, {
+      "file" : {
+        "relativePath" : "backend/controllers/userController.js",
+        "extension" : "js",
+        "linesOfCode" : 171,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 152,
+      "startLine" : 4,
+      "endLine" : 14,
+      "cleanedStartLine" : 3,
+      "cleanedEndLine" : 12
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+        "extension" : "css",
+        "linesOfCode" : 33,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 33,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+        "extension" : "css",
+        "linesOfCode" : 75,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 75,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+        "extension" : "css",
+        "linesOfCode" : 77,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 77,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Logout.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 4,
+      "endLine" : 13,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+        "extension" : "css",
+        "linesOfCode" : 77,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 77,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Inscription.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+        "extension" : "css",
+        "linesOfCode" : 77,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 77,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Inscription.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Logout.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 4,
+      "endLine" : 13,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+        "extension" : "css",
+        "linesOfCode" : 62,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 62,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+        "extension" : "css",
+        "linesOfCode" : 33,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 33,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+        "extension" : "css",
+        "linesOfCode" : 77,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 77,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+        "extension" : "css",
+        "linesOfCode" : 75,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 75,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+        "extension" : "css",
+        "linesOfCode" : 62,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 62,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+        "extension" : "css",
+        "linesOfCode" : 52,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 52,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+        "extension" : "css",
+        "linesOfCode" : 75,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 75,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Inscription.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+        "extension" : "css",
+        "linesOfCode" : 52,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 52,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+        "extension" : "css",
+        "linesOfCode" : 52,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 52,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Inscription.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+        "extension" : "css",
+        "linesOfCode" : 75,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 75,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Login.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+        "extension" : "css",
+        "linesOfCode" : 77,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 77,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+        "extension" : "css",
+        "linesOfCode" : 52,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 52,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+        "extension" : "css",
+        "linesOfCode" : 62,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 62,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Logout.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 4,
+      "endLine" : 13,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Inscription.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Login.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Inscription.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+        "extension" : "css",
+        "linesOfCode" : 75,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 75,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+        "extension" : "css",
+        "linesOfCode" : 33,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 33,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Inscription.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+        "extension" : "css",
+        "linesOfCode" : 33,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 33,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Logout.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 4,
+      "endLine" : 13,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+        "extension" : "css",
+        "linesOfCode" : 62,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 62,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Login.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Login.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+        "extension" : "css",
+        "linesOfCode" : 52,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 52,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+        "extension" : "css",
+        "linesOfCode" : 75,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 75,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+        "extension" : "css",
+        "linesOfCode" : 62,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 62,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+        "extension" : "css",
+        "linesOfCode" : 77,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 77,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+        "extension" : "css",
+        "linesOfCode" : 33,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 33,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+        "extension" : "css",
+        "linesOfCode" : 33,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 33,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Login.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+        "extension" : "css",
+        "linesOfCode" : 77,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 77,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Login.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+        "extension" : "css",
+        "linesOfCode" : 62,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 62,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Inscription.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+        "extension" : "css",
+        "linesOfCode" : 77,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 77,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+        "extension" : "css",
+        "linesOfCode" : 62,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 62,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+        "extension" : "css",
+        "linesOfCode" : 52,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 52,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Login.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+        "extension" : "css",
+        "linesOfCode" : 294,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 294,
+      "startLine" : 132,
+      "endLine" : 141,
+      "cleanedStartLine" : 111,
+      "cleanedEndLine" : 120
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+        "extension" : "css",
+        "linesOfCode" : 294,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 294,
+      "startLine" : 147,
+      "endLine" : 157,
+      "cleanedStartLine" : 125,
+      "cleanedEndLine" : 134
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+        "extension" : "css",
+        "linesOfCode" : 75,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 75,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Logout.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 4,
+      "endLine" : 13,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+        "extension" : "css",
+        "linesOfCode" : 33,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 33,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Login.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 6,
+      "endLine" : 15,
+      "cleanedStartLine" : 5,
+      "cleanedEndLine" : 14
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Logout.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 4,
+      "endLine" : 13,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+        "extension" : "css",
+        "linesOfCode" : 52,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 52,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+        "extension" : "css",
+        "linesOfCode" : 33,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 33,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+        "extension" : "css",
+        "linesOfCode" : 52,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 52,
+      "startLine" : 2,
+      "endLine" : 11,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Logout.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 4,
+      "endLine" : 13,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 11
+    } ]
+  }, {
+    "blockSize" : 8,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+        "extension" : "css",
+        "linesOfCode" : 77,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 77,
+      "startLine" : 73,
+      "endLine" : 80,
+      "cleanedStartLine" : 63,
+      "cleanedEndLine" : 70
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Logout.css",
+        "extension" : "css",
+        "linesOfCode" : 39,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 39,
+      "startLine" : 22,
+      "endLine" : 29,
+      "cleanedStartLine" : 18,
+      "cleanedEndLine" : 25
+    } ]
+  }, {
+    "blockSize" : 8,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Inscription.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 39,
+      "endLine" : 46,
+      "cleanedStartLine" : 34,
+      "cleanedEndLine" : 41
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/styles/Login.css",
+        "extension" : "css",
+        "linesOfCode" : 44,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 39,
+      "endLine" : 46,
+      "cleanedStartLine" : 34,
+      "cleanedEndLine" : 41
+    } ]
+  }, {
+    "blockSize" : 8,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "backend/controllers/ideaController.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 71,
+      "startLine" : 90,
+      "endLine" : 98,
+      "cleanedStartLine" : 64,
+      "cleanedEndLine" : 71
+    }, {
+      "file" : {
+        "relativePath" : "backend/models/ideaModel.js",
+        "extension" : "js",
+        "linesOfCode" : 37,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 37,
+      "startLine" : 40,
+      "endLine" : 48,
+      "cleanedStartLine" : 30,
+      "cleanedEndLine" : 37
+    } ]
+  }, {
+    "blockSize" : 8,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+        "extension" : "css",
+        "linesOfCode" : 294,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 294,
+      "startLine" : 179,
+      "endLine" : 187,
+      "cleanedStartLine" : 153,
+      "cleanedEndLine" : 160
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+        "extension" : "css",
+        "linesOfCode" : 294,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 294,
+      "startLine" : 248,
+      "endLine" : 256,
+      "cleanedStartLine" : 213,
+      "cleanedEndLine" : 220
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 62,
+      "endLine" : 67,
+      "cleanedStartLine" : 49,
+      "cleanedEndLine" : 54
+    }, {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 74,
+      "endLine" : 79,
+      "cleanedStartLine" : 59,
+      "cleanedEndLine" : 64
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 62,
+      "endLine" : 67,
+      "cleanedStartLine" : 49,
+      "cleanedEndLine" : 54
+    }, {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 86,
+      "endLine" : 91,
+      "cleanedStartLine" : 69,
+      "cleanedEndLine" : 74
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 74,
+      "endLine" : 79,
+      "cleanedStartLine" : 59,
+      "cleanedEndLine" : 64
+    }, {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 86,
+      "endLine" : 91,
+      "cleanedStartLine" : 69,
+      "cleanedEndLine" : 74
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/Inscription.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 80,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 75,
+      "startLine" : 13,
+      "endLine" : 19,
+      "cleanedStartLine" : 11,
+      "cleanedEndLine" : 16
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/Login.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 76,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 72,
+      "startLine" : 11,
+      "endLine" : 16,
+      "cleanedStartLine" : 9,
+      "cleanedEndLine" : 14
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 89,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 83,
+      "startLine" : 64,
+      "endLine" : 72,
+      "cleanedStartLine" : 52,
+      "cleanedEndLine" : 57
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/UserButton/UserButton.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 82,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 74,
+      "startLine" : 77,
+      "endLine" : 86,
+      "cleanedStartLine" : 67,
+      "cleanedEndLine" : 72
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 54,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 44,
+      "startLine" : 47,
+      "endLine" : 54,
+      "cleanedStartLine" : 35,
+      "cleanedEndLine" : 40
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/UserButton/UserButton.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 82,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 74,
+      "startLine" : 76,
+      "endLine" : 83,
+      "cleanedStartLine" : 66,
+      "cleanedEndLine" : 71
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+        "extension" : "css",
+        "linesOfCode" : 294,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 294,
+      "startLine" : 29,
+      "endLine" : 34,
+      "cleanedStartLine" : 27,
+      "cleanedEndLine" : 32
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+        "extension" : "css",
+        "linesOfCode" : 294,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 294,
+      "startLine" : 252,
+      "endLine" : 257,
+      "cleanedStartLine" : 216,
+      "cleanedEndLine" : 221
+    } ]
+  } ],
+  "overallDuplication" : null
+}

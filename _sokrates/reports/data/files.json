@@ -1,0 +1,361 @@
+[ {
+  "relativePath" : "backend/cloudinaryConfig.js",
+  "extension" : "js",
+  "linesOfCode" : 8,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend/controllers/ideaController.js",
+  "extension" : "js",
+  "linesOfCode" : 78,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend/controllers/userController.js",
+  "extension" : "js",
+  "linesOfCode" : 171,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend/index.js",
+  "extension" : "js",
+  "linesOfCode" : 32,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend/models/ideaModel.js",
+  "extension" : "js",
+  "linesOfCode" : 37,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend/models/userModel.js",
+  "extension" : "js",
+  "linesOfCode" : 93,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend/routes/commentsLikesRoutes.js",
+  "extension" : "js",
+  "linesOfCode" : 83,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend/routes/ideaRoutes.js",
+  "extension" : "js",
+  "linesOfCode" : 12,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend/routes/userRoutes.js",
+  "extension" : "js",
+  "linesOfCode" : 19,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend/supabaseClient.js",
+  "extension" : "js",
+  "linesOfCode" : 15,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend/testDB.js",
+  "extension" : "js",
+  "linesOfCode" : 10,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "database/cweeterie.sql",
+  "extension" : "sql",
+  "linesOfCode" : 65,
+  "components" : [ "primary::database" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "database/cweeterie_Old.sql",
+  "extension" : "sql",
+  "linesOfCode" : 110,
+  "components" : [ "primary::database" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/createClient.js",
+  "extension" : "js",
+  "linesOfCode" : 5,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/eslint.config.js",
+  "extension" : "js",
+  "linesOfCode" : 28,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/index.html",
+  "extension" : "html",
+  "linesOfCode" : 18,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/App.css",
+  "extension" : "css",
+  "linesOfCode" : 12,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/App.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 38,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/AuthContext/auth-context.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 9,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/AuthContext/authProvider.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 29,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/Containers/ErrorPage.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 13,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/Containers/Roots.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 13,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
+  "extension" : "css",
+  "linesOfCode" : 77,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/CreateItem/CreateItem.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 80,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/EditIdeaPortal/EditIdeaPortal.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 10,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/Gallery/Gallery.css",
+  "extension" : "css",
+  "linesOfCode" : 14,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/Gallery/Gallery.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 37,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/GalleyItem/GalleryItem.css",
+  "extension" : "css",
+  "linesOfCode" : 154,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/GalleyItem/GalleryItem.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 173,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/Header/Header.css",
+  "extension" : "css",
+  "linesOfCode" : 64,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/Header/Header.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 31,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/Inscription.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 80,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/LanguageSelector/LanguageSelector.css",
+  "extension" : "css",
+  "linesOfCode" : 37,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/LanguageSelector/LanguageSelector.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 8,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/Login.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 76,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/Logout.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 23,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
+  "extension" : "css",
+  "linesOfCode" : 62,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 45,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
+  "extension" : "css",
+  "linesOfCode" : 52,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 87,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
+  "extension" : "css",
+  "linesOfCode" : 33,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 89,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
+  "extension" : "css",
+  "linesOfCode" : 39,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 54,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
+  "extension" : "css",
+  "linesOfCode" : 75,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 89,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
+  "extension" : "css",
+  "linesOfCode" : 294,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/SingleItem/SingleItem.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 186,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/UserButton/UserButton.css",
+  "extension" : "css",
+  "linesOfCode" : 66,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/UserButton/UserButton.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 82,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/UserOptionsPortal/UserOptionsPortal.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 6,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/userProfile.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 46,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/components/usersTest.js",
+  "extension" : "js",
+  "linesOfCode" : 24,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/index.css",
+  "extension" : "css",
+  "linesOfCode" : 12,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/main.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 15,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/styles/Inscription.css",
+  "extension" : "css",
+  "linesOfCode" : 44,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/styles/Login.css",
+  "extension" : "css",
+  "linesOfCode" : 44,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/styles/Logout.css",
+  "extension" : "css",
+  "linesOfCode" : 39,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/src/styles/UserProfile.css",
+  "extension" : "css",
+  "linesOfCode" : 56,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend/vite.config.js",
+  "extension" : "js",
+  "linesOfCode" : 5,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+} ]

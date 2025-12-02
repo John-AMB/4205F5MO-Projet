@@ -1,0 +1,140 @@
+<html>
+<head>
+    <title>backend/models/userModel.js</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">backend/models/userModel.js (<b>93</b> lines of code) (<a href="userModel.js">raw</a>):</h3>
+<div id="editor">// models/userModel.js
+const supabase = require(&quot;../supabaseClient&quot;);
+
+// Get all users
+const getAllUsers = async () =&gt; {
+  const { data, error } = await supabase.from(&quot;users&quot;).select(&quot;*&quot;);
+  if (error) throw error;
+  return data;
+};
+
+// Get one user by id
+const getUserById = async (id) =&gt; {
+  const { data, error } = await supabase
+    .from(&quot;users&quot;)
+    .select(&quot;id, username, bio, photo&quot;)
+    .eq(&quot;id&quot;, id)
+    .single();
+  if (error) throw error;
+  return data;
+};
+
+// Create a user
+const createUser = async ({ username, password, bio }) =&gt; {
+  const { data, error } = await supabase
+    .from(&quot;users&quot;)
+    .insert({ username, password, bio })
+    .select()
+    .single();
+  if (error) throw error;
+  return data;
+};
+
+//verifie si le username et password correspondent a un user dans le database -&gt; un user existant
+const findByUsernameAndPassword = async (username, password) =&gt; {
+  const { data, error } = await supabase
+    .from(&quot;users&quot;)
+    .select(&quot;*&quot;)
+    .eq(&quot;username&quot;, username)
+    .eq(&quot;password&quot;, password)
+    .single();
+  if (error) throw error;
+  return data;
+};
+
+//verifie si l'ancien mot de passe correspond au mot de passe que l'utilisateur a entre
+const verifyOldPassword = async (userId, oldPassword) =&gt; {
+  const { data, error } = await supabase
+    .from(&quot;users&quot;)
+    .select(&quot;*&quot;)
+    .eq(&quot;id&quot;, userId)
+    .eq(&quot;password&quot;, oldPassword)
+    .single();
+  if (error) throw error;
+  return data;
+};
+
+//met a jour le mot de passe de l'utilisateur
+const updatePassword = async (userId, newPassword) =&gt; {
+  const { data, error } = await supabase
+    .from(&quot;users&quot;)
+    .update({ password: newPassword })
+    .eq(&quot;id&quot;, userId)
+    .select()
+    .single();
+  if (error) throw error;
+  return data;
+};
+
+//met a jour la bio de l'utilisateur
+const updateBio = async (userId, newBio) =&gt; {
+  const { data, error } = await supabase
+    .from(&quot;users&quot;)
+    .update({ bio: newBio })
+    .eq(&quot;id&quot;, userId)
+    .select()
+    .single();
+  if (error) throw error;
+  return data;
+};
+
+//met a jour la photo de profil de l'utilisateur
+const updateProfilePhoto = async (userId, photoUrl) =&gt; {
+  const { data, error } = await supabase
+    .from(&quot;users&quot;)
+    .update({ photo: photoUrl })
+    .eq(&quot;id&quot;, userId)
+    .select()
+    .single();
+  if (error) throw error;
+  return data;
+};
+
+//supprime un user
+const deleteUser = async (userId) =&gt; {
+  const { data, error } = await supabase
+    .from(&quot;users&quot;)
+    .delete()
+    .eq(&quot;id&quot;, userId);
+  if (error) throw error;
+  return data;
+};
+
+//les fichiers qui importent userModel.js a access:
+module.exports = {
+  getAllUsers,
+  getUserById,
+  createUser,
+  findByUsernameAndPassword,
+  verifyOldPassword,
+  updatePassword,
+  updateBio,
+  updateProfilePhoto,
+  deleteUser,
+};
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/javascript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

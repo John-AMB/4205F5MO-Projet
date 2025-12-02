@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>frontend/src/styles/Logout.css</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">frontend/src/styles/Logout.css (<b>39</b> lines of code) (<a href="Logout.css">raw</a>):</h3>
+<div id="editor">/* logout.css */
+
+.logout-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 200px;
+}
+
+.logout-container h2 {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.logout-container button {
+  padding: 10px 24px;
+  margin: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.logout-container button:first-of-type {
+  background-color: #e74c3c; /* red for confirm */
+  color: white;
+}
+
+.logout-container button:first-of-type:hover {
+  background-color: #c0392b;
+}
+
+.logout-container button:last-of-type {
+  background-color: #bdc3c7; /* grey for cancel */
+  color: #2c3e50;
+}
+
+.logout-container button:last-of-type:hover {
+  background-color: #95a5a6;
+}
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/css");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

@@ -1,0 +1,119 @@
+<html>
+<head>
+    <title>frontend/src/components/Inscription.jsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">frontend/src/components/Inscription.jsx (<b>80</b> lines of code) (<a href="Inscription.jsx">raw</a>):</h3>
+<div id="editor">import React, { useState } from &quot;react&quot;;
+import &quot;../styles/Inscription.css&quot;;
+import { useNavigate } from &quot;react-router-dom&quot;;
+
+function Inscription() {
+  const [formData, setFormData] = useState({
+    username: &quot;&quot;,
+    password: &quot;&quot;,
+    bio: &quot;&quot;,
+  });
+  const navigate = useNavigate();
+
+  const backendUrl = import.meta.env.VITE_API_URL || &quot;http://localhost:3001&quot;;
+
+  const handleChange = (e) =&gt; {
+    //e = input change char
+    //Enregistrez les entrees utilisateur dans leur champ input.name respectif et permettez a
+    //l'utilisateur de modifier les autres champs input.value sans perdre les valeurs precedemment saisies.
+    setFormData({
+      ...formData, //La meme que-&gt; username: formData.username, password: formData.password, bio: formData.bio
+      [e.target.name]: e.target.value, //e.target.name-&gt; username, password,bio | e.target.value-&gt; le valeur de username,password,bio
+    });
+  };
+
+  const handleSubmit = async (e) =&gt; {
+    e.preventDefault(); //Le formulaire essaie de recharger la page lorsque la personne le soumet.La m&eacute;thode preventDefault() empeche cela.
+
+    try {
+      const res = await fetch(`${backendUrl}/users`, {
+        //appel POST /users route dans
+        method: &quot;POST&quot;,
+        headers: { &quot;Content-Type&quot;: &quot;application/json&quot; }, //body sera donc dans le format JSON
+        body: JSON.stringify(formData), //body: formData -&gt; transform -&gt; JSON
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        //erreur 4xx ou 5xx a
+        throw new Error(data.message || &quot;Erreur lors de la cr&eacute;ation du compte&quot;);
+      }
+      alert(&quot;Compte cr&eacute;&eacute; avec succ&egrave;s !&quot;);
+
+      navigate(&quot;/login&quot;);
+    } catch (err) {
+      console.error(&quot;Erreur lors de la cr&eacute;ation du compte:&quot;, err);
+      alert(err.message || &quot;Erreur lors de la cr&eacute;ation du compte&quot;);
+    }
+  };
+
+  return (
+    &lt;div className=&quot;inscription-container&quot;&gt;
+      &lt;h2&gt;Create an account&lt;/h2&gt;
+      &lt;form onSubmit={handleSubmit} className=&quot;inscription-form&quot;&gt;
+        &lt;label&gt;
+          Username
+          &lt;input
+            type=&quot;text&quot;
+            name=&quot;username&quot;
+            value={formData.username} //ce qu'on retrouve -&gt; username
+            onChange={handleChange}
+            required
+          /&gt;
+        &lt;/label&gt;
+
+        &lt;label&gt;
+          Password
+          &lt;input
+            type=&quot;password&quot;
+            name=&quot;password&quot;
+            value={formData.password} //ce qu'on retrouve -&gt; password
+            onChange={handleChange}
+            required
+          /&gt;
+        &lt;/label&gt;
+
+        &lt;label&gt;
+          Bio
+          &lt;textarea
+            name=&quot;bio&quot;
+            value={formData.bio} //ce qu'on retrouve -&gt; bio
+            onChange={handleChange}
+            rows=&quot;3&quot;
+          /&gt;
+        &lt;/label&gt;
+
+        &lt;button type=&quot;submit&quot;&gt;Sign Up&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default Inscription;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/html");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

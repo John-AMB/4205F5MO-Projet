@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>frontend/src/styles/Inscription.css</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">frontend/src/styles/Inscription.css (<b>44</b> lines of code) (<a href="Inscription.css">raw</a>):</h3>
+<div id="editor">body {
+  background-color: white;
+}
+
+.inscription-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 200px;
+}
+
+.inscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inscription-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: left;
+}
+
+.inscription-form input,
+.inscription-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.inscription-form button {
+  padding: 10px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.inscription-form button:hover {
+  background: #005fa3;
+}
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/css");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

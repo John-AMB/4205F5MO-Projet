@@ -1,0 +1,437 @@
+<head>
+    <style> body {
+        margin: 0;
+    } </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/3d-force-graph"></script>
+</head>
+
+<body>
+<div id="3d-graph"></div>
+
+<script>
+    const gData = {
+  "nodes" : [ {
+    "id" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx]",
+    "size" : 1
+  }, {
+    "id" : "[frontend/src/components/UserButton/UserButton.jsx]",
+    "size" : 2
+  }, {
+    "id" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "size" : 8
+  }, {
+    "id" : "[frontend/src/styles/Inscription.css]",
+    "size" : 8
+  }, {
+    "id" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "size" : 8
+  }, {
+    "id" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "size" : 8
+  }, {
+    "id" : "[frontend/src/components/Login.jsx]",
+    "size" : 1
+  }, {
+    "id" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "size" : 8
+  }, {
+    "id" : "[backend/models/userModel.js]",
+    "size" : 2
+  }, {
+    "id" : "[frontend/src/components/Inscription.jsx]",
+    "size" : 1
+  }, {
+    "id" : "[frontend/src/components/ModificationProfile/ModificationProfile.jsx]",
+    "size" : 1
+  }, {
+    "id" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "size" : 8
+  }, {
+    "id" : "[frontend/src/components/SingleItem/SingleItem.css]",
+    "size" : 2
+  }, {
+    "id" : "[backend/controllers/ideaController.js]",
+    "size" : 2
+  }, {
+    "id" : "[backend/controllers/userController.js]",
+    "size" : 1
+  }, {
+    "id" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "size" : 8
+  }, {
+    "id" : "[frontend/src/styles/Logout.css]",
+    "size" : 8
+  }, {
+    "id" : "[backend/models/ideaModel.js]",
+    "size" : 1
+  }, {
+    "id" : "[frontend/src/styles/Login.css]",
+    "size" : 8
+  } ],
+  "links" : [ {
+    "source" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "target" : "[frontend/src/styles/Logout.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Logout.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "target" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "count" : 20
+  }, {
+    "source" : "[backend/controllers/ideaController.js]",
+    "target" : "[backend/controllers/userController.js]",
+    "count" : 20
+  }, {
+    "source" : "[backend/controllers/userController.js]",
+    "target" : "[backend/controllers/ideaController.js]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "target" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "target" : "[frontend/src/styles/Logout.css]",
+    "count" : 36
+  }, {
+    "source" : "[frontend/src/styles/Logout.css]",
+    "target" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "count" : 36
+  }, {
+    "source" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "target" : "[frontend/src/styles/Inscription.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Inscription.css]",
+    "target" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "target" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Inscription.css]",
+    "target" : "[frontend/src/styles/Logout.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Logout.css]",
+    "target" : "[frontend/src/styles/Inscription.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "target" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "target" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "target" : "[frontend/src/styles/Inscription.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Inscription.css]",
+    "target" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "target" : "[frontend/src/styles/Inscription.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Inscription.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "target" : "[frontend/src/styles/Login.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Login.css]",
+    "target" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "target" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "target" : "[frontend/src/styles/Logout.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Logout.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Inscription.css]",
+    "target" : "[frontend/src/styles/Login.css]",
+    "count" : 36
+  }, {
+    "source" : "[frontend/src/styles/Login.css]",
+    "target" : "[frontend/src/styles/Inscription.css]",
+    "count" : 36
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "target" : "[frontend/src/styles/Inscription.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Inscription.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "target" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "target" : "[frontend/src/styles/Inscription.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Inscription.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "target" : "[frontend/src/styles/Logout.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Logout.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "target" : "[frontend/src/styles/Login.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Login.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "target" : "[frontend/src/styles/Login.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Login.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "target" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "target" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "target" : "[frontend/src/styles/Login.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Login.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "target" : "[frontend/src/styles/Login.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Login.css]",
+    "target" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "target" : "[frontend/src/styles/Inscription.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Inscription.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css]",
+    "target" : "[frontend/src/components/CreateItem/CreateItem.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "target" : "[frontend/src/styles/Login.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Login.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/SingleItem/SingleItem.css]",
+    "target" : "[frontend/src/components/SingleItem/SingleItem.css]",
+    "count" : 48
+  }, {
+    "source" : "[frontend/src/components/SingleItem/SingleItem.css]",
+    "target" : "[frontend/src/components/SingleItem/SingleItem.css]",
+    "count" : 48
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "target" : "[frontend/src/styles/Logout.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Logout.css]",
+    "target" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ModificationProfile.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Login.css]",
+    "target" : "[frontend/src/styles/Logout.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Logout.css]",
+    "target" : "[frontend/src/styles/Login.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "target" : "[frontend/src/styles/Logout.css]",
+    "count" : 20
+  }, {
+    "source" : "[frontend/src/styles/Logout.css]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css]",
+    "count" : 20
+  }, {
+    "source" : "[backend/controllers/ideaController.js]",
+    "target" : "[backend/models/ideaModel.js]",
+    "count" : 16
+  }, {
+    "source" : "[backend/models/ideaModel.js]",
+    "target" : "[backend/controllers/ideaController.js]",
+    "count" : 16
+  }, {
+    "source" : "[backend/models/userModel.js]",
+    "target" : "[backend/models/userModel.js]",
+    "count" : 36
+  }, {
+    "source" : "[backend/models/userModel.js]",
+    "target" : "[backend/models/userModel.js]",
+    "count" : 36
+  }, {
+    "source" : "[frontend/src/components/Inscription.jsx]",
+    "target" : "[frontend/src/components/Login.jsx]",
+    "count" : 12
+  }, {
+    "source" : "[frontend/src/components/Login.jsx]",
+    "target" : "[frontend/src/components/Inscription.jsx]",
+    "count" : 12
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx]",
+    "target" : "[frontend/src/components/UserButton/UserButton.jsx]",
+    "count" : 12
+  }, {
+    "source" : "[frontend/src/components/UserButton/UserButton.jsx]",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx]",
+    "count" : 12
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ModificationProfile.jsx]",
+    "target" : "[frontend/src/components/UserButton/UserButton.jsx]",
+    "count" : 12
+  }, {
+    "source" : "[frontend/src/components/UserButton/UserButton.jsx]",
+    "target" : "[frontend/src/components/ModificationProfile/ModificationProfile.jsx]",
+    "count" : 12
+  } ]
+}
+
+    const maxNodeSize = gData.nodes.map(n => n.size).reduce((a, b) => Math.max(a, b));
+    const maxCount = gData.links.map(l => l.count).reduce((a, b) => Math.max(a, b));
+
+    gData.links = gData.links.map(l => { return {source: l.target, target: l.source, count: l.count} });
+
+    const Graph = ForceGraph3D()
+    (document.getElementById('3d-graph'))
+        .graphData(gData)
+        .nodeRelSize(4)
+        .nodeVal(n => Math.max(20 * n.size / maxNodeSize, 0.001))
+        .nodeLabel(n => n.id + " (" + n.size + ")")
+        .nodeColor(n => n.id.startsWith("[") ? "skyblue" : "")
+        .linkDirectionalParticles(6)
+        .linkDirectionalParticleSpeed(d => d.count / maxCount * 0.01)
+        .linkOpacity(0.1)
+        .linkWidth(d => 3 * d.count / maxCount + 0.1);
+
+</script>
+</body>
