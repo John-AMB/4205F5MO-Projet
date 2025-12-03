@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Inscription.css";
 import { useNavigate } from "react-router-dom";
+import "../../styles/global.css";
 
 function Inscription() {
   const [formData, setFormData] = useState({
@@ -49,7 +50,7 @@ function Inscription() {
   };
 
   return (
-    <div className="inscription-container">
+    <div className="project-container">
       <h2>Create an account</h2>
       <form onSubmit={handleSubmit} className="inscription-form">
         <label>

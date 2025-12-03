@@ -1,31 +1,29 @@
-frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css [2:11]:
+frontend/src/components/SingleItem/SingleItem.css [179:187]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: 200px;
 }
+/* ===== ICONS OVER IMAGE ===== */
+.singleItem-imageWrapper {
+  position: relative;
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 
-frontend/src/styles/Inscription.css [6:15]:
+frontend/src/components/SingleItem/SingleItem.css [248:256]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: 200px;
 }
+
+.singleItem-imageWrapper {
+  position: relative; /* so heart-btn can position absolutely */
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 

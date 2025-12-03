@@ -12,18 +12,18 @@
     </style>
 </head>
 <body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
-<h3 style="margin-bottom: 0">frontend/src/components/ModificationProfile/ModificationProfile.jsx (<b>54</b> lines of code) (<a href="ModificationProfile.jsx">raw</a>):</h3>
+<h3 style="margin-bottom: 0">frontend/src/components/ModificationProfile/ModificationProfile.jsx (<b>55</b> lines of code) (<a href="ModificationProfile.jsx">raw</a>):</h3>
 <div id="editor">import { useContext } from &quot;react&quot;;
 import { Link, useNavigate } from &quot;react-router-dom&quot;;
 import { AuthContext } from &quot;../AuthContext/auth-context&quot;;
 import &quot;./ModificationProfile.css&quot;;
-
+import &quot;../../styles/global.css&quot;;
 const ProfileOptions = () =&gt; {
   const { isLoggedIn, user } = useContext(AuthContext);
   const navigate = useNavigate();
 
   return (
-    &lt;div className=&quot;profileOptionsPage&quot;&gt;
+    &lt;div className=&quot;project-container&quot;&gt;
       {isLoggedIn ? (
         &lt;div className=&quot;profileOptions&quot;&gt;
           &lt;h2&gt;Hello, {user?.username || &quot;User&quot;}&lt;/h2&gt;

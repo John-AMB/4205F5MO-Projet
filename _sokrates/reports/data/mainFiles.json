@@ -155,14 +155,14 @@
 }, {
   "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
   "extension" : "css",
-  "linesOfCode" : 77,
+  "linesOfCode" : 66,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
 }, {
   "relativePath" : "frontend/src/components/CreateItem/CreateItem.jsx",
   "extension" : "jsx",
-  "linesOfCode" : 80,
+  "linesOfCode" : 81,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -218,7 +218,7 @@
 }, {
   "relativePath" : "frontend/src/components/Inscription.jsx",
   "extension" : "jsx",
-  "linesOfCode" : 80,
+  "linesOfCode" : 81,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -239,7 +239,7 @@
 }, {
   "relativePath" : "frontend/src/components/Login.jsx",
   "extension" : "jsx",
-  "linesOfCode" : 76,
+  "linesOfCode" : 77,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -260,7 +260,7 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.jsx",
   "extension" : "jsx",
-  "linesOfCode" : 45,
+  "linesOfCode" : 46,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -295,14 +295,14 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.css",
   "extension" : "css",
-  "linesOfCode" : 39,
+  "linesOfCode" : 28,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.jsx",
   "extension" : "jsx",
-  "linesOfCode" : 54,
+  "linesOfCode" : 55,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -379,14 +379,21 @@
 }, {
   "relativePath" : "frontend/src/main.jsx",
   "extension" : "jsx",
-  "linesOfCode" : 15,
+  "linesOfCode" : 16,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend/src/styles/global.css",
+  "extension" : "css",
+  "linesOfCode" : 11,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
 }, {
   "relativePath" : "frontend/src/styles/Inscription.css",
   "extension" : "css",
-  "linesOfCode" : 44,
+  "linesOfCode" : 33,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -400,7 +407,7 @@
 }, {
   "relativePath" : "frontend/src/styles/Logout.css",
   "extension" : "css",
-  "linesOfCode" : 39,
+  "linesOfCode" : 28,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0

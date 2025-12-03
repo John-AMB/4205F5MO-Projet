@@ -1,4 +1,4 @@
-frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css [2:11]:
+frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css [2:11]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   max-width: 500px;
   margin: 40px auto;
@@ -14,7 +14,7 @@ frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css [2:11]:
 
 
 
-frontend/src/styles/Logout.css [4:13]:
+frontend/src/styles/Login.css [6:15]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   max-width: 500px;
   margin: 40px auto;

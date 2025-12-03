@@ -73,7 +73,7 @@ const ChangePhoto = () => {
   }
 
   return (
-    <div className="change-photo-container">
+    <div className="project-container">
       <h2>Change Profile Picture</h2>
       <form onSubmit={handleSubmit} className="change-photo-form">
         {preview ? (

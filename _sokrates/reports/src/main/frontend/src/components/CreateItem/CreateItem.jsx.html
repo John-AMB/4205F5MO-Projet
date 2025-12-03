@@ -12,12 +12,12 @@
     </style>
 </head>
 <body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
-<h3 style="margin-bottom: 0">frontend/src/components/CreateItem/CreateItem.jsx (<b>80</b> lines of code) (<a href="CreateItem.jsx">raw</a>):</h3>
+<h3 style="margin-bottom: 0">frontend/src/components/CreateItem/CreateItem.jsx (<b>81</b> lines of code) (<a href="CreateItem.jsx">raw</a>):</h3>
 <div id="editor">import { useState, useContext } from &quot;react&quot;;
 import { AuthContext } from &quot;../AuthContext/auth-context&quot;;
 import { useNavigate } from &quot;react-router-dom&quot;;
 import &quot;./CreateItem.css&quot;;
-
+import &quot;../../styles/global.css&quot;;
 const AddIdea = () =&gt; {
   const [titre, setTitre] = useState(&quot;&quot;);
   const [description, setDescription] = useState(&quot;&quot;);
@@ -70,7 +70,7 @@ const AddIdea = () =&gt; {
   };
 
   return isLoggedIn ? (
-    &lt;div className=&quot;add-idea-container&quot;&gt;
+    &lt;div className=&quot;project-container&quot;&gt;
       &lt;h2&gt;Add a New Idea&lt;/h2&gt;
       &lt;form className=&quot;add-idea-form&quot; onSubmit={handleSubmit}&gt;
         &lt;input
@@ -96,7 +96,7 @@ const AddIdea = () =&gt; {
       {message &amp;&amp; &lt;p className=&quot;message&quot;&gt;{message}&lt;/p&gt;}
     &lt;/div&gt;
   ) : (
-    &lt;div className=&quot;add-idea-container&quot;&gt;
+    &lt;div className=&quot;project-container&quot;&gt;
       &lt;h2&gt;You must be logged in to access this feature&lt;/h2&gt;
 
       &lt;button onClick={handleLogin}&gt;Login&lt;/button&gt;

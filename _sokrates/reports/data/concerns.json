@@ -9,8 +9,8 @@
     "linesOfCodePerExtension" : [ ]
   }, {
     "name" : "Unclassified",
-    "filesCount" : 60,
-    "linesOfCode" : 3306,
+    "filesCount" : 61,
+    "linesOfCode" : 3279,
     "numberOfRegexLineMatches" : 0,
     "fileCountPerExtension" : [ {
       "name" : "  *.jsx",
@@ -18,7 +18,7 @@
       "description" : [ ]
     }, {
       "name" : "  *.css",
-      "value" : 18,
+      "value" : 19,
       "description" : [ ]
     }, {
       "name" : "  *.js",
@@ -35,11 +35,11 @@
     } ],
     "linesOfCodePerExtension" : [ {
       "name" : "  *.jsx",
-      "value" : 1319,
+      "value" : 1325,
       "description" : [ ]
     }, {
       "name" : "  *.css",
-      "value" : 1174,
+      "value" : 1141,
       "description" : [ ]
     }, {
       "name" : "  *.js",
@@ -62,7 +62,7 @@
     "description" : [ ]
   }, {
     "name" : "Unclassified",
-    "value" : 60,
+    "value" : 61,
     "description" : [ ]
   } ],
   "linesOfCodePerConcern" : [ {
@@ -71,7 +71,7 @@
     "description" : [ ]
   }, {
     "name" : "Unclassified",
-    "value" : 3306,
+    "value" : 3279,
     "description" : [ ]
   } ]
 } ]

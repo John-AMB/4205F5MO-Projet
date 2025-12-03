@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../AuthContext/auth-context";
 import { useNavigate } from "react-router-dom";
 import "./CreateItem.css";
-
+import "../../styles/global.css";
 const AddIdea = () => {
   const [titre, setTitre] = useState("");
   const [description, setDescription] = useState("");
@@ -55,7 +55,7 @@ const AddIdea = () => {
   };
 
   return isLoggedIn ? (
-    <div className="add-idea-container">
+    <div className="project-container">
       <h2>Add a New Idea</h2>
       <form className="add-idea-form" onSubmit={handleSubmit}>
         <input
@@ -81,7 +81,7 @@ const AddIdea = () => {
       {message && <p className="message">{message}</p>}
     </div>
   ) : (
-    <div className="add-idea-container">
+    <div className="project-container">
       <h2>You must be logged in to access this feature</h2>
 
       <button onClick={handleLogin}>Login</button>

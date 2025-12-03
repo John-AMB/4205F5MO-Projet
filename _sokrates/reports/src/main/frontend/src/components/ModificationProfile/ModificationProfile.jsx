@@ -2,13 +2,13 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext/auth-context";
 import "./ModificationProfile.css";
-
+import "../../styles/global.css";
 const ProfileOptions = () => {
   const { isLoggedIn, user } = useContext(AuthContext);
   const navigate = useNavigate();
 
   return (
-    <div className="profileOptionsPage">
+    <div className="project-container">
       {isLoggedIn ? (
         <div className="profileOptions">
           <h2>Hello, {user?.username || "User"}</h2>

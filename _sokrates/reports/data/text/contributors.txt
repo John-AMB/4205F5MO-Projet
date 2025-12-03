@@ -1,1 +1,5 @@
 Contributor	#commits (all time)	#commits (30 days)	#commits (90 days)	#commits (180 days)	#commits (365 days)	first commit	last commit
+seanskyjune@gmail.com	45	2	45	45	45	2025-09-12	2025-12-02	46%
+2124824@cmontmorency.qc.ca	39	0	39	39	39	2025-09-11	2025-10-30	40%
+143745098+john-amb@users.noreply.github.com	6	0	6	6	6	2025-09-25	2025-10-30	6%
+2396127@cmontmorency.qc.ca	6	0	6	6	6	2025-10-13	2025-10-30	6%

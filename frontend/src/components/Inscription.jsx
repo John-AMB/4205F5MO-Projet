@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Inscription.css";
 import { useNavigate } from "react-router-dom";
-import "../../styles/global.css";
+import "../styles/global.css";
 
 function Inscription() {
   const [formData, setFormData] = useState({

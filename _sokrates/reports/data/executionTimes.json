@@ -1,311 +1,516 @@
 [ {
   "processing" : "everything",
-  "startMs" : 1764701360095,
+  "startMs" : 1764804575281,
   "endMs" : 0,
-  "durationMs" : 8843
+  "durationMs" : 7811
 }, {
   "processing" : "configuring",
-  "startMs" : 1764701360180,
-  "endMs" : 1764701360738,
-  "durationMs" : 558
+  "startMs" : 1764804575323,
+  "endMs" : 1764804575548,
+  "durationMs" : 225
 }, {
   "processing" : "analysis",
-  "startMs" : 1764701360741,
-  "endMs" : 1764701366732,
-  "durationMs" : 5991
+  "startMs" : 1764804575549,
+  "endMs" : 1764804581728,
+  "durationMs" : 6179
 }, {
   "processing" : "analysis/basic",
-  "startMs" : 1764701360750,
-  "endMs" : 1764701366131,
-  "durationMs" : 5381
+  "startMs" : 1764804575557,
+  "endMs" : 1764804581228,
+  "durationMs" : 5671
 }, {
   "processing" : "analysis/logical decomposition",
-  "startMs" : 1764701366131,
-  "endMs" : 1764701366206,
-  "durationMs" : 75
-}, {
-  "processing" : "analysis/features of interest",
-  "startMs" : 1764701366206,
-  "endMs" : 1764701366245,
-  "durationMs" : 39
-}, {
-  "processing" : "analysis/file size",
-  "startMs" : 1764701366245,
-  "endMs" : 1764701366256,
-  "durationMs" : 11
-}, {
-  "processing" : "analysis/units",
-  "startMs" : 1764701366263,
-  "endMs" : 1764701366422,
-  "durationMs" : 159
-}, {
-  "processing" : "analysis/file history",
-  "startMs" : 1764701366422,
-  "endMs" : 1764701366424,
-  "durationMs" : 2
-}, {
-  "processing" : "analysis/contributors",
-  "startMs" : 1764701366424,
-  "endMs" : 1764701366426,
-  "durationMs" : 2
-}, {
-  "processing" : "analysis/duplication",
-  "startMs" : 1764701366427,
-  "endMs" : 1764701366718,
-  "durationMs" : 291
-}, {
-  "processing" : "analysis/duplication/extracting blocks",
-  "startMs" : 1764701366498,
-  "endMs" : 1764701366558,
-  "durationMs" : 60
-}, {
-  "processing" : "analysis/duplication/getting number of duplicated lines",
-  "startMs" : 1764701366558,
-  "endMs" : 1764701366564,
-  "durationMs" : 6
-}, {
-  "processing" : "analysis/duplication/finding duplicated units",
-  "startMs" : 1764701366564,
-  "endMs" : 1764701366570,
-  "durationMs" : 6
-}, {
-  "processing" : "analysis/duplication/consolidating duplicates",
-  "startMs" : 1764701366571,
-  "endMs" : 1764701366584,
-  "durationMs" : 13
-}, {
-  "processing" : "analysis/duplication/counting duplicates",
-  "startMs" : 1764701366584,
-  "endMs" : 1764701366632,
-  "durationMs" : 48
-}, {
-  "processing" : "analysis/controls",
-  "startMs" : 1764701366718,
-  "endMs" : 1764701366726,
-  "durationMs" : 8
-}, {
-  "processing" : "saving data",
-  "startMs" : 1764701366732,
-  "endMs" : 1764701367820,
-  "durationMs" : 1088
-}, {
-  "processing" : "generating visuals",
-  "startMs" : 1764701367823,
-  "endMs" : 1764701368171,
-  "durationMs" : 348
-}, {
-  "processing" : "reporting",
-  "startMs" : 1764701368173,
-  "endMs" : 1764701368763,
-  "durationMs" : 590
-}, {
-  "processing" : "reporting/basic",
-  "startMs" : 1764701368177,
-  "endMs" : 1764701368311,
-  "durationMs" : 134
-}, {
-  "processing" : "reporting/logical decomposition",
-  "startMs" : 1764701368311,
-  "endMs" : 1764701368333,
-  "durationMs" : 22
-}, {
-  "processing" : "reporting/features of interest",
-  "startMs" : 1764701368333,
-  "endMs" : 1764701368359,
-  "durationMs" : 26
-}, {
-  "processing" : "reporting/duplication",
-  "startMs" : 1764701368359,
-  "endMs" : 1764701368638,
-  "durationMs" : 279
-}, {
-  "processing" : "reporting/duplication/overall",
-  "startMs" : 1764701368361,
-  "endMs" : 1764701368588,
-  "durationMs" : 227
-}, {
-  "processing" : "reporting/duplication/per extension",
-  "startMs" : 1764701368588,
-  "endMs" : 1764701368591,
-  "durationMs" : 3
-}, {
-  "processing" : "reporting/duplication/per logical decomposition",
-  "startMs" : 1764701368591,
-  "endMs" : 1764701368607,
-  "durationMs" : 16
-}, {
-  "processing" : "reporting/duplication/per logical decomposition/1/table",
-  "startMs" : 1764701368593,
-  "endMs" : 1764701368593,
-  "durationMs" : 0
-}, {
-  "processing" : "reporting/duplication/per logical decomposition/1/rendering",
-  "startMs" : 1764701368595,
-  "endMs" : 1764701368607,
+  "startMs" : 1764804581229,
+  "endMs" : 1764804581241,
   "durationMs" : 12
 }, {
-  "processing" : "reporting/duplication/per logical decomposition/1/rendering/extracting dependencies",
-  "startMs" : 1764701368595,
-  "endMs" : 1764701368601,
-  "durationMs" : 6
+  "processing" : "analysis/features of interest",
+  "startMs" : 1764804581241,
+  "endMs" : 1764804581251,
+  "durationMs" : 10
 }, {
-  "processing" : "reporting/duplication/per logical decomposition/1/rendering/updating dependencies",
-  "startMs" : 1764701368603,
-  "endMs" : 1764701368605,
+  "processing" : "analysis/file size",
+  "startMs" : 1764804581252,
+  "endMs" : 1764804581255,
+  "durationMs" : 3
+}, {
+  "processing" : "analysis/units",
+  "startMs" : 1764804581255,
+  "endMs" : 1764804581296,
+  "durationMs" : 41
+}, {
+  "processing" : "analysis/file history",
+  "startMs" : 1764804581296,
+  "endMs" : 1764804581473,
+  "durationMs" : 177
+}, {
+  "processing" : "analysis/contributors",
+  "startMs" : 1764804581473,
+  "endMs" : 1764804581622,
+  "durationMs" : 149
+}, {
+  "processing" : "analysis/contributors/loading",
+  "startMs" : 1764804581475,
+  "endMs" : 1764804581487,
+  "durationMs" : 12
+}, {
+  "processing" : "analysis/contributors/loading/import",
+  "startMs" : 1764804581476,
+  "endMs" : 1764804581486,
+  "durationMs" : 10
+}, {
+  "processing" : "analysis/contributors/loading/ignore filtering",
+  "startMs" : 1764804581486,
+  "endMs" : 1764804581487,
+  "durationMs" : 1
+}, {
+  "processing" : "analysis/contributors/per extension",
+  "startMs" : 1764804581487,
+  "endMs" : 1764804581522,
+  "durationMs" : 35
+}, {
+  "processing" : "analysis/contributors/get people file dependencies",
+  "startMs" : 1764804581522,
+  "endMs" : 1764804581566,
+  "durationMs" : 44
+}, {
+  "processing" : "analysis/contributors/get people file dependencies/30 days",
+  "startMs" : 1764804581523,
+  "endMs" : 1764804581536,
+  "durationMs" : 13
+}, {
+  "processing" : "analysis/contributors/get people file dependencies/90 days",
+  "startMs" : 1764804581537,
+  "endMs" : 1764804581547,
+  "durationMs" : 10
+}, {
+  "processing" : "analysis/contributors/get people file dependencies/180 days",
+  "startMs" : 1764804581548,
+  "endMs" : 1764804581556,
+  "durationMs" : 8
+}, {
+  "processing" : "analysis/contributors/get people file dependencies/365 days",
+  "startMs" : 1764804581556,
+  "endMs" : 1764804581565,
+  "durationMs" : 9
+}, {
+  "processing" : "analysis/contributors/get people dependencies",
+  "startMs" : 1764804581566,
+  "endMs" : 1764804581622,
+  "durationMs" : 56
+}, {
+  "processing" : "analysis/contributors/get people dependencies/30 days",
+  "startMs" : 1764804581566,
+  "endMs" : 1764804581571,
+  "durationMs" : 5
+}, {
+  "processing" : "analysis/contributors/get people dependencies/90 days",
+  "startMs" : 1764804581572,
+  "endMs" : 1764804581589,
+  "durationMs" : 17
+}, {
+  "processing" : "analysis/contributors/get people dependencies/180 days",
+  "startMs" : 1764804581589,
+  "endMs" : 1764804581605,
+  "durationMs" : 16
+}, {
+  "processing" : "analysis/contributors/get people dependencies/365 days",
+  "startMs" : 1764804581606,
+  "endMs" : 1764804581622,
+  "durationMs" : 16
+}, {
+  "processing" : "analysis/duplication",
+  "startMs" : 1764804581622,
+  "endMs" : 1764804581721,
+  "durationMs" : 99
+}, {
+  "processing" : "analysis/duplication/extracting blocks",
+  "startMs" : 1764804581644,
+  "endMs" : 1764804581662,
+  "durationMs" : 18
+}, {
+  "processing" : "analysis/duplication/getting number of duplicated lines",
+  "startMs" : 1764804581663,
+  "endMs" : 1764804581664,
+  "durationMs" : 1
+}, {
+  "processing" : "analysis/duplication/finding duplicated units",
+  "startMs" : 1764804581665,
+  "endMs" : 1764804581667,
   "durationMs" : 2
 }, {
+  "processing" : "analysis/duplication/consolidating duplicates",
+  "startMs" : 1764804581667,
+  "endMs" : 1764804581670,
+  "durationMs" : 3
+}, {
+  "processing" : "analysis/duplication/counting duplicates",
+  "startMs" : 1764804581670,
+  "endMs" : 1764804581686,
+  "durationMs" : 16
+}, {
+  "processing" : "analysis/controls",
+  "startMs" : 1764804581722,
+  "endMs" : 1764804581727,
+  "durationMs" : 5
+}, {
+  "processing" : "saving data",
+  "startMs" : 1764804581728,
+  "endMs" : 1764804582193,
+  "durationMs" : 465
+}, {
+  "processing" : "generating visuals",
+  "startMs" : 1764804582193,
+  "endMs" : 1764804582270,
+  "durationMs" : 77
+}, {
+  "processing" : "reporting",
+  "startMs" : 1764804582271,
+  "endMs" : 1764804582959,
+  "durationMs" : 688
+}, {
+  "processing" : "reporting/basic",
+  "startMs" : 1764804582273,
+  "endMs" : 1764804582310,
+  "durationMs" : 37
+}, {
+  "processing" : "reporting/logical decomposition",
+  "startMs" : 1764804582311,
+  "endMs" : 1764804582346,
+  "durationMs" : 35
+}, {
+  "processing" : "reporting/features of interest",
+  "startMs" : 1764804582346,
+  "endMs" : 1764804582350,
+  "durationMs" : 4
+}, {
+  "processing" : "reporting/duplication",
+  "startMs" : 1764804582350,
+  "endMs" : 1764804582419,
+  "durationMs" : 69
+}, {
+  "processing" : "reporting/duplication/overall",
+  "startMs" : 1764804582351,
+  "endMs" : 1764804582405,
+  "durationMs" : 54
+}, {
+  "processing" : "reporting/duplication/per extension",
+  "startMs" : 1764804582406,
+  "endMs" : 1764804582407,
+  "durationMs" : 1
+}, {
+  "processing" : "reporting/duplication/per logical decomposition",
+  "startMs" : 1764804582407,
+  "endMs" : 1764804582411,
+  "durationMs" : 4
+}, {
+  "processing" : "reporting/duplication/per logical decomposition/1/table",
+  "startMs" : 1764804582407,
+  "endMs" : 1764804582408,
+  "durationMs" : 1
+}, {
+  "processing" : "reporting/duplication/per logical decomposition/1/rendering",
+  "startMs" : 1764804582408,
+  "endMs" : 1764804582411,
+  "durationMs" : 3
+}, {
+  "processing" : "reporting/duplication/per logical decomposition/1/rendering/extracting dependencies",
+  "startMs" : 1764804582408,
+  "endMs" : 1764804582409,
+  "durationMs" : 1
+}, {
+  "processing" : "reporting/duplication/per logical decomposition/1/rendering/updating dependencies",
+  "startMs" : 1764804582410,
+  "endMs" : 1764804582410,
+  "durationMs" : 0
+}, {
   "processing" : "reporting/duplication/per logical decomposition/1/rendering/rendering",
-  "startMs" : 1764701368607,
-  "endMs" : 1764701368607,
+  "startMs" : 1764804582410,
+  "endMs" : 1764804582410,
   "durationMs" : 0
 }, {
   "processing" : "reporting/duplication/longest duplicates",
-  "startMs" : 1764701368610,
-  "endMs" : 1764701368636,
-  "durationMs" : 26
-}, {
-  "processing" : "reporting/duplication/duplicated units",
-  "startMs" : 1764701368636,
-  "endMs" : 1764701368638,
-  "durationMs" : 2
-}, {
-  "processing" : "reporting/file size",
-  "startMs" : 1764701368638,
-  "endMs" : 1764701368716,
-  "durationMs" : 78
-}, {
-  "processing" : "reporting/file size/overall",
-  "startMs" : 1764701368647,
-  "endMs" : 1764701368663,
-  "durationMs" : 16
-}, {
-  "processing" : "reporting/file size/per extension",
-  "startMs" : 1764701368663,
-  "endMs" : 1764701368670,
+  "startMs" : 1764804582411,
+  "endMs" : 1764804582418,
   "durationMs" : 7
 }, {
-  "processing" : "reporting/file size/per logical component",
-  "startMs" : 1764701368672,
-  "endMs" : 1764701368674,
-  "durationMs" : 2
-}, {
-  "processing" : "reporting/file size/longest files",
-  "startMs" : 1764701368675,
-  "endMs" : 1764701368694,
-  "durationMs" : 19
-}, {
-  "processing" : "reporting/file size/files with most units",
-  "startMs" : 1764701368694,
-  "endMs" : 1764701368697,
-  "durationMs" : 3
-}, {
-  "processing" : "reporting/file size/files with most long lines",
-  "startMs" : 1764701368697,
-  "endMs" : 1764701368716,
-  "durationMs" : 19
-}, {
-  "processing" : "reporting/unit size",
-  "startMs" : 1764701368718,
-  "endMs" : 1764701368735,
-  "durationMs" : 17
-}, {
-  "processing" : "reporting/conditional complexity",
-  "startMs" : 1764701368735,
-  "endMs" : 1764701368740,
-  "durationMs" : 5
-}, {
-  "processing" : "reporting/findings",
-  "startMs" : 1764701368741,
-  "endMs" : 1764701368743,
-  "durationMs" : 2
-}, {
-  "processing" : "reporting/metrics",
-  "startMs" : 1764701368746,
-  "endMs" : 1764701368752,
-  "durationMs" : 6
-}, {
-  "processing" : "reporting/trend",
-  "startMs" : 1764701368754,
-  "endMs" : 1764701368757,
-  "durationMs" : 3
-}, {
-  "processing" : "reporting/controls",
-  "startMs" : 1764701368757,
-  "endMs" : 1764701368763,
-  "durationMs" : 6
-}, {
-  "processing" : "saving report",
-  "startMs" : 1764701368763,
-  "endMs" : 1764701368936,
-  "durationMs" : 173
-}, {
-  "processing" : "saving report/source code overview",
-  "startMs" : 1764701368765,
-  "endMs" : 1764701368780,
-  "durationMs" : 15
-}, {
-  "processing" : "saving report/components",
-  "startMs" : 1764701368780,
-  "endMs" : 1764701368783,
-  "durationMs" : 3
-}, {
-  "processing" : "saving report/static component dependencies",
-  "startMs" : 1764701368783,
-  "endMs" : 1764701368785,
-  "durationMs" : 2
-}, {
-  "processing" : "saving report/duplication",
-  "startMs" : 1764701368787,
-  "endMs" : 1764701368801,
-  "durationMs" : 14
-}, {
-  "processing" : "saving report/file size",
-  "startMs" : 1764701368801,
-  "endMs" : 1764701368806,
-  "durationMs" : 5
-}, {
-  "processing" : "saving report/unit size",
-  "startMs" : 1764701368808,
-  "endMs" : 1764701368810,
-  "durationMs" : 2
-}, {
-  "processing" : "saving report/conditional complexity",
-  "startMs" : 1764701368812,
-  "endMs" : 1764701368812,
+  "processing" : "reporting/duplication/duplicated units",
+  "startMs" : 1764804582418,
+  "endMs" : 1764804582418,
   "durationMs" : 0
 }, {
-  "processing" : "saving report/features of interest",
-  "startMs" : 1764701368812,
-  "endMs" : 1764701368816,
+  "processing" : "reporting/file size",
+  "startMs" : 1764804582419,
+  "endMs" : 1764804582505,
+  "durationMs" : 86
+}, {
+  "processing" : "reporting/file size/overall",
+  "startMs" : 1764804582421,
+  "endMs" : 1764804582426,
+  "durationMs" : 5
+}, {
+  "processing" : "reporting/file size/per extension",
+  "startMs" : 1764804582426,
+  "endMs" : 1764804582428,
+  "durationMs" : 2
+}, {
+  "processing" : "reporting/file size/per logical component",
+  "startMs" : 1764804582428,
+  "endMs" : 1764804582429,
+  "durationMs" : 1
+}, {
+  "processing" : "reporting/file size/longest files",
+  "startMs" : 1764804582429,
+  "endMs" : 1764804582436,
+  "durationMs" : 7
+}, {
+  "processing" : "reporting/file size/files with most units",
+  "startMs" : 1764804582437,
+  "endMs" : 1764804582438,
+  "durationMs" : 1
+}, {
+  "processing" : "reporting/file size/files with most long lines",
+  "startMs" : 1764804582438,
+  "endMs" : 1764804582442,
   "durationMs" : 4
+}, {
+  "processing" : "reporting/file size/correlations",
+  "startMs" : 1764804582443,
+  "endMs" : 1764804582504,
+  "durationMs" : 61
+}, {
+  "processing" : "reporting/file age",
+  "startMs" : 1764804582506,
+  "endMs" : 1764804582523,
+  "durationMs" : 17
+}, {
+  "processing" : "reporting/file change frequency",
+  "startMs" : 1764804582524,
+  "endMs" : 1764804582545,
+  "durationMs" : 21
+}, {
+  "processing" : "reporting/file update frequency/correlations",
+  "startMs" : 1764804582537,
+  "endMs" : 1764804582544,
+  "durationMs" : 7
+}, {
+  "processing" : "reporting/temporal dependencies",
+  "startMs" : 1764804582545,
+  "endMs" : 1764804582624,
+  "durationMs" : 79
+}, {
+  "processing" : "reporting/temporal dependencies/extract dependencies",
+  "startMs" : 1764804582548,
+  "endMs" : 1764804582549,
+  "durationMs" : 1
+}, {
+  "processing" : "reporting/temporal dependencies/graphviz",
+  "startMs" : 1764804582549,
+  "endMs" : 1764804582554,
+  "durationMs" : 5
+}, {
+  "processing" : "reporting/temporal dependencies/extract dependencies with commits",
+  "startMs" : 1764804582554,
+  "endMs" : 1764804582555,
+  "durationMs" : 1
+}, {
+  "processing" : "reporting/temporal dependencies/export graph",
+  "startMs" : 1764804582555,
+  "endMs" : 1764804582557,
+  "durationMs" : 2
+}, {
+  "processing" : "reporting/temporal dependencies/graphviz",
+  "startMs" : 1764804582558,
+  "endMs" : 1764804582560,
+  "durationMs" : 2
+}, {
+  "processing" : "reporting/temporal dependencies/extract dependencies",
+  "startMs" : 1764804582561,
+  "endMs" : 1764804582564,
+  "durationMs" : 3
+}, {
+  "processing" : "reporting/temporal dependencies/graphviz",
+  "startMs" : 1764804582564,
+  "endMs" : 1764804582578,
+  "durationMs" : 14
+}, {
+  "processing" : "reporting/temporal dependencies/extract dependencies with commits",
+  "startMs" : 1764804582578,
+  "endMs" : 1764804582581,
+  "durationMs" : 3
+}, {
+  "processing" : "reporting/temporal dependencies/export graph",
+  "startMs" : 1764804582581,
+  "endMs" : 1764804582587,
+  "durationMs" : 6
+}, {
+  "processing" : "reporting/temporal dependencies/graphviz",
+  "startMs" : 1764804582588,
+  "endMs" : 1764804582591,
+  "durationMs" : 3
+}, {
+  "processing" : "reporting/temporal dependencies/extract dependencies",
+  "startMs" : 1764804582592,
+  "endMs" : 1764804582593,
+  "durationMs" : 1
+}, {
+  "processing" : "reporting/temporal dependencies/graphviz",
+  "startMs" : 1764804582594,
+  "endMs" : 1764804582604,
+  "durationMs" : 10
+}, {
+  "processing" : "reporting/temporal dependencies/extract dependencies with commits",
+  "startMs" : 1764804582604,
+  "endMs" : 1764804582609,
+  "durationMs" : 5
+}, {
+  "processing" : "reporting/temporal dependencies/export graph",
+  "startMs" : 1764804582610,
+  "endMs" : 1764804582618,
+  "durationMs" : 8
+}, {
+  "processing" : "reporting/temporal dependencies/graphviz",
+  "startMs" : 1764804582620,
+  "endMs" : 1764804582624,
+  "durationMs" : 4
+}, {
+  "processing" : "reporting/commits",
+  "startMs" : 1764804582625,
+  "endMs" : 1764804582658,
+  "durationMs" : 33
+}, {
+  "processing" : "reporting/contributors",
+  "startMs" : 1764804582659,
+  "endMs" : 1764804582946,
+  "durationMs" : 287
+}, {
+  "processing" : "reporting/unit size",
+  "startMs" : 1764804582947,
+  "endMs" : 1764804582950,
+  "durationMs" : 3
+}, {
+  "processing" : "reporting/conditional complexity",
+  "startMs" : 1764804582951,
+  "endMs" : 1764804582952,
+  "durationMs" : 1
+}, {
+  "processing" : "reporting/findings",
+  "startMs" : 1764804582952,
+  "endMs" : 1764804582953,
+  "durationMs" : 1
+}, {
+  "processing" : "reporting/metrics",
+  "startMs" : 1764804582953,
+  "endMs" : 1764804582955,
+  "durationMs" : 2
+}, {
+  "processing" : "reporting/trend",
+  "startMs" : 1764804582956,
+  "endMs" : 1764804582957,
+  "durationMs" : 1
+}, {
+  "processing" : "reporting/controls",
+  "startMs" : 1764804582957,
+  "endMs" : 1764804582958,
+  "durationMs" : 1
+}, {
+  "processing" : "saving report",
+  "startMs" : 1764804582959,
+  "endMs" : 1764804583091,
+  "durationMs" : 132
+}, {
+  "processing" : "saving report/source code overview",
+  "startMs" : 1764804582960,
+  "endMs" : 1764804582967,
+  "durationMs" : 7
+}, {
+  "processing" : "saving report/components",
+  "startMs" : 1764804582968,
+  "endMs" : 1764804582973,
+  "durationMs" : 5
+}, {
+  "processing" : "saving report/static component dependencies",
+  "startMs" : 1764804582973,
+  "endMs" : 1764804582974,
+  "durationMs" : 1
+}, {
+  "processing" : "saving report/duplication",
+  "startMs" : 1764804582974,
+  "endMs" : 1764804582977,
+  "durationMs" : 3
+}, {
+  "processing" : "saving report/file size",
+  "startMs" : 1764804582977,
+  "endMs" : 1764804582979,
+  "durationMs" : 2
+}, {
+  "processing" : "saving report/file age & freshness",
+  "startMs" : 1764804582979,
+  "endMs" : 1764804582982,
+  "durationMs" : 3
+}, {
+  "processing" : "saving report/file change frequency",
+  "startMs" : 1764804582983,
+  "endMs" : 1764804582985,
+  "durationMs" : 2
+}, {
+  "processing" : "saving report/temporal dependencies",
+  "startMs" : 1764804582985,
+  "endMs" : 1764804583009,
+  "durationMs" : 24
+}, {
+  "processing" : "saving report/commits",
+  "startMs" : 1764804583009,
+  "endMs" : 1764804583012,
+  "durationMs" : 3
+}, {
+  "processing" : "saving report/contributors",
+  "startMs" : 1764804583012,
+  "endMs" : 1764804583028,
+  "durationMs" : 16
+}, {
+  "processing" : "saving report/unit size",
+  "startMs" : 1764804583029,
+  "endMs" : 1764804583030,
+  "durationMs" : 1
+}, {
+  "processing" : "saving report/conditional complexity",
+  "startMs" : 1764804583030,
+  "endMs" : 1764804583031,
+  "durationMs" : 1
+}, {
+  "processing" : "saving report/features of interest",
+  "startMs" : 1764804583032,
+  "endMs" : 1764804583033,
+  "durationMs" : 1
 }, {
   "processing" : "saving report/notes & findings",
-  "startMs" : 1764701368816,
-  "endMs" : 1764701368819,
-  "durationMs" : 3
+  "startMs" : 1764804583033,
+  "endMs" : 1764804583034,
+  "durationMs" : 1
 }, {
   "processing" : "saving report/metrics",
-  "startMs" : 1764701368819,
-  "endMs" : 1764701368823,
-  "durationMs" : 4
+  "startMs" : 1764804583035,
+  "endMs" : 1764804583036,
+  "durationMs" : 1
 }, {
   "processing" : "saving report/trend",
-  "startMs" : 1764701368823,
-  "endMs" : 1764701368826,
-  "durationMs" : 3
+  "startMs" : 1764804583036,
+  "endMs" : 1764804583037,
+  "durationMs" : 1
 }, {
   "processing" : "saving report/goals & controls",
-  "startMs" : 1764701368826,
-  "endMs" : 1764701368829,
-  "durationMs" : 3
+  "startMs" : 1764804583037,
+  "endMs" : 1764804583038,
+  "durationMs" : 1
 }, {
   "processing" : "saving report/index",
-  "startMs" : 1764701368829,
-  "endMs" : 1764701368924,
-  "durationMs" : 95
+  "startMs" : 1764804583038,
+  "endMs" : 1764804583087,
+  "durationMs" : 49
 }, {
   "processing" : "saving report/explorer",
-  "startMs" : 1764701368924,
-  "endMs" : 1764701368936,
-  "durationMs" : 12
+  "startMs" : 1764804583087,
+  "endMs" : 1764804583091,
+  "durationMs" : 4
 } ]

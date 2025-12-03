@@ -12,12 +12,12 @@
     </style>
 </head>
 <body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
-<h3 style="margin-bottom: 0">frontend/src/components/Login.jsx (<b>76</b> lines of code) (<a href="Login.jsx">raw</a>):</h3>
+<h3 style="margin-bottom: 0">frontend/src/components/Login.jsx (<b>77</b> lines of code) (<a href="Login.jsx">raw</a>):</h3>
 <div id="editor">import React, { useState, useContext } from &quot;react&quot;;
 import &quot;../styles/Login.css&quot;;
 import { AuthContext } from &quot;./AuthContext/auth-context&quot;;
 import { useNavigate } from &quot;react-router-dom&quot;;
-
+import &quot;../styles/global.css&quot;;
 function Login() {
   const [formData, setFormData] = useState({ username: &quot;&quot;, password: &quot;&quot; });
   const { login } = useContext(AuthContext);
@@ -68,7 +68,7 @@ function Login() {
   };
 
   return (
-    &lt;div className=&quot;login-container&quot;&gt;
+    &lt;div className=&quot;project-container&quot;&gt;
       &lt;h2&gt;Connexion&lt;/h2&gt;
       &lt;form onSubmit={handleSubmit} className=&quot;login-form&quot;&gt;
         {/*Quand le formulaire est soumis, appeler handleSubmit*/}
