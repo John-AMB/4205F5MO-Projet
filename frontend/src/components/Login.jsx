@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import "../styles/Login.css";
 import { AuthContext } from "./AuthContext/auth-context";
 import { useNavigate } from "react-router-dom";
-
+import "../styles/global.css";
 function Login() {
   const [formData, setFormData] = useState({ username: "", password: "" });
   const { login } = useContext(AuthContext);
@@ -53,7 +53,7 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
+    <div className="project-container">
       <h2>Connexion</h2>
       <form onSubmit={handleSubmit} className="login-form">
         {/*Quand le formulaire est soumis, appeler handleSubmit*/}

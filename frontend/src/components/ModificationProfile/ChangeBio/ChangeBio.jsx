@@ -2,7 +2,7 @@ import "./ChangeBio.css";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthContext/auth-context";
 import { useNavigate } from "react-router-dom";
-
+import "../../../styles/global.css";
 const ChangeBio = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ const ChangeBio = () => {
   };
 
   return (
-    <div className="change-bio-container">
+    <div className="project-container">
       <h2>Change Bio</h2>
       <form onSubmit={handleSubmit}>
         <textarea value={bio} onChange={handleChange} rows={4} />
