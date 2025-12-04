@@ -1,0 +1,237 @@
+<html>
+<head>
+    <title>backend/controllers/userController.js</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">backend/controllers/userController.js (<b>171</b> lines of code) (<a href="userController.js">raw</a>):</h3>
+<div id="editor">// controllers/userController.js
+const User = require(&quot;../models/userModel&quot;);
+const streamifier = require(&quot;streamifier&quot;);
+const cloudinary = require(&quot;../cloudinaryConfig&quot;);
+
+const uploadFromBuffer = (buffer) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    const stream = cloudinary.uploader.upload_stream((error, result) =&gt; {
+      if (result) resolve(result);
+      else reject(error);
+    });
+    streamifier.createReadStream(buffer).pipe(stream);
+  });
+};
+
+const changeProfilePhoto = async (req, res) =&gt; {
+  try {
+    const { userId } = req.body;
+    if (!userId) {
+      return res.status(400).json({ error: &quot;User ID requis&quot; });
+    }
+
+    let photoUrl = null;
+
+    if (!req.file) return res.status(400).json({ error: &quot;No file uploaded&quot; });
+
+    const result = await uploadFromBuffer(req.file.buffer);
+    const updatedUser = await User.updateProfilePhoto(
+      userId,
+      result.secure_url
+    );
+
+    res.json({
+      message: &quot;Photo de profil mise &agrave; jour avec succ&egrave;s&quot;,
+      user: updatedUser,
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+// Get all users
+const getUsers = async (req, res) =&gt; {
+  try {
+    const users = await User.getAllUsers();
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+// Get one user
+const getUser = async (req, res) =&gt; {
+  const id = req.params.id;
+  try {
+    const user = await User.getUserById(id);
+    if (!user)
+      return res.status(404).json({ message: &quot;Utilisateur non trouv&eacute;&quot; });
+    res.json(user);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+// Create a user
+const createUser = async (req, res) =&gt; {
+  const { username, password, bio } = req.body;
+
+  if (!username || !password) {
+    return res
+      .status(400)
+      .json({ message: &quot;Nom d'utilisateur et mot de passe requis&quot; });
+  }
+
+  try {
+    const newUser = await User.createUser({ username, password, bio });
+    res.status(201).json({ message: &quot;Utilisateur cr&eacute;&eacute;&quot;, user: newUser });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+//methode qui connecte une user
+const loginUser = async (req, res) =&gt; {
+  const { username, password } = req.body;
+
+  //lorsque username OU password = null
+  if (!username || !password) {
+    return res
+      .status(400)
+      .json({ message: &quot;Nom d'utilisateur et mot de passe requis&quot; });
+  }
+
+  try {
+    //methode dans userModel.js
+    const user = await User.findByUsernameAndPassword(username, password);
+    if (!user) {
+      return res.status(401).json({ message: &quot;Identifiants incorrects&quot; });
+    }
+    res.json({
+      message: &quot;Connexion r&eacute;ussie&quot;,
+      user,
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+const changePassword = async (req, res) =&gt; {
+  const { userId, oldPassword, newPassword } = req.body;
+
+  //check si les champs requis sont fournis
+  if (!userId || !oldPassword || !newPassword) {
+    return res
+      .status(400)
+      .json({ success: false, message: &quot;Champs requis manquants&quot; });
+  }
+  try {
+    //verifie si l'ancien mot de passe correspond au mot de passe stocke dans la db
+    const user = await User.verifyOldPassword(userId, oldPassword);
+    if (!user) {
+      return res
+        .status(401)
+        .json({ success: false, message: &quot;Ancien mot de passe incorrect&quot; });
+    }
+
+    await User.updatePassword(userId, newPassword);
+    res.json({
+      success: true,
+      message: &quot;Mot de passe mis &agrave; jour avec succ&egrave;s&quot;,
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
+
+const changeBio = async (req, res) =&gt; {
+  const { userId, bio } = req.body;
+
+  // Check if userId and bio are provided
+  if (!userId || bio == undefined) {
+    return res
+      .status(400)
+      .json({ success: false, message: &quot;Champs requis manquants&quot; });
+  }
+  try {
+    // Update the user's bio in the database
+    const updatedUser = await User.updateBio(userId, bio);
+    res.json({
+      success: true,
+      user: updatedUser,
+      message: &quot;Bio mise &agrave; jour avec succ&egrave;s&quot;,
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
+
+const deleteAccount = async (req, res) =&gt; {
+  const { userId, username, confirmUsername } = req.body;
+
+  //assure que tous les champs requis sont fournis
+  if (!userId || !username || !confirmUsername) {
+    return res
+      .status(400)
+      .json({ success: false, message: &quot;Champs requis manquants&quot; });
+  }
+
+  //verifie que les noms d'utilisateur correspondent
+  if (username !== confirmUsername) {
+    return res.status(400).json({
+      success: false,
+      message: &quot;Les noms d'utilisateur ne correspondent pas&quot;,
+    });
+  }
+
+  try {
+    //verifie que le nom d'utilisateur correspond a l'id de l'utilisateur
+    const user = await User.getUserById(userId);
+    if (!user) {
+      return res
+        .status(404)
+        .json({ success: false, message: &quot;Utilisateur non trouv&eacute;&quot; });
+    }
+    if (user.username !== username) {
+      return res
+        .status(403)
+        .json({ success: false, message: &quot;Nom d'utilisateur incorrect&quot; });
+    }
+
+    //supprime l'utilisateur
+    await User.deleteUser(userId);
+    res.json({
+      success: true,
+      message: &quot;Compte supprim&eacute; avec succ&egrave;s&quot;,
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
+
+module.exports = {
+  getUsers,
+  getUser,
+  createUser,
+  loginUser,
+  changePassword,
+  changeBio,
+  changeProfilePhoto,
+  deleteAccount,
+};
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/javascript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

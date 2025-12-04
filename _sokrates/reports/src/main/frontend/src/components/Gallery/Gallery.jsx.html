@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>frontend/src/components/Gallery/Gallery.jsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">frontend/src/components/Gallery/Gallery.jsx (<b>37</b> lines of code) (<a href="Gallery.jsx">raw</a>):</h3>
+<div id="editor">import { useEffect, useState } from &quot;react&quot;;
+import GalleryItem from &quot;../GalleyItem/GalleryItem&quot;;
+import &quot;./Gallery.css&quot;;
+import Header from &quot;../Header/Header&quot;;
+const Gallery = () =&gt; {
+  const [ideas, setIdeas] = useState([]);
+  const [searchTerm, setSearchTerm] = useState(&quot;&quot;);
+  const fetchIdeas = () =&gt; {
+    fetch(`${import.meta.env.VITE_API_URL}/ideas`)
+      .then((res) =&gt; res.json())
+      .then((data) =&gt; setIdeas(data))
+      .catch(console.error);
+  };
+
+  useEffect(() =&gt; {
+    fetchIdeas();
+  }, []);
+  const filteredIdeas = ideas.filter(
+    (idea) =&gt;
+      idea.titre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      idea.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  return (
+    &lt;&gt;
+      &lt;Header onSearchChange={setSearchTerm} /&gt;
+      &lt;div className=&quot;gallery&quot;&gt;
+        {filteredIdeas.length &gt; 0 ? (
+          filteredIdeas.map((item) =&gt; (
+            &lt;GalleryItem key={item.id} item={item} refreshIdeas={fetchIdeas} /&gt;
+          ))
+        ) : (
+          &lt;p className=&quot;noResults&quot;&gt;No results found :(&lt;/p&gt;
+        )}
+      &lt;/div&gt;
+    &lt;/&gt;
+  );
+};
+
+export default Gallery;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/html");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

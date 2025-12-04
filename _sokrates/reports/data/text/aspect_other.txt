@@ -1,0 +1,11 @@
+Path	Lines of Code
+backend/package-lock.json	1603
+backend/package.json	28
+frontend/README.md	7
+frontend/package-lock.json	2652
+frontend/package.json	30
+frontend/public/general/arrow.svg	4
+frontend/public/general/more.svg	5
+frontend/public/general/search.svg	11
+frontend/src/data/ideas.json	33
+note.txt	31

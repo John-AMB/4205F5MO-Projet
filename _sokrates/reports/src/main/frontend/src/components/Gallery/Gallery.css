@@ -1,0 +1,14 @@
+.gallery {
+  column-count: 6;
+  column-gap: 16px;
+  margin-top: 200px;
+}
+.noResults {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 46%;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: #666;
+}

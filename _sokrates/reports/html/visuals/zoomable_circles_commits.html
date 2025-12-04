@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+    .node {
+        cursor: pointer;
+    }
+
+    .node:hover {
+        stroke: #000;
+        stroke-width: 1.5px;
+    }
+
+    .node--leaf {
+        fill: white;
+    }
+
+    .label {
+        font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-anchor: middle;
+        text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+    }
+
+    .label,
+    .node--root,
+    .node--leaf {
+        pointer-events: none;
+    }
+
+</style>
+<svg width="960" height="960"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+    var svg = d3.select("svg"),
+        margin = 20,
+        diameter = +svg.attr("width"),
+        g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+
+    var color = d3.scaleLinear()
+        .domain([-1, 5])
+        .range(["hsl(152,80%,100%)", "hsl(228,30%,40%)"])
+        .interpolate(d3.interpolateHcl);
+
+    var pack = d3.pack()
+        .size([diameter - margin, diameter - margin])
+        .padding(2);
+
+
+    var root = {
+        "name": "cluster",
+        "children": [ {
+  "name" : "backend",
+  "color" : "",
+  "size" : 0,
+  "children" : [ {
+    "name" : "cloudinaryConfig.js (2)",
+    "color" : "",
+    "size" : 2,
+    "children" : [ ]
+  }, {
+    "name" : "controllers",
+    "color" : "",
+    "size" : 0,
+    "children" : [ {
+      "name" : "ideaController.js (6)",
+      "color" : "",
+      "size" : 6,
+      "children" : [ ]
+    }, {
+      "name" : "userController.js (15)",
+      "color" : "",
+      "size" : 15,
+      "children" : [ ]
+    } ]
+  }, {
+    "name" : "index.js (14)",
+    "color" : "",
+    "size" : 14,
+    "children" : [ ]
+  }, {
+    "name" : "models",
+    "color" : "",
+    "size" : 0,
+    "children" : [ {
+      "name" : "ideaModel.js (5)",
+      "color" : "",
+      "size" : 5,
+      "children" : [ ]
+    }, {
+      "name" : "userModel.js (18)",
+      "color" : "",
+      "size" : 18,
+      "children" : [ ]
+    } ]
+  }, {
+    "name" : "routes",
+    "color" : "",
+    "size" : 0,
+    "children" : [ {
+      "name" : "commentsLikesRoutes.js (2)",
+      "color" : "",
+      "size" : 2,
+      "children" : [ ]
+    }, {
+      "name" : "ideaRoutes.js (3)",
+      "color" : "",
+      "size" : 3,
+      "children" : [ ]
+    }, {
+      "name" : "userRoutes.js (11)",
+      "color" : "",
+      "size" : 11,
+      "children" : [ ]
+    } ]
+  }, {
+    "name" : "supabaseClient.js (2)",
+    "color" : "",
+    "size" : 2,
+    "children" : [ ]
+  }, {
+    "name" : "testDB.js (3)",
+    "color" : "",
+    "size" : 3,
+    "children" : [ ]
+  } ]
+}, {
+  "name" : "database",
+  "color" : "",
+  "size" : 0,
+  "children" : [ {
+    "name" : "cweeterie.sql (6)",
+    "color" : "",
+    "size" : 6,
+    "children" : [ ]
+  }, {
+    "name" : "cweeterie_Old.sql (2)",
+    "color" : "",
+    "size" : 2,
+    "children" : [ ]
+  } ]
+}, {
+  "name" : "frontend",
+  "color" : "",
+  "size" : 0,
+  "children" : [ {
+    "name" : "createClient.js (2)",
+    "color" : "",
+    "size" : 2,
+    "children" : [ ]
+  }, {
+    "name" : "eslint.config.js (2)",
+    "color" : "",
+    "size" : 2,
+    "children" : [ ]
+  }, {
+    "name" : "index.html (6)",
+    "color" : "",
+    "size" : 6,
+    "children" : [ ]
+  }, {
+    "name" : "src",
+    "color" : "",
+    "size" : 0,
+    "children" : [ {
+      "name" : "App.css (8)",
+      "color" : "",
+      "size" : 8,
+      "children" : [ ]
+    }, {
+      "name" : "App.jsx (27)",
+      "color" : "",
+      "size" : 27,
+      "children" : [ ]
+    }, {
+      "name" : "components",
+      "color" : "",
+      "size" : 0,
+      "children" : [ {
+        "name" : "AuthContext",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "auth-context.jsx (6)",
+          "color" : "",
+          "size" : 6,
+          "children" : [ ]
+        }, {
+          "name" : "authProvider.jsx (5)",
+          "color" : "",
+          "size" : 5,
+          "children" : [ ]
+        } ]
+      }, {
+        "name" : "Containers",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "ErrorPage.jsx (3)",
+          "color" : "",
+          "size" : 3,
+          "children" : [ ]
+        }, {
+          "name" : "Roots.jsx (3)",
+          "color" : "",
+          "size" : 3,
+          "children" : [ ]
+        } ]
+      }, {
+        "name" : "CreateItem",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "CreateItem.css (7)",
+          "color" : "",
+          "size" : 7,
+          "children" : [ ]
+        }, {
+          "name" : "CreateItem.jsx (11)",
+          "color" : "",
+          "size" : 11,
+          "children" : [ ]
+        } ]
+      }, {
+        "name" : "EditIdeaPortal",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "EditIdeaPortal.jsx (2)",
+          "color" : "",
+          "size" : 2,
+          "children" : [ ]
+        } ]
+      }, {
+        "name" : "Gallery",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "Gallery.css (7)",
+          "color" : "",
+          "size" : 7,
+          "children" : [ ]
+        }, {
+          "name" : "Gallery.jsx (15)",
+          "color" : "",
+          "size" : 15,
+          "children" : [ ]
+        } ]
+      }, {
+        "name" : "GalleyItem",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "GalleryItem.css (13)",
+          "color" : "",
+          "size" : 13,
+          "children" : [ ]
+        }, {
+          "name" : "GalleryItem.jsx (14)",
+          "color" : "",
+          "size" : 14,
+          "children" : [ ]
+        } ]
+      }, {
+        "name" : "Header",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "Header.css (7)",
+          "color" : "",
+          "size" : 7,
+          "children" : [ ]
+        }, {
+          "name" : "Header.jsx (12)",
+          "color" : "",
+          "size" : 12,
+          "children" : [ ]
+        } ]
+      }, {
+        "name" : "Inscription.jsx (8)",
+        "color" : "",
+        "size" : 8,
+        "children" : [ ]
+      }, {
+        "name" : "LanguageSelector",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "LanguageSelector.css (3)",
+          "color" : "",
+          "size" : 3,
+          "children" : [ ]
+        }, {
+          "name" : "LanguageSelector.jsx (5)",
+          "color" : "",
+          "size" : 5,
+          "children" : [ ]
+        } ]
+      }, {
+        "name" : "Login.jsx (12)",
+        "color" : "",
+        "size" : 12,
+        "children" : [ ]
+      }, {
+        "name" : "Logout.jsx (4)",
+        "color" : "",
+        "size" : 4,
+        "children" : [ ]
+      }, {
+        "name" : "ModificationProfile",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "ChangeBio",
+          "color" : "",
+          "size" : 0,
+          "children" : [ {
+            "name" : "ChangeBio.css (4)",
+            "color" : "",
+            "size" : 4,
+            "children" : [ ]
+          }, {
+            "name" : "ChangeBio.jsx (5)",
+            "color" : "",
+            "size" : 5,
+            "children" : [ ]
+          } ]
+        }, {
+          "name" : "ChangePassword",
+          "color" : "",
+          "size" : 0,
+          "children" : [ {
+            "name" : "ChangePassword.css (4)",
+            "color" : "",
+            "size" : 4,
+            "children" : [ ]
+          }, {
+            "name" : "ChangePassword.jsx (5)",
+            "color" : "",
+            "size" : 5,
+            "children" : [ ]
+          } ]
+        }, {
+          "name" : "ChangePhoto",
+          "color" : "",
+          "size" : 0,
+          "children" : [ {
+            "name" : "ChangePhoto.css (4)",
+            "color" : "",
+            "size" : 4,
+            "children" : [ ]
+          }, {
+            "name" : "ChangePhoto.jsx (6)",
+            "color" : "",
+            "size" : 6,
+            "children" : [ ]
+          } ]
+        }, {
+          "name" : "ModificationProfile.css (5)",
+          "color" : "",
+          "size" : 5,
+          "children" : [ ]
+        }, {
+          "name" : "ModificationProfile.jsx (9)",
+          "color" : "",
+          "size" : 9,
+          "children" : [ ]
+        }, {
+          "name" : "SupprimeAccount",
+          "color" : "",
+          "size" : 0,
+          "children" : [ {
+            "name" : "SupprimeAccount.css (4)",
+            "color" : "",
+            "size" : 4,
+            "children" : [ ]
+          }, {
+            "name" : "SupprimeAccount.jsx (6)",
+            "color" : "",
+            "size" : 6,
+            "children" : [ ]
+          } ]
+        } ]
+      }, {
+        "name" : "SingleItem",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "SingleItem.css (5)",
+          "color" : "",
+          "size" : 5,
+          "children" : [ ]
+        }, {
+          "name" : "SingleItem.jsx (13)",
+          "color" : "",
+          "size" : 13,
+          "children" : [ ]
+        } ]
+      }, {
+        "name" : "UserButton",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "UserButton.css (8)",
+          "color" : "",
+          "size" : 8,
+          "children" : [ ]
+        }, {
+          "name" : "UserButton.jsx (15)",
+          "color" : "",
+          "size" : 15,
+          "children" : [ ]
+        } ]
+      }, {
+        "name" : "UserOptionsPortal",
+        "color" : "",
+        "size" : 0,
+        "children" : [ {
+          "name" : "UserOptionsPortal.jsx (2)",
+          "color" : "",
+          "size" : 2,
+          "children" : [ ]
+        } ]
+      }, {
+        "name" : "userProfile.jsx (8)",
+        "color" : "",
+        "size" : 8,
+        "children" : [ ]
+      }, {
+        "name" : "usersTest.js (2)",
+        "color" : "",
+        "size" : 2,
+        "children" : [ ]
+      } ]
+    }, {
+      "name" : "index.css (8)",
+      "color" : "",
+      "size" : 8,
+      "children" : [ ]
+    }, {
+      "name" : "main.jsx (8)",
+      "color" : "",
+      "size" : 8,
+      "children" : [ ]
+    }, {
+      "name" : "styles",
+      "color" : "",
+      "size" : 0,
+      "children" : [ {
+        "name" : "global.css (1)",
+        "color" : "grey",
+        "size" : 1,
+        "children" : [ ]
+      }, {
+        "name" : "Inscription.css (10)",
+        "color" : "",
+        "size" : 10,
+        "children" : [ ]
+      }, {
+        "name" : "Login.css (7)",
+        "color" : "",
+        "size" : 7,
+        "children" : [ ]
+      }, {
+        "name" : "Logout.css (4)",
+        "color" : "",
+        "size" : 4,
+        "children" : [ ]
+      }, {
+        "name" : "UserProfile.css (9)",
+        "color" : "",
+        "size" : 9,
+        "children" : [ ]
+      } ]
+    } ]
+  }, {
+    "name" : "vite.config.js (2)",
+    "color" : "",
+    "size" : 2,
+    "children" : [ ]
+  } ]
+} ]
+    }
+
+    root = d3.hierarchy(root)
+        .sum(function (d) {
+            return d.size;
+        })
+        .sort(function (a, b) {
+            return b.value - a.value;
+        });
+
+    var focus = root,
+        nodes = pack(root).descendants(),
+        view;
+
+    var circle = g.selectAll("circle")
+        .data(nodes)
+        .enter().append("circle")
+        .attr("class", function (d) {
+            return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root";
+        })
+        .style("fill", function (d) {
+            return d.children ? color(d.depth) : (d.data.color ? d.data.color : null);
+        })
+        .on("click", function (d) {
+            if (focus !== d) zoom(d), d3.event.stopPropagation();
+        });
+
+    var text = g.selectAll("text")
+        .data(nodes)
+        .enter().append("text")
+        .attr("class", "label")
+        .style("fill-opacity", function (d) {
+            return d.parent === root ? 1 : 0;
+        })
+        .style("display", function (d) {
+            return d.parent === root ? "inline" : "none";
+        })
+        .text(function (d) {
+            return d.data.name.length > 33 ? (d.data.name.substr(0, 14) + "..." + d.data.name.substr(d.data.name.length - 14))  : d.data.name;
+        });
+
+    var node = g.selectAll("circle,text");
+
+    svg
+        .style("background", color(-1))
+        .on("click", function () {
+            zoom(root);
+        });
+
+    zoomTo([root.x, root.y, root.r * 2 + margin]);
+
+    function zoom(d) {
+        var focus0 = focus;
+        focus = d;
+
+        var transition = d3.transition()
+            .duration(d3.event.altKey ? 7500 : 750)
+            .tween("zoom", function (d) {
+                var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
+                return function (t) {
+                    zoomTo(i(t));
+                };
+            });
+
+        transition.selectAll("text")
+            .filter(function (d) {
+                return d.parent === focus || this.style.display === "inline";
+            })
+            .style("fill-opacity", function (d) {
+                return d.parent === focus ? 1 : 0;
+            })
+            .on("start", function (d) {
+                if (d.parent === focus) this.style.display = "inline";
+            })
+            .on("end", function (d) {
+                if (d.parent !== focus) this.style.display = "none";
+            });
+    }
+
+    function zoomTo(v) {
+        var k = diameter / v[2];
+        view = v;
+        node.attr("transform", function (d) {
+            return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")";
+        });
+        circle.attr("r", function (d) {
+            return d.r * k;
+        });
+    }
+
+</script>

@@ -1,0 +1,45 @@
+id: 1
+unit: export default defineConfig()
+file: frontend/eslint.config.js
+start line: 7
+end line: 28
+size: 22 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 2
+unit: function Users()
+file: frontend/src/components/usersTest.js
+start line: 3
+end line: 27
+size: 22 LOC
+McCabe index: 1
+number of parameters: 0
+
+id: 3
+unit: origin: function()
+file: backend/index.js
+start line: 13
+end line: 22
+size: 8 LOC
+McCabe index: 3
+number of parameters: 2
+
+id: 4
+unit: async function testInsert()
+file: backend/testDB.js
+start line: 3
+end line: 11
+size: 8 LOC
+McCabe index: 2
+number of parameters: 0
+
+id: 5
+unit: export default defineConfig()
+file: frontend/vite.config.js
+start line: 5
+end line: 7
+size: 3 LOC
+McCabe index: 1
+number of parameters: 1
+

@@ -1,0 +1,36 @@
+duplicated block id: 1
+size: 10 cleaned lines of code
+in 2 files:
+ - backend/controllers/ideaController.js (4:15)
+ - backend/controllers/userController.js (4:14)
+
+duplicated block id: 2
+size: 8 cleaned lines of code
+in 2 files:
+ - backend/controllers/ideaController.js (90:98)
+ - backend/models/ideaModel.js (40:48)
+
+duplicated block id: 3
+size: 6 cleaned lines of code
+in 2 files:
+ - backend/models/userModel.js (62:67)
+ - backend/models/userModel.js (86:91)
+
+duplicated block id: 4
+size: 6 cleaned lines of code
+in 2 files:
+ - backend/models/userModel.js (62:67)
+ - backend/models/userModel.js (74:79)
+
+duplicated block id: 5
+size: 6 cleaned lines of code
+in 2 files:
+ - backend/models/userModel.js (74:79)
+ - backend/models/userModel.js (86:91)
+
+duplicated block id: 6
+size: 6 cleaned lines of code
+in 2 files:
+ - frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx (57:63)
+ - frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.jsx (58:64)
+

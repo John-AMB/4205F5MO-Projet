@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title>frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.jsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.jsx (<b>46</b> lines of code) (<a href="ChangeBio.jsx">raw</a>):</h3>
+<div id="editor">import &quot;./ChangeBio.css&quot;;
+import { useContext, useState } from &quot;react&quot;;
+import { AuthContext } from &quot;../../AuthContext/auth-context&quot;;
+import { useNavigate } from &quot;react-router-dom&quot;;
+import &quot;../../../styles/global.css&quot;;
+const ChangeBio = () =&gt; {
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const [bio, setBio] = useState(user?.bio || &quot;&quot;); //initial bio s'il existe
+
+  const handleChange = (e) =&gt; {
+    setBio(e.target.value);
+  };
+
+  const backendUrl = import.meta.env.VITE_API_URL || &quot;http://localhost:3001&quot;;
+
+  const handleSubmit = async (e) =&gt; {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(`${backendUrl}/users/change-bio`, {
+        method: &quot;PUT&quot;,
+        headers: {
+          &quot;Content-Type&quot;: &quot;application/json&quot;,
+        },
+        body: JSON.stringify({ userId: user.id, bio }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.message || &quot;Erreur lors de la mise a jour de la bio&quot;
+        );
+      }
+
+      navigate(`/user/${user.id}`); //redirige vers la page de profil de l'utilisateur
+    } catch (error) {
+      console.error(&quot;Error:&quot;, error);
+      alert(error.message || &quot;Erreur lors de la mise a jour de la bio&quot;);
+    }
+  };
+
+  return (
+    &lt;div className=&quot;project-container&quot;&gt;
+      &lt;h2&gt;Change Bio&lt;/h2&gt;
+      &lt;form onSubmit={handleSubmit}&gt;
+        &lt;textarea value={bio} onChange={handleChange} rows={4} /&gt;
+        &lt;button type=&quot;submit&quot;&gt;Save&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default ChangeBio;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/html");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>
