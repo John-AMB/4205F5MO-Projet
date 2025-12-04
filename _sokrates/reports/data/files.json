@@ -217,7 +217,7 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
   "extension" : "css",
-  "linesOfCode" : 62,
+  "linesOfCode" : 51,
   "components" : [ "primary::frontend" ],
   "concerns" : [ "::Unclassified" ]
 }, {
@@ -229,7 +229,7 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
   "extension" : "css",
-  "linesOfCode" : 52,
+  "linesOfCode" : 41,
   "components" : [ "primary::frontend" ],
   "concerns" : [ "::Unclassified" ]
 }, {
@@ -241,7 +241,7 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
   "extension" : "css",
-  "linesOfCode" : 33,
+  "linesOfCode" : 22,
   "components" : [ "primary::frontend" ],
   "concerns" : [ "::Unclassified" ]
 }, {
@@ -265,7 +265,7 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
   "extension" : "css",
-  "linesOfCode" : 75,
+  "linesOfCode" : 64,
   "components" : [ "primary::frontend" ],
   "concerns" : [ "::Unclassified" ]
 }, {
@@ -343,7 +343,7 @@
 }, {
   "relativePath" : "frontend/src/styles/Login.css",
   "extension" : "css",
-  "linesOfCode" : 44,
+  "linesOfCode" : 33,
   "components" : [ "primary::frontend" ],
   "concerns" : [ "::Unclassified" ]
 }, {

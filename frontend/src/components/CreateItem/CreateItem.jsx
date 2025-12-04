@@ -76,7 +76,9 @@ const AddIdea = () => {
           accept="image/*"
           onChange={(e) => setPhoto(e.target.files[0])}
         />
-        <button type="submit">➕ Add Idea</button>
+        <button style={{ color: "white" }} type="submit">
+          ➕ Add Idea
+        </button>
       </form>
       {message && <p className="message">{message}</p>}
     </div>

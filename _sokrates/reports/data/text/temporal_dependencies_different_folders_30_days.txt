@@ -1,6 +1,6 @@
 file 1	file 2	# same commits	# commits file 1	# commits file 2
 frontend/src/styles/global.css	frontend/src/components/Logout.jsx	1	1	4
-frontend/src/main.jsx	frontend/src/components/Logout.jsx	1	8	4
 frontend/src/styles/Logout.css	frontend/src/main.jsx	1	4	8
-frontend/src/styles/Logout.css	frontend/src/components/Logout.jsx	1	4	4
 frontend/src/styles/global.css	frontend/src/main.jsx	1	1	8
+frontend/src/main.jsx	frontend/src/components/Logout.jsx	1	8	4
+frontend/src/styles/Logout.css	frontend/src/components/Logout.jsx	1	4	4

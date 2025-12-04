@@ -10,7 +10,7 @@
   }, {
     "name" : "Unclassified",
     "filesCount" : 61,
-    "linesOfCode" : 3279,
+    "linesOfCode" : 3224,
     "numberOfRegexLineMatches" : 0,
     "fileCountPerExtension" : [ {
       "name" : "  *.jsx",
@@ -39,7 +39,7 @@
       "description" : [ ]
     }, {
       "name" : "  *.css",
-      "value" : 1141,
+      "value" : 1086,
       "description" : [ ]
     }, {
       "name" : "  *.js",
@@ -71,7 +71,7 @@
     "description" : [ ]
   }, {
     "name" : "Unclassified",
-    "value" : 3279,
+    "value" : 3224,
     "description" : [ ]
   } ]
 } ]

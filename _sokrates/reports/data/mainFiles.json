@@ -253,7 +253,7 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.css",
   "extension" : "css",
-  "linesOfCode" : 62,
+  "linesOfCode" : 51,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -267,7 +267,7 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css",
   "extension" : "css",
-  "linesOfCode" : 52,
+  "linesOfCode" : 41,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -281,7 +281,7 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css",
   "extension" : "css",
-  "linesOfCode" : 33,
+  "linesOfCode" : 22,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -309,7 +309,7 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css",
   "extension" : "css",
-  "linesOfCode" : 75,
+  "linesOfCode" : 64,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -400,7 +400,7 @@
 }, {
   "relativePath" : "frontend/src/styles/Login.css",
   "extension" : "css",
-  "linesOfCode" : 44,
+  "linesOfCode" : 33,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0

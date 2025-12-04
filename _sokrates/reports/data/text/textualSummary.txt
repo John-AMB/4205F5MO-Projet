@@ -1,8 +1,8 @@
 Start of analysis
 Found 18519 files
-61 are in the main's scope  (3279 lines of code)
+61 are in the main's scope  (3224 lines of code)
   *.jsx: 24 files, (1325 lines of code)
-  *.css: 19 files, (1141 lines of code)
+  *.css: 19 files, (1086 lines of code)
   *.js: 15 files, (620 lines of code)
   *.sql: 2 files, (175 lines of code)
   *.html: 1 files, (18 lines of code)
@@ -21,16 +21,16 @@ Analysing dependencies...
   *.js: 11 files, (558 lines of code)
 2 are in the DECOMPOSITION_primary\database's scope  (175 lines of code)
   *.sql: 2 files, (175 lines of code)
-48 are in the DECOMPOSITION_primary\frontend's scope  (2546 lines of code)
+48 are in the DECOMPOSITION_primary\frontend's scope  (2491 lines of code)
   *.jsx: 24 files, (1325 lines of code)
-  *.css: 19 files, (1141 lines of code)
+  *.css: 19 files, (1086 lines of code)
   *.js: 4 files, (62 lines of code)
   *.html: 1 files, (18 lines of code)
   - "primary", found 0 dependencies (0 component dependencies)
 0 are in the CONCERN_general\TODOs's scope  (0 lines of code)
-61 are in the CONCERN_general\Unclassified's scope  (3279 lines of code)
+61 are in the CONCERN_general\Unclassified's scope  (3224 lines of code)
   *.jsx: 24 files, (1325 lines of code)
-  *.css: 19 files, (1141 lines of code)
+  *.css: 19 files, (1086 lines of code)
   *.js: 15 files, (620 lines of code)
   *.sql: 2 files, (175 lines of code)
   *.html: 1 files, (18 lines of code)
@@ -50,14 +50,14 @@ Conditional Complexity Component frontend 47 / 0 / 0 / 0 / 0
 Conditional complexity per extension:
 Conditional Complexity Component js: 63 / 0 / 0 / 0 / 0
 Analysing duplication...
-  - found 28 duplicates (224 duplicated lines vs. 3125 cleaned lines) in 19 files
+  - found 13 duplicates (164 duplicated lines vs. 3070 cleaned lines) in 14 files
   - per component:primary
-     - "frontend": 170 duplicated lines vs. 2427 total lines
+     - "frontend": 110 duplicated lines vs. 2372 total lines
      - "backend": 54 duplicated lines vs. 523 total lines
      - "database": 0 duplicated lines vs. 175 total lines
   - per extension:
-     - "css": 139 duplicated lines vs. 1141 total lines
+     - "css": 79 duplicated lines vs. 1086 total lines
      - "js": 54 duplicated lines vs. 574 total lines
      - "jsx": 31 duplicated lines vs. 1220 total lines
-Total analysis time: 6.17s
+Total analysis time: 6.02s
 

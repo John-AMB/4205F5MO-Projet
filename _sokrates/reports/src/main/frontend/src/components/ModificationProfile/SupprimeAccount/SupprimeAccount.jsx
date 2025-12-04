@@ -61,7 +61,7 @@ const DeleteAccount = () => {
   };
 
   return (
-    <div className="deleteAccount">
+    <div className="project-container">
       <h2>Delete your account</h2>
       <p>
         To confirm deletion, please enter your username twice. This action is{" "}
