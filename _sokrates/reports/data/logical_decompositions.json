@@ -33,7 +33,7 @@
   }, {
     "name" : "frontend",
     "filesCount" : 48,
-    "linesOfCode" : 2450,
+    "linesOfCode" : 2419,
     "numberOfRegexLineMatches" : 0,
     "fileCountPerExtension" : [ {
       "name" : "  *.jsx",
@@ -54,11 +54,11 @@
     } ],
     "linesOfCodePerExtension" : [ {
       "name" : "  *.jsx",
-      "value" : 1327,
+      "value" : 1314,
       "description" : [ ]
     }, {
       "name" : "  *.css",
-      "value" : 1043,
+      "value" : 1025,
       "description" : [ ]
     }, {
       "name" : "  *.js",
@@ -151,7 +151,7 @@
     "description" : [ ]
   }, {
     "name" : "frontend",
-    "value" : 2450,
+    "value" : 2419,
     "description" : [ ]
   } ]
 } ]

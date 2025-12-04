@@ -2,8 +2,6 @@ body {
   background-color: white;
 }
 
-
-
 .inscription-form {
   display: flex;
   flex-direction: column;
@@ -23,16 +21,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
-}
-
-.inscription-form button {
-  padding: 10px;
-  background: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
 }
 
 .inscription-form button:hover {

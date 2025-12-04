@@ -218,7 +218,7 @@
 }, {
   "relativePath" : "frontend/src/components/Inscription.jsx",
   "extension" : "jsx",
-  "linesOfCode" : 81,
+  "linesOfCode" : 83,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -288,7 +288,7 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx",
   "extension" : "jsx",
-  "linesOfCode" : 89,
+  "linesOfCode" : 77,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -302,7 +302,7 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.jsx",
   "extension" : "jsx",
-  "linesOfCode" : 55,
+  "linesOfCode" : 52,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -393,14 +393,14 @@
 }, {
   "relativePath" : "frontend/src/styles/Inscription.css",
   "extension" : "css",
-  "linesOfCode" : 33,
+  "linesOfCode" : 24,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
 }, {
   "relativePath" : "frontend/src/styles/Login.css",
   "extension" : "css",
-  "linesOfCode" : 33,
+  "linesOfCode" : 24,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0

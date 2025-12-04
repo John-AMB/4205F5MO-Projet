@@ -11,44 +11,26 @@ in 2 files:
  - backend/models/ideaModel.js (40:48)
 
 duplicated block id: 3
-size: 8 cleaned lines of code
+size: 6 cleaned lines of code
 in 2 files:
- - frontend/src/styles/Inscription.css (29:36)
- - frontend/src/styles/Login.css (27:34)
+ - backend/models/userModel.js (62:67)
+ - backend/models/userModel.js (86:91)
 
 duplicated block id: 4
 size: 6 cleaned lines of code
 in 2 files:
  - backend/models/userModel.js (62:67)
- - backend/models/userModel.js (86:91)
+ - backend/models/userModel.js (74:79)
 
 duplicated block id: 5
 size: 6 cleaned lines of code
 in 2 files:
- - backend/models/userModel.js (62:67)
  - backend/models/userModel.js (74:79)
+ - backend/models/userModel.js (86:91)
 
 duplicated block id: 6
 size: 6 cleaned lines of code
 in 2 files:
- - frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx (64:72)
- - frontend/src/components/UserButton/UserButton.jsx (77:86)
-
-duplicated block id: 7
-size: 6 cleaned lines of code
-in 2 files:
- - frontend/src/components/ModificationProfile/ModificationProfile.jsx (47:54)
- - frontend/src/components/UserButton/UserButton.jsx (76:83)
-
-duplicated block id: 8
-size: 6 cleaned lines of code
-in 2 files:
- - frontend/src/components/Inscription.jsx (14:20)
- - frontend/src/components/Login.jsx (11:16)
-
-duplicated block id: 9
-size: 6 cleaned lines of code
-in 2 files:
- - backend/models/userModel.js (74:79)
- - backend/models/userModel.js (86:91)
+ - frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx (57:63)
+ - frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.jsx (58:64)
 

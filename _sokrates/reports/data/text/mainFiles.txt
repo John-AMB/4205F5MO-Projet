@@ -30,7 +30,7 @@ frontend/src/components/GalleyItem/GalleryItem.css	154
 frontend/src/components/GalleyItem/GalleryItem.jsx	173
 frontend/src/components/Header/Header.css	64
 frontend/src/components/Header/Header.jsx	31
-frontend/src/components/Inscription.jsx	81
+frontend/src/components/Inscription.jsx	83
 frontend/src/components/LanguageSelector/LanguageSelector.css	37
 frontend/src/components/LanguageSelector/LanguageSelector.jsx	8
 frontend/src/components/Login.jsx	77
@@ -40,9 +40,9 @@ frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.jsx	46
 frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css	41
 frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.jsx	87
 frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css	22
-frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx	89
+frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx	77
 frontend/src/components/ModificationProfile/ModificationProfile.css	28
-frontend/src/components/ModificationProfile/ModificationProfile.jsx	55
+frontend/src/components/ModificationProfile/ModificationProfile.jsx	52
 frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css	64
 frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.jsx	89
 frontend/src/components/SingleItem/SingleItem.css	260
@@ -55,8 +55,8 @@ frontend/src/components/usersTest.js	24
 frontend/src/index.css	12
 frontend/src/main.jsx	16
 frontend/src/styles/global.css	20
-frontend/src/styles/Inscription.css	33
-frontend/src/styles/Login.css	33
+frontend/src/styles/Inscription.css	24
+frontend/src/styles/Login.css	24
 frontend/src/styles/Logout.css	19
 frontend/src/styles/UserProfile.css	56
 frontend/vite.config.js	5

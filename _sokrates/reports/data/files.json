@@ -187,7 +187,7 @@
 }, {
   "relativePath" : "frontend/src/components/Inscription.jsx",
   "extension" : "jsx",
-  "linesOfCode" : 81,
+  "linesOfCode" : 83,
   "components" : [ "primary::frontend" ],
   "concerns" : [ "::Unclassified" ]
 }, {
@@ -247,7 +247,7 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx",
   "extension" : "jsx",
-  "linesOfCode" : 89,
+  "linesOfCode" : 77,
   "components" : [ "primary::frontend" ],
   "concerns" : [ "::Unclassified" ]
 }, {
@@ -259,7 +259,7 @@
 }, {
   "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.jsx",
   "extension" : "jsx",
-  "linesOfCode" : 55,
+  "linesOfCode" : 52,
   "components" : [ "primary::frontend" ],
   "concerns" : [ "::Unclassified" ]
 }, {
@@ -337,13 +337,13 @@
 }, {
   "relativePath" : "frontend/src/styles/Inscription.css",
   "extension" : "css",
-  "linesOfCode" : 33,
+  "linesOfCode" : 24,
   "components" : [ "primary::frontend" ],
   "concerns" : [ "::Unclassified" ]
 }, {
   "relativePath" : "frontend/src/styles/Login.css",
   "extension" : "css",
-  "linesOfCode" : 33,
+  "linesOfCode" : 24,
   "components" : [ "primary::frontend" ],
   "concerns" : [ "::Unclassified" ]
 }, {

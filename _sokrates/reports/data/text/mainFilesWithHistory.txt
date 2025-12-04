@@ -30,7 +30,7 @@ frontend/src/components/GalleyItem/GalleryItem.css	154	8	78	41	13	3	2025-09-17	2
 frontend/src/components/GalleyItem/GalleryItem.jsx	173	8	78	41	14	3	2025-09-17	2025-10-24	seanskyjune@gmail.com	143745098+john-amb@users.noreply.github.com
 frontend/src/components/Header/Header.css	64	6	83	41	7	3	2025-09-12	2025-10-24	seanskyjune@gmail.com	143745098+john-amb@users.noreply.github.com
 frontend/src/components/Header/Header.jsx	31	8	83	41	12	3	2025-09-12	2025-10-24	seanskyjune@gmail.com	seanskyjune@gmail.com
-frontend/src/components/Inscription.jsx	81	5	76	35	8	2	2025-09-19	2025-10-30	2124824@cmontmorency.qc.ca	2124824@cmontmorency.qc.ca
+frontend/src/components/Inscription.jsx	83	5	76	35	8	2	2025-09-19	2025-10-30	2124824@cmontmorency.qc.ca	2124824@cmontmorency.qc.ca
 frontend/src/components/LanguageSelector/LanguageSelector.css	37	3	83	70	3	2	2025-09-12	2025-09-25	seanskyjune@gmail.com	2124824@cmontmorency.qc.ca
 frontend/src/components/LanguageSelector/LanguageSelector.jsx	8	5	83	41	5	3	2025-09-12	2025-10-24	seanskyjune@gmail.com	143745098+john-amb@users.noreply.github.com
 frontend/src/components/Login.jsx	77	7	76	35	12	2	2025-09-19	2025-10-30	2124824@cmontmorency.qc.ca	2124824@cmontmorency.qc.ca
@@ -40,9 +40,9 @@ frontend/src/components/ModificationProfile/ChangeBio/ChangeBio.jsx	46	3	42	35	5
 frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.css	41	2	48	41	4	2	2025-10-17	2025-10-24	2124824@cmontmorency.qc.ca	2124824@cmontmorency.qc.ca
 frontend/src/components/ModificationProfile/ChangePassword/ChangePassword.jsx	87	3	48	35	5	2	2025-10-17	2025-10-30	2124824@cmontmorency.qc.ca	2124824@cmontmorency.qc.ca
 frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.css	22	2	42	41	4	2	2025-10-23	2025-10-24	2124824@cmontmorency.qc.ca	143745098+john-amb@users.noreply.github.com
-frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx	89	3	42	35	6	2	2025-10-23	2025-10-30	2124824@cmontmorency.qc.ca	2124824@cmontmorency.qc.ca
+frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx	77	3	42	35	6	2	2025-10-23	2025-10-30	2124824@cmontmorency.qc.ca	2124824@cmontmorency.qc.ca
 frontend/src/components/ModificationProfile/ModificationProfile.css	28	2	48	41	5	2	2025-10-17	2025-10-24	2124824@cmontmorency.qc.ca	2124824@cmontmorency.qc.ca
-frontend/src/components/ModificationProfile/ModificationProfile.jsx	55	3	48	41	9	2	2025-10-17	2025-10-24	2124824@cmontmorency.qc.ca	2124824@cmontmorency.qc.ca
+frontend/src/components/ModificationProfile/ModificationProfile.jsx	52	3	48	41	9	2	2025-10-17	2025-10-24	2124824@cmontmorency.qc.ca	2124824@cmontmorency.qc.ca
 frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.css	64	1	41	41	4	2	2025-10-24	2025-10-24	2124824@cmontmorency.qc.ca	2124824@cmontmorency.qc.ca
 frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.jsx	89	2	41	35	6	2	2025-10-24	2025-10-30	2124824@cmontmorency.qc.ca	2124824@cmontmorency.qc.ca
 frontend/src/components/SingleItem/SingleItem.css	260	4	43	36	5	3	2025-10-22	2025-10-29	seanskyjune@gmail.com	2396127@cmontmorency.qc.ca
@@ -55,8 +55,8 @@ frontend/src/components/usersTest.js	24	2	76	70	2	2	2025-09-19	2025-09-25	212482
 frontend/src/index.css	12	6	84	41	8	3	2025-09-11	2025-10-24	2124824@cmontmorency.qc.ca	143745098+john-amb@users.noreply.github.com
 frontend/src/main.jsx	16	6	83	2	8	3	2025-09-12	2025-12-02	seanskyjune@gmail.com	seanskyjune@gmail.com
 frontend/src/styles/global.css	20	1	2	2	1	1	2025-12-02	2025-12-02	seanskyjune@gmail.com	seanskyjune@gmail.com
-frontend/src/styles/Inscription.css	33	6	76	41	10	3	2025-09-19	2025-10-24	2124824@cmontmorency.qc.ca	143745098+john-amb@users.noreply.github.com
-frontend/src/styles/Login.css	33	6	76	41	7	2	2025-09-19	2025-10-24	2124824@cmontmorency.qc.ca	143745098+john-amb@users.noreply.github.com
+frontend/src/styles/Inscription.css	24	6	76	41	10	3	2025-09-19	2025-10-24	2124824@cmontmorency.qc.ca	143745098+john-amb@users.noreply.github.com
+frontend/src/styles/Login.css	24	6	76	41	7	2	2025-09-19	2025-10-24	2124824@cmontmorency.qc.ca	143745098+john-amb@users.noreply.github.com
 frontend/src/styles/Logout.css	19	3	49	2	4	3	2025-10-16	2025-12-02	2124824@cmontmorency.qc.ca	seanskyjune@gmail.com
 frontend/src/styles/UserProfile.css	56	6	76	41	9	3	2025-09-19	2025-10-24	2124824@cmontmorency.qc.ca	143745098+john-amb@users.noreply.github.com
 frontend/vite.config.js	5	1	83	83	2	1	2025-09-12	2025-09-12	seanskyjune@gmail.com	seanskyjune@gmail.com

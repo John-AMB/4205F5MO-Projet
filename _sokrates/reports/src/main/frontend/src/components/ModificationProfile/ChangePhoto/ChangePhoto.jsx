@@ -4,7 +4,7 @@ import { AuthContext } from "../../AuthContext/auth-context";
 import { Link, useNavigate } from "react-router-dom";
 
 const ChangePhoto = () => {
-  const { isLoggedIn, user, updateUser } = useContext(AuthContext);
+  const { user, updateUser } = useContext(AuthContext);
   const [photo, setPhoto] = useState(null);
   const [preview, setPreview] = useState(null);
   const [message, setMessage] = useState("");
@@ -58,19 +58,6 @@ const ChangePhoto = () => {
       setLoading(false);
     }
   };
-
-  if (!isLoggedIn) {
-    return (
-      <>
-        <Link to="/inscription" className="loginLink">
-          Sign Up
-        </Link>
-        <Link to="/login" className="loginLink">
-          Login
-        </Link>
-      </>
-    );
-  }
 
   return (
     <div className="project-container">

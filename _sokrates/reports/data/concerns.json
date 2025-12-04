@@ -10,7 +10,7 @@
   }, {
     "name" : "Unclassified",
     "filesCount" : 61,
-    "linesOfCode" : 3183,
+    "linesOfCode" : 3152,
     "numberOfRegexLineMatches" : 0,
     "fileCountPerExtension" : [ {
       "name" : "  *.jsx",
@@ -35,11 +35,11 @@
     } ],
     "linesOfCodePerExtension" : [ {
       "name" : "  *.jsx",
-      "value" : 1327,
+      "value" : 1314,
       "description" : [ ]
     }, {
       "name" : "  *.css",
-      "value" : 1043,
+      "value" : 1025,
       "description" : [ ]
     }, {
       "name" : "  *.js",
@@ -56,6 +56,15 @@
     } ]
   } ],
   "concernsGroup" : null,
+  "linesOfCodePerConcern" : [ {
+    "name" : "TODOs",
+    "value" : 0,
+    "description" : [ ]
+  }, {
+    "name" : "Unclassified",
+    "value" : 3152,
+    "description" : [ ]
+  } ],
   "fileCountPerConcern" : [ {
     "name" : "TODOs",
     "value" : 0,
@@ -63,15 +72,6 @@
   }, {
     "name" : "Unclassified",
     "value" : 61,
-    "description" : [ ]
-  } ],
-  "linesOfCodePerConcern" : [ {
-    "name" : "TODOs",
-    "value" : 0,
-    "description" : [ ]
-  }, {
-    "name" : "Unclassified",
-    "value" : 3183,
     "description" : [ ]
   } ]
 } ]

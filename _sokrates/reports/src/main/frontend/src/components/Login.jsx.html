@@ -26,11 +26,9 @@ function Login() {
   const backendUrl = import.meta.env.VITE_API_URL || &quot;http://localhost:3001&quot;;
   const handleChange = (e) =&gt; {
     //e = input change char
-    //Enregistrez les entrees utilisateur dans leur champ input.name respectif et permettez a
-    //l'utilisateur de modifier les autres champs input.value sans perdre les valeurs precedemment saisies.
     setFormData({
-      ...formData, //La meme que-&gt; username: formData.username, password: formData.password
-      [e.target.name]: e.target.value, //e.target.name-&gt; username, password | e.target.value-&gt; le valeur de username,password
+      ...formData,
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -94,7 +92,9 @@ function Login() {
           /&gt;
         &lt;/label&gt;
 
-        &lt;button type=&quot;submit&quot;&gt;Se connecter&lt;/button&gt;
+        &lt;button style={{ background: &quot;#0077cc&quot;, color: &quot;white&quot; }} type=&quot;submit&quot;&gt;
+          Se connecter
+        &lt;/button&gt;
       &lt;/form&gt;
     &lt;/div&gt;
   );

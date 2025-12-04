@@ -1,6 +1,6 @@
 {
   "title" : "Duplication",
-  "timestamp" : "2025-12-03 19:09:53",
+  "timestamp" : "2025-12-03 20:18:01",
   "duplicates" : [ {
     "blockSize" : 10,
     "duplicatedFileBlocks" : [ {
@@ -60,35 +60,6 @@
       "cleanedEndLine" : 37
     } ]
   }, {
-    "blockSize" : 8,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend/src/styles/Inscription.css",
-        "extension" : "css",
-        "linesOfCode" : 33,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 33,
-      "startLine" : 29,
-      "endLine" : 36,
-      "cleanedStartLine" : 23,
-      "cleanedEndLine" : 30
-    }, {
-      "file" : {
-        "relativePath" : "frontend/src/styles/Login.css",
-        "extension" : "css",
-        "linesOfCode" : 33,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 33,
-      "startLine" : 27,
-      "endLine" : 34,
-      "cleanedStartLine" : 23,
-      "cleanedEndLine" : 30
-    } ]
-  }, {
     "blockSize" : 6,
     "duplicatedFileBlocks" : [ {
       "file" : {
@@ -145,6 +116,35 @@
       "endLine" : 79,
       "cleanedStartLine" : 59,
       "cleanedEndLine" : 64
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 74,
+      "endLine" : 79,
+      "cleanedStartLine" : 59,
+      "cleanedEndLine" : 64
+    }, {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 86,
+      "endLine" : 91,
+      "cleanedStartLine" : 69,
+      "cleanedEndLine" : 74
     } ]
   }, {
     "blockSize" : 6,
@@ -152,115 +152,28 @@
       "file" : {
         "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx",
         "extension" : "jsx",
+        "linesOfCode" : 77,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 74,
+      "startLine" : 57,
+      "endLine" : 63,
+      "cleanedStartLine" : 46,
+      "cleanedEndLine" : 51
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.jsx",
+        "extension" : "jsx",
         "linesOfCode" : 89,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
       "sourceFileCleanedLinesOfCode" : 83,
-      "startLine" : 64,
-      "endLine" : 72,
-      "cleanedStartLine" : 52,
-      "cleanedEndLine" : 57
-    }, {
-      "file" : {
-        "relativePath" : "frontend/src/components/UserButton/UserButton.jsx",
-        "extension" : "jsx",
-        "linesOfCode" : 82,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 74,
-      "startLine" : 77,
-      "endLine" : 86,
-      "cleanedStartLine" : 67,
-      "cleanedEndLine" : 72
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend/src/components/ModificationProfile/ModificationProfile.jsx",
-        "extension" : "jsx",
-        "linesOfCode" : 55,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 45,
-      "startLine" : 47,
-      "endLine" : 54,
-      "cleanedStartLine" : 36,
-      "cleanedEndLine" : 41
-    }, {
-      "file" : {
-        "relativePath" : "frontend/src/components/UserButton/UserButton.jsx",
-        "extension" : "jsx",
-        "linesOfCode" : 82,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 74,
-      "startLine" : 76,
-      "endLine" : 83,
-      "cleanedStartLine" : 66,
-      "cleanedEndLine" : 71
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend/src/components/Inscription.jsx",
-        "extension" : "jsx",
-        "linesOfCode" : 81,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 76,
-      "startLine" : 14,
-      "endLine" : 20,
-      "cleanedStartLine" : 12,
-      "cleanedEndLine" : 17
-    }, {
-      "file" : {
-        "relativePath" : "frontend/src/components/Login.jsx",
-        "extension" : "jsx",
-        "linesOfCode" : 77,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 73,
-      "startLine" : 11,
-      "endLine" : 16,
-      "cleanedStartLine" : 10,
-      "cleanedEndLine" : 15
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend/models/userModel.js",
-        "extension" : "js",
-        "linesOfCode" : 93,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 93,
-      "startLine" : 74,
-      "endLine" : 79,
-      "cleanedStartLine" : 59,
-      "cleanedEndLine" : 64
-    }, {
-      "file" : {
-        "relativePath" : "backend/models/userModel.js",
-        "extension" : "js",
-        "linesOfCode" : 93,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 93,
-      "startLine" : 86,
-      "endLine" : 91,
-      "cleanedStartLine" : 69,
-      "cleanedEndLine" : 74
+      "startLine" : 58,
+      "endLine" : 64,
+      "cleanedStartLine" : 47,
+      "cleanedEndLine" : 52
     } ]
   } ],
   "overallDuplication" : null
