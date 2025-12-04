@@ -12,7 +12,7 @@
     </style>
 </head>
 <body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
-<h3 style="margin-bottom: 0">frontend/src/components/CreateItem/CreateItem.jsx (<b>81</b> lines of code) (<a href="CreateItem.jsx">raw</a>):</h3>
+<h3 style="margin-bottom: 0">frontend/src/components/CreateItem/CreateItem.jsx (<b>83</b> lines of code) (<a href="CreateItem.jsx">raw</a>):</h3>
 <div id="editor">import { useState, useContext } from &quot;react&quot;;
 import { AuthContext } from &quot;../AuthContext/auth-context&quot;;
 import { useNavigate } from &quot;react-router-dom&quot;;
@@ -91,7 +91,9 @@ const AddIdea = () =&gt; {
           accept=&quot;image/*&quot;
           onChange={(e) =&gt; setPhoto(e.target.files[0])}
         /&gt;
-        &lt;button type=&quot;submit&quot;&gt;➕ Add Idea&lt;/button&gt;
+        &lt;button style={{ color: &quot;white&quot; }} type=&quot;submit&quot;&gt;
+          ➕ Add Idea
+        &lt;/button&gt;
       &lt;/form&gt;
       {message &amp;&amp; &lt;p className=&quot;message&quot;&gt;{message}&lt;/p&gt;}
     &lt;/div&gt;

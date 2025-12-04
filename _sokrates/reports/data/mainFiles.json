@@ -155,14 +155,14 @@
 }, {
   "relativePath" : "frontend/src/components/CreateItem/CreateItem.css",
   "extension" : "css",
-  "linesOfCode" : 66,
+  "linesOfCode" : 57,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
 }, {
   "relativePath" : "frontend/src/components/CreateItem/CreateItem.jsx",
   "extension" : "jsx",
-  "linesOfCode" : 81,
+  "linesOfCode" : 83,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -323,7 +323,7 @@
 }, {
   "relativePath" : "frontend/src/components/SingleItem/SingleItem.css",
   "extension" : "css",
-  "linesOfCode" : 294,
+  "linesOfCode" : 260,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -386,7 +386,7 @@
 }, {
   "relativePath" : "frontend/src/styles/global.css",
   "extension" : "css",
-  "linesOfCode" : 11,
+  "linesOfCode" : 20,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0
@@ -407,7 +407,7 @@
 }, {
   "relativePath" : "frontend/src/styles/Logout.css",
   "extension" : "css",
-  "linesOfCode" : 28,
+  "linesOfCode" : 19,
   "unitsCount" : 0,
   "unitsMcCabeIndexSum" : 0,
   "linesOfCodeInUnits" : 0

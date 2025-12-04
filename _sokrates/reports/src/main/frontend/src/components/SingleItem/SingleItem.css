@@ -7,10 +7,13 @@
   min-height: 100vh;
   padding: 40px 20px;
 }
+
 .section1 {
   position: relative;
   top: 10px;
 }
+
+/* CARD */
 .singleItem-card {
   display: flex;
   flex-direction: row;
@@ -24,13 +27,16 @@
   animation: fadeIn 0.4s ease;
 }
 
-/* Image section */
+/* IMAGE WRAPPER — merged all 3 duplicates */
 .singleItem-imageWrapper {
+  position: relative;
   flex: 1.2;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f8f8f8;
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 .singleItem-image {
@@ -41,8 +47,9 @@
   max-height: 80vh;
 }
 
-/* Text section */
+/* TEXT SECTION — merged duplicate */
 .singleItem-details {
+  position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -62,7 +69,7 @@
   line-height: 1.6;
 }
 
-/* Small states */
+/* LOADING / ERROR */
 .singleItem-loading,
 .singleItem-error {
   text-align: center;
@@ -71,7 +78,7 @@
   margin-top: 100px;
 }
 
-/* Animation */
+/* ANIMATION */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -83,7 +90,7 @@
   }
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .singleItem-card {
     flex-direction: column;
@@ -104,7 +111,8 @@
     padding: 20px;
   }
 }
-/* 🔙 Back button (top-left corner) */
+
+/* BACK BUTTON */
 .singleItem-backBtn {
   position: absolute;
   top: 20%;
@@ -112,7 +120,6 @@
   background: white;
   border: none;
   font-size: 20px;
-
   padding: 8px 14px;
   border-radius: 12px;
   cursor: pointer;
@@ -125,10 +132,10 @@
   background-color: #f2f2f2;
 }
 
-/* 🔗 Open in new tab icon */
-.singleItem-openNew {
+/* OPEN IN NEW TAB ICON */
+.singleItem-openNew,
+.singleItem-openNewTwo {
   position: absolute;
-  bottom: 20px;
   right: 20px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
@@ -139,30 +146,19 @@
   align-items: center;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.singleItem-openNew {
+  bottom: 20px;
 }
 
 .singleItem-openNewTwo {
-  position: absolute;
   bottom: 80px;
-  right: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-  transition: transform 0.25s ease, background-color 0.25s ease;
-  position: absolute;
 }
+
+.singleItem-openNew:hover,
 .singleItem-openNewTwo:hover {
   cursor: pointer;
-  background-color: white;
-  transform: scale(1.1);
-}
-.singleItem-openNew:hover {
   background-color: white;
   transform: scale(1.1);
 }
@@ -170,30 +166,10 @@
 .singleItem-openIcon {
   width: 22px;
   height: 22px;
-  pointer-events: none; /* prevents the icon from blocking the click */
+  pointer-events: none;
 }
 
-/* Make sure the image wrapper is positioned relative for the icon */
-.singleItem-imageWrapper {
-  position: relative;
-}
-/* ===== ICONS OVER IMAGE ===== */
-.singleItem-imageWrapper {
-  position: relative;
-  flex: 1.2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f8f8f8;
-  border-radius: 24px;
-  overflow: hidden;
-}
-
-/* ===== 3 dots in top right of the text section ===== */
-.singleItem-details {
-  position: relative;
-}
-
+/* OPTIONS DOTS */
 .singleItem-options {
   position: absolute;
   top: 20px;
@@ -219,7 +195,8 @@
   width: 20px;
   height: 20px;
 }
-/* ❤️ Heart like button */
+
+/* ❤️ LIKE BUTTON */
 .heart-btn {
   position: absolute;
   top: 20px;
@@ -247,27 +224,29 @@
   background: #ffe3e3;
 }
 
-.singleItem-imageWrapper {
-  position: relative; /* so heart-btn can position absolutely */
-  flex: 1.2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f8f8f8;
-}
-
+/* LIKE COUNT */
 .like-count {
   margin-top: 10px;
   font-size: 16px;
   color: #444;
 }
+
+/* COMMENTS SECTION */
 .comments-section {
   position: absolute;
   bottom: 20px;
 }
 
+/* COMMENTS LIST — merged both duplicates */
 .comments-list {
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 5px;
+  scroll-behavior: smooth;
 }
 
 .comment {
@@ -277,6 +256,7 @@
   margin-bottom: 6px;
 }
 
+/* COMMENT INPUT */
 .comment-input {
   display: flex;
   gap: 8px;
@@ -298,6 +278,8 @@
   border-color: #888;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
+
+/* SHOW MORE COMMENTS BUTTON */
 .toggle-comments-btn {
   background: none;
   border: none;
@@ -313,15 +295,8 @@
 .toggle-comments-btn:hover {
   text-decoration: underline;
 }
-.comments-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-height: 180px; /* height for ~4 comments */
-  overflow-y: auto;
-  padding-right: 5px;
-  scroll-behavior: smooth;
-}
+
+/* COMMENT BUTTON */
 .comment-input button {
   background-color: #4a90e2;
   color: white;

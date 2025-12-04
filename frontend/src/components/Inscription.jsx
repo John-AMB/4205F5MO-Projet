@@ -85,7 +85,9 @@ function Inscription() {
           />
         </label>
 
-        <button type="submit">Sign Up</button>
+        <button style={{ background: "#0077cc", color: "white" }} type="submit">
+          Sign Up
+        </button>
       </form>
     </div>
   );

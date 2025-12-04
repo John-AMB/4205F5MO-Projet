@@ -46,10 +46,6 @@ const ProfileOptions = () => {
         </div>
       ) : (
         <>
-          <Link to="/inscription" className="loginLink">
-            Sign Up
-          </Link>
-
           <Link to="/login" className="loginLink">
             Login
           </Link>
