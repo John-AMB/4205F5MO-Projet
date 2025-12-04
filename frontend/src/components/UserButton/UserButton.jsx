@@ -61,6 +61,18 @@ const UserButton = () => {
           >
             Options
           </div>
+          {/*ADMIN*/}
+          {user.role === "admin" && (
+            <div
+              className="uo admin-link"
+              onClick={() => {
+                navigate("/AdminBoard");
+                setOpen(false);
+              }}
+            >
+              Admin Board
+            </div>
+          )}
           <div
             className="uo"
             onClick={() => {

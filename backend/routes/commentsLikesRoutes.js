@@ -2,7 +2,9 @@ const express = require("express");
 const router = express.Router();
 const supabase = require("../supabaseClient");
 
-// Get all comments for a specific idea
+/* =======================
+   GET COMMENTS FOR AN IDEA
+   ======================= */
 router.get("/comments/:idee_id", async (req, res) => {
   const { idee_id } = req.params;
 
@@ -22,13 +24,13 @@ router.get("/comments/:idee_id", async (req, res) => {
   }
 });
 
-// Add a comment (temporary: user_id = 1)
+/* =======================
+   ADD COMMENT
+   ======================= */
 router.post("/comments", async (req, res) => {
-  const { idee_id, content } = req.body;
+  const { idee_id, content, user_id } = req.body;
 
-  const user_id = 1; // **************************placeholder until auth is ready
-
-  if (!idee_id || !content) {
+  if (!idee_id || !content || !user_id) {
     return res.status(400).json({ error: "Missing required fields" });
   }
 
@@ -42,12 +44,14 @@ router.post("/comments", async (req, res) => {
 
     res.status(201).json(data[0]);
   } catch (err) {
-    console.error("Error adding comment:", err.message);
+    console.error("❌ Error adding comment:", err.message);
     res.status(500).json({ error: "Failed to add comment" });
   }
 });
 
-//  Get total likes for an idea
+/* =======================
+   GET TOTAL LIKES
+   ======================= */
 router.get("/likes/:idee_id", async (req, res) => {
   const { idee_id } = req.params;
 
@@ -66,24 +70,51 @@ router.get("/likes/:idee_id", async (req, res) => {
   }
 });
 
-//  Toggle like (temporary: user_id = 1)
-router.post("/likes/:idee_id", async (req, res) => {
-  const { idee_id } = req.params;
-  const user_id = 1; // 👈 temporary placeholder
+/* ======================
+   CHECK IF USER LIKED
+   ====================== */
+router.get("/likes/:idee_id/user/:user_id", async (req, res) => {
+  const { idee_id, user_id } = req.params;
 
   try {
-    // Check if the user already liked this idea
+    const { data, error } = await supabase
+      .from("likes")
+      .select("*")
+      .eq("idee_id", idee_id)
+      .eq("user_id", user_id)
+      .maybeSingle();
+
+    if (error) throw error;
+
+    res.status(200).json({ liked: !!data });
+  } catch (err) {
+    console.error("❌ Error checking like state:", err.message);
+    res.status(500).json({ error: "Failed to fetch user like state" });
+  }
+});
+
+/* =======================
+   TOGGLE LIKE
+   ======================= */
+router.post("/likes/:idee_id", async (req, res) => {
+  const { idee_id } = req.params;
+  const { user_id } = req.body;
+
+  if (!user_id) {
+    return res.status(400).json({ error: "Missing user_id" });
+  }
+
+  try {
     const { data: existing, error: fetchError } = await supabase
       .from("likes")
       .select("*")
       .eq("idee_id", idee_id)
       .eq("user_id", user_id)
-      .single();
+      .maybeSingle();
 
-    if (fetchError && fetchError.code !== "PGRST116") throw fetchError;
+    if (fetchError) throw fetchError;
 
     if (existing) {
-      // Unlike → delete the record
       const { error: deleteError } = await supabase
         .from("likes")
         .delete()
@@ -94,7 +125,6 @@ router.post("/likes/:idee_id", async (req, res) => {
 
       return res.status(200).json({ message: "Like removed" });
     } else {
-      // Like → insert new record
       const { data, error } = await supabase
         .from("likes")
         .insert([{ idee_id, user_id }])
@@ -105,7 +135,7 @@ router.post("/likes/:idee_id", async (req, res) => {
       return res.status(201).json({ message: "Like added", data });
     }
   } catch (err) {
-    console.error(" Error toggling like:", err.message);
+    console.error("❌ Error toggling like:", err.message);
     res.status(500).json({ error: "Failed to toggle like" });
   }
 });
