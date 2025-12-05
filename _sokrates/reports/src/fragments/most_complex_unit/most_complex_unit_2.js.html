@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>async function testInsert()</title>
+    <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
+    <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">async function testInsert()</h3>
+<p style="margin-top: 4px">in <i>backend/testDB.js [3:11]</i></p>
+<ul>
+    <li><b>8</b> lines of code</li>
+    <li><b>2</b> McCabe index (conditional complexity)</li>
+</ul>
+<pre>
+<code class="js">
+async function testInsert() {
+  const { data, error } = await supabase
+    .from(&quot;idees&quot;)
+    .insert([{ titre: &quot;Test&quot;, description: &quot;Hello&quot;, user_id: 1 }])
+    .select();
+
+  if (error) console.error(error);
+  else console.log(data);
+}
+
+</code>
+</pre>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>

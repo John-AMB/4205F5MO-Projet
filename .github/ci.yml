@@ -7,6 +7,7 @@ on:
     branches: [main]
 
 jobs:
+  # ===== BACKEND JEST TESTS =====
   backend-tests:
     name: Backend Jest Tests
     runs-on: ubuntu-latest
@@ -27,6 +28,7 @@ jobs:
         working-directory: ./backend
         run: npm test -- --coverage
 
+  # ===== CYPRESS E2E TESTS =====
   frontend-tests:
     name: Cypress E2E Tests
     runs-on: ubuntu-latest
@@ -40,27 +42,39 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install frontend deps
-        working-directory: ./frontend
+      # BACKEND
+      - name: Install backend dependencies
+        working-directory: ./backend
         run: npm install
 
       - name: Start backend server
         working-directory: ./backend
         run: |
-          npm run dev &
+          npm start &
         env:
           PORT: 3001
 
-      - name: Start frontend server
+      # FRONTEND
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: npm install
+
+      - name: Build frontend
+        working-directory: ./frontend
+        run: npm run build
+
+      - name: Start frontend (preview mode)
         working-directory: ./frontend
         run: |
-          npm run dev &
+          npx vite preview --port 5173 &
         env:
           PORT: 5173
 
+      # WAIT FOR BOTH SERVERS
       - name: Wait for servers
         run: npx wait-on http://localhost:3001 http://localhost:5173
 
-      - name: Run Cypress
+      # CYPRESS RUN
+      - name: Run Cypress Tests
         working-directory: ./frontend
         run: npx cypress run

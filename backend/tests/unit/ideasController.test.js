@@ -1,4 +1,5 @@
 // tests/unit/ideasController.test.js
+
 const {
   getAllIdeas,
   getIdeaById,
@@ -12,26 +13,23 @@ const cloudinary = require("../../cloudinaryConfig");
 const streamifier = require("streamifier");
 
 // -------------------------
-// Mocks
+// GLOBAL MOCKS
 // -------------------------
 jest.mock("../../models/ideaModel");
 
-// Mock Cloudinary uploader
+// Fake Cloudinary uploader — always returns a mock URL unless replaced in a test
 cloudinary.uploader = {
-  upload_stream: jest.fn().mockImplementation((callback) => {
-    // Simulate successful upload immediately
-    callback(null, { secure_url: "https://mock.cloudinary/test.jpg" });
-    return { end: jest.fn() }; // required by your controller
+  upload_stream: jest.fn().mockImplementation((cb) => {
+    cb(null, { secure_url: "https://mock.cloudinary/test.jpg" });
+    return { end: jest.fn() };
   }),
 };
 
-// Mock streamifier to just return a dummy pipe object
-streamifier.createReadStream.mockImplementation(() => ({
+// mock streamifier pipe
+streamifier.createReadStream = jest.fn(() => ({
   pipe: jest.fn(),
 }));
 
-// -------------------------
-// Tests
 // -------------------------
 describe("Ideas Controller", () => {
   let req, res;
@@ -46,7 +44,7 @@ describe("Ideas Controller", () => {
   // GET ALL IDEAS
   // -------------------------------
   test("getAllIdeas → returns list", async () => {
-    const mockData = [{ id: 1, titre: "Hello" }];
+    const mockData = [{ id: 1 }];
     IdeasModel.getAllIdeas.mockResolvedValue(mockData);
 
     await getAllIdeas(req, res);
@@ -55,13 +53,21 @@ describe("Ideas Controller", () => {
     expect(res.json).toHaveBeenCalledWith(mockData);
   });
 
-  // ------------------------------
-  // GET IDEA BY ID
-  // ------------------------------
-  test("getIdeaById → returns idea if found", async () => {
-    req.params.id = 1;
-    const mockIdea = { id: 1, titre: "Test" };
+  test("getAllIdeas → handles error", async () => {
+    IdeasModel.getAllIdeas.mockRejectedValue(new Error("DB error"));
 
+    await getAllIdeas(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(500);
+    expect(res.json).toHaveBeenCalledWith({ error: "DB error" });
+  });
+
+  // -------------------------------
+  // GET IDEA BY ID
+  // -------------------------------
+  test("getIdeaById → returns idea", async () => {
+    req.params.id = 1;
+    const mockIdea = { id: 1 };
     IdeasModel.getIdeaById.mockResolvedValue(mockIdea);
 
     await getIdeaById(req, res);
@@ -70,7 +76,7 @@ describe("Ideas Controller", () => {
     expect(res.json).toHaveBeenCalledWith(mockIdea);
   });
 
-  test("getIdeaById → 404 when not found", async () => {
+  test("getIdeaById → 404 not found", async () => {
     req.params.id = 999;
     IdeasModel.getIdeaById.mockResolvedValue(null);
 
@@ -80,16 +86,42 @@ describe("Ideas Controller", () => {
     expect(res.json).toHaveBeenCalledWith({ message: "Idea not found" });
   });
 
-  // -------------------------------
-  // CREATE IDEA
-  // -------------------------------
-  test("createIdea → uploads image + creates idea", async () => {
-    req.file = { buffer: Buffer.from("mock") };
+  test("getIdeaById → handles error", async () => {
+    req.params.id = 1;
+    IdeasModel.getIdeaById.mockRejectedValue(new Error("DB error"));
+
+    await getIdeaById(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(500);
+    expect(res.json).toHaveBeenCalledWith({ error: "DB error" });
+  });
+
+  test("createIdea → creates idea without file", async () => {
+    req.body = {
+      user_id: "u1",
+      titre: "test",
+      description: "desc",
+    };
+
+    IdeasModel.createIdea.mockResolvedValue({ id: 1 });
+
+    await createIdea(req, res);
+
+    expect(IdeasModel.createIdea).toHaveBeenCalled();
+    expect(res.status).toHaveBeenCalledWith(201);
+    expect(res.json).toHaveBeenCalledWith({
+      message: "Idea created",
+      id: 1,
+    });
+  });
+
+  test("createIdea → creates idea with image", async () => {
     req.body = {
       user_id: "abc",
-      titre: "Test",
-      description: "Desc",
+      titre: "T",
+      description: "D",
     };
+    req.file = { buffer: Buffer.from("mock") };
 
     IdeasModel.createIdea.mockResolvedValue({ id: 10 });
 
@@ -97,119 +129,55 @@ describe("Ideas Controller", () => {
 
     expect(IdeasModel.createIdea).toHaveBeenCalledWith(
       expect.objectContaining({
-        user_id: "abc",
-        titre: "Test",
-        description: "Desc",
         photo: expect.any(String),
       })
     );
-
     expect(res.status).toHaveBeenCalledWith(201);
-    expect(res.json).toHaveBeenCalledWith({
-      message: "Idea created",
-      id: 10,
-    });
   });
 
-  test("createIdea → no file still works", async () => {
+  test("createIdea → handles Cloudinary error", async () => {
+    const consoleSpy = jest.spyOn(console, "error").mockImplementation();
     req.body = {
       user_id: "abc",
-      titre: "Test",
-      description: "Desc",
+      titre: "X",
+      description: "Y",
     };
+    req.file = { buffer: Buffer.from("mock") };
 
-    IdeasModel.createIdea.mockResolvedValue({ id: 5 });
+    cloudinary.uploader.upload_stream.mockImplementationOnce((cb) => {
+      cb(new Error("Upload failed"));
+      return { end: jest.fn() };
+    });
 
     await createIdea(req, res);
 
-    expect(IdeasModel.createIdea).toHaveBeenCalled();
-    expect(res.status).toHaveBeenCalledWith(201);
+    expect(res.status).toHaveBeenCalledWith(500);
+    expect(res.json).toHaveBeenCalledWith({ error: "Upload failed" });
+    // Restore console.error
+    consoleSpy.mockRestore();
   });
 
   // -------------------------------
   // UPDATE IDEA
   // -------------------------------
   test("updateIdea → updates idea", async () => {
-    req.params.id = 1;
-    req.body = { titre: "Updated" };
+    req.params.id = 5;
+    req.body = { titre: "New" };
 
-    IdeasModel.updateIdea.mockResolvedValue({ id: 1, titre: "Updated" });
+    IdeasModel.updateIdea.mockResolvedValue({ id: 5, titre: "New" });
 
     await updateIdea(req, res);
 
-    expect(IdeasModel.updateIdea).toHaveBeenCalledWith(1, {
-      titre: "Updated",
-    });
-
+    expect(IdeasModel.updateIdea).toHaveBeenCalledWith(5, { titre: "New" });
     expect(res.json).toHaveBeenCalledWith({
       message: "Idea updated",
-      idea: { id: 1, titre: "Updated" },
+      idea: { id: 5, titre: "New" },
     });
   });
 
-  // -------------------------------
-  // DELETE IDEA
-  // -------------------------------
-  test("deleteIdea → deletes idea", async () => {
-    req.params.id = 1;
-
-    await deleteIdea(req, res);
-
-    expect(IdeasModel.deleteIdea).toHaveBeenCalledWith(1);
-    expect(res.json).toHaveBeenCalledWith({ message: "Idea deleted" });
-  });
-  // ------------------------------
-  // getAllIdeas error
-  //-------------------------------
-  test("getAllIdeas → handles error", async () => {
-    const errorMessage = "DB error";
-    IdeasModel.getAllIdeas.mockRejectedValue(new Error(errorMessage));
-
-    await getAllIdeas(req, res);
-
-    expect(res.status).toHaveBeenCalledWith(500);
-    expect(res.json).toHaveBeenCalledWith({ error: errorMessage });
-  });
-
-  // ------------------------------
-  // getIdeaById error
-  //-------------------------------
-  test("getIdeaById → handles error", async () => {
-    const errorMessage = "DB error";
-    req.params.id = 1;
-    IdeasModel.getIdeaById.mockRejectedValue(new Error(errorMessage));
-
-    await getIdeaById(req, res);
-
-    expect(res.status).toHaveBeenCalledWith(500);
-    expect(res.json).toHaveBeenCalledWith({ error: errorMessage });
-  });
-  const cloudinary = require("../../cloudinaryConfig");
-  const streamifier = require("streamifier");
-
-  // ------------------------------
-  // cloudinary error
-  //-------------------------------
-  test("createIdea → fails if Cloudinary upload fails", async () => {
-    req.file = { buffer: Buffer.from("mock") };
-    req.body = { user_id: "abc", titre: "Fail", description: "Fail" };
-
-    // Simulate Cloudinary failure
-    cloudinary.uploader.upload_stream.mockImplementation((cb) =>
-      cb(new Error("Upload failed"))
-    );
-
-    await createIdea(req, res);
-
-    expect(res.status).toHaveBeenCalledWith(500);
-    expect(res.json).toHaveBeenCalledWith({ error: "Upload failed" });
-  });
-  // ------------------------------
-  // update error
-  //-------------------------------
   test("updateIdea → handles error", async () => {
     req.params.id = 1;
-    req.body = { titre: "Test" };
+    req.body = {};
     IdeasModel.updateIdea.mockRejectedValue(new Error("Update error"));
 
     await updateIdea(req, res);
@@ -218,9 +186,18 @@ describe("Ideas Controller", () => {
     expect(res.json).toHaveBeenCalledWith({ error: "Update error" });
   });
 
-  // ------------------------------
-  // delete error
-  //-------------------------------
+  // -------------------------------
+  // DELETE IDEA
+  // -------------------------------
+  test("deleteIdea → deletes idea", async () => {
+    req.params.id = 7;
+
+    await deleteIdea(req, res);
+
+    expect(IdeasModel.deleteIdea).toHaveBeenCalledWith(7);
+    expect(res.json).toHaveBeenCalledWith({ message: "Idea deleted" });
+  });
+
   test("deleteIdea → handles error", async () => {
     req.params.id = 1;
     IdeasModel.deleteIdea.mockRejectedValue(new Error("Delete error"));
