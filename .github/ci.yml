@@ -13,15 +13,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node 20
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
-      - name: Install backend dependencies
+      - name: Install backend deps
         working-directory: ./backend
         run: npm install
 
@@ -36,20 +35,19 @@ jobs:
     needs: backend-tests
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node 20
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       # BACKEND
       - name: Install backend dependencies
         working-directory: ./backend
         run: npm install
 
-      - name: Start backend
+      - name: Start backend server
         working-directory: ./backend
         run: |
           npm start &
