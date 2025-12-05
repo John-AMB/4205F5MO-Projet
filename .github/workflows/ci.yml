@@ -70,9 +70,10 @@ jobs:
 
       - name: Start frontend preview
         working-directory: ./frontend
-        run: npx vite preview --port 5173 &
+        run: npx vite preview --port 5173 --host 0.0.0.0 &
         env:
           PORT: 5173
+
 
       # ---- Wait for both servers ----
       - name: Wait until backend + frontend are ready
