@@ -7,54 +7,59 @@ on:
     branches: [main]
 
 jobs:
-  # ===== BACKEND JEST TESTS =====
+  # ===========================
+  # BACKEND UNIT TESTS (JEST)
+  # ===========================
   backend-tests:
     name: Backend Jest Tests
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Setup Node 20
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 20 # REQUIRED by joi + Vite
 
-      - name: Install backend deps
+      - name: Install backend dependencies
         working-directory: ./backend
         run: npm install
 
-      - name: Run Jest tests + coverage
+      - name: Run Jest tests with coverage
         working-directory: ./backend
         run: npm test -- --coverage
 
-  # ===== CYPRESS E2E TESTS =====
-  frontend-tests:
+  # ============================
+  # FRONTEND + BACKEND CYPRESS E2E
+  # ============================
+  e2e-tests:
     name: Cypress E2E Tests
     runs-on: ubuntu-latest
     needs: backend-tests
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Setup Node 20
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 20 # Vite REQUIRES Node 20+
 
-      # BACKEND
+      # ---- Backend ----
       - name: Install backend dependencies
         working-directory: ./backend
         run: npm install
 
-      - name: Start backend server
+      - name: Start backend
         working-directory: ./backend
-        run: |
-          npm start &
+        run: NODE_ENV=production PORT=3001 node index.js & # run directly without cross-env
         env:
           PORT: 3001
 
-      # FRONTEND
+      # ---- Frontend ----
       - name: Install frontend dependencies
         working-directory: ./frontend
         run: npm install
@@ -63,18 +68,17 @@ jobs:
         working-directory: ./frontend
         run: npm run build
 
-      - name: Start frontend (preview mode)
+      - name: Start frontend preview
         working-directory: ./frontend
-        run: |
-          npx vite preview --port 5173 &
+        run: npx vite preview --port 5173 &
         env:
           PORT: 5173
 
-      # WAIT FOR BOTH SERVERS
-      - name: Wait for servers
+      # ---- Wait for both servers ----
+      - name: Wait until backend + frontend are ready
         run: npx wait-on http://localhost:3001 http://localhost:5173
 
-      # CYPRESS RUN
+      # ---- Cypress ----
       - name: Run Cypress Tests
         working-directory: ./frontend
         run: npx cypress run
