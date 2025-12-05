@@ -1,0 +1,72 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 3%;
+  display: flex;
+  background: rgb(255, 255, 255);
+  align-items: center;
+  z-index: 100;
+  gap: 30px;
+}
+
+.trois {
+  padding: 10px;
+  align-items: center;
+  display: flex;
+}
+.logo {
+  width: auto;
+  height: 100px;
+  margin-top: 10px;
+}
+.logo:hover {
+  cursor: pointer;
+}
+.trois a {
+  font-size: 20px;
+  padding: 20px;
+  margin-left: 30px;
+
+  border-radius: 50px;
+}
+
+.logo {
+  font-size: 32px;
+  color: black;
+  font-weight: 700;
+}
+
+/* Target the first <a> inside .trois */
+.home {
+  color: white;
+  background-color: black;
+}
+
+.create {
+  color: black;
+}
+/* Header styling */
+.search {
+  flex: 1;
+  background-color: #f1f1f1;
+  border-radius: 16px;
+  padding: 16px;
+}
+.search img {
+  margin-top: 3px;
+  margin-right: 10px;
+  width: 20px;
+  height: 30px;
+}
+
+.search input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+.form {
+  display: flex;
+}

@@ -1,0 +1,239 @@
+<html>
+<head>
+    <title>frontend/src/components/SingleItem/SingleItem.jsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">frontend/src/components/SingleItem/SingleItem.jsx (<b>186</b> lines of code) (<a href="SingleItem.jsx">raw</a>):</h3>
+<div id="editor">import { useParams, useNavigate } from &quot;react-router-dom&quot;;
+import { useEffect, useState } from &quot;react&quot;;
+import &quot;./SingleItem.css&quot;;
+
+const SingleItem = () =&gt; {
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  const [idea, setIdea] = useState(null);
+  const [likes, setLikes] = useState(0);
+  const [liked, setLiked] = useState(false);
+  const [comments, setComments] = useState([]);
+  const [newComment, setNewComment] = useState(&quot;&quot;);
+  const [showAllComments, setShowAllComments] = useState(false);
+
+  // Fetch idea, comments and likes
+  useEffect(() =&gt; {
+    if (!id) return;
+
+    const backendUrl = import.meta.env.VITE_API_URL || &quot;http://localhost:3001&quot;;
+
+    // Fetch idea details
+    fetch(`${backendUrl}/ideas/${id}`)
+      .then((res) =&gt; res.json())
+      .then((data) =&gt; setIdea(data))
+      .catch(console.error);
+
+    // Fetch comments
+    fetch(`${backendUrl}/ideas/comments/${id}`)
+      .then((res) =&gt; res.json())
+      .then((data) =&gt; setComments(Array.isArray(data) ? data : []))
+      .catch(console.error);
+
+    // Fetch likes count
+    fetch(`${backendUrl}/ideas/likes/${id}`)
+      .then((res) =&gt; res.json())
+      .then((data) =&gt; setLikes(data.likes))
+      .catch(console.error);
+
+    // Check if user liked
+    fetch(`${backendUrl}/ideas/likes/${id}/user/1`)
+      .then((res) =&gt; res.json())
+      .then((data) =&gt; setLiked(data.liked))
+      .catch(() =&gt; setLiked(false));
+  }, [id]);
+
+  // Handle like toggle
+  const handleLike = async () =&gt; {
+    const backendUrl = import.meta.env.VITE_API_URL || &quot;http://localhost:3001&quot;;
+    try {
+      await fetch(`${backendUrl}/ideas/likes/${id}`, {
+        method: &quot;POST&quot;,
+      });
+
+      const likesRes = await fetch(`${backendUrl}/ideas/likes/${id}`);
+      const likesData = await likesRes.json();
+
+      setLiked((prev) =&gt; !prev);
+      setLikes(likesData.likes || 0);
+    } catch (err) {
+      console.error(&quot;Error toggling like:&quot;, err);
+    }
+  };
+
+  // Add new comment
+  const handleAddComment = async () =&gt; {
+    if (newComment.trim() === &quot;&quot;) return;
+    const backendUrl = import.meta.env.VITE_API_URL || &quot;http://localhost:3001&quot;;
+
+    try {
+      const res = await fetch(`${backendUrl}/ideas/comments`, {
+        method: &quot;POST&quot;,
+        headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+        body: JSON.stringify({ idee_id: id, content: newComment }),
+      });
+      const data = await res.json();
+
+      setComments([...comments, data]);
+      setNewComment(&quot;&quot;);
+    } catch (err) {
+      console.error(&quot;Error adding your comment:&quot;, err);
+    }
+  };
+
+  // Download image
+  const handleDownload = () =&gt; {
+    const downloadUrl = idea.photo.replace(
+      &quot;/upload/&quot;,
+      &quot;/upload/fl_attachment/&quot;
+    );
+    const link = document.createElement(&quot;a&quot;);
+    link.href = downloadUrl;
+    link.download = `${idea.titre}.jpg`;
+    link.click();
+  };
+
+  if (!idea) return &lt;div className=&quot;singleItem-error&quot;&gt;Idea not found&lt;/div&gt;;
+
+  return (
+    &lt;div className=&quot;page&quot;&gt;
+      &lt;div className=&quot;singleItem-container&quot;&gt;
+        &lt;div className=&quot;singleItem-card&quot;&gt;
+          {/* ===== LEFT IMAGE SIDE ===== */}
+          &lt;div className=&quot;singleItem-imageWrapper&quot;&gt;
+            {/* ❤️ Like button */}
+            &lt;button
+              className={`heart-btn ${liked ? &quot;liked&quot; : &quot;&quot;}`}
+              onClick={handleLike}
+              title=&quot;Like&quot;
+            &gt;
+              {liked ? &quot;&hearts;️&quot; : &quot;🤍&quot;}
+            &lt;/button&gt;
+
+            &lt;img
+              src={idea.photo}
+              alt={idea.titre}
+              className=&quot;singleItem-image&quot;
+            /&gt;
+
+            {/* Download button */}
+            &lt;a onClick={handleDownload} className=&quot;singleItem-openNewTwo&quot;&gt;
+              &lt;img
+                src=&quot;/general/download.png&quot;
+                alt=&quot;Download&quot;
+                className=&quot;singleItem-openIcon&quot;
+              /&gt;
+            &lt;/a&gt;
+
+            {/* Open full size */}
+            &lt;a
+              href={idea.photo}
+              target=&quot;_blank&quot;
+              rel=&quot;noopener noreferrer&quot;
+              className=&quot;singleItem-openNew&quot;
+            &gt;
+              &lt;img
+                src=&quot;/general/resize.png&quot;
+                alt=&quot;Open full size&quot;
+                className=&quot;singleItem-openIcon&quot;
+              /&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+
+          {/* ===== RIGHT DETAILS SIDE ===== */}
+          &lt;div className=&quot;singleItem-details&quot;&gt;
+            &lt;div className=&quot;singleItem-options&quot;&gt;
+              &lt;img src=&quot;/general/more.svg&quot; alt=&quot;Options&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div className=&quot;section1&quot;&gt;
+              &lt;h1 className=&quot;singleItem-title&quot;&gt;{idea.titre}&lt;/h1&gt;
+              &lt;p className=&quot;singleItem-description&quot;&gt;{idea.description}&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div className=&quot;like-count&quot;&gt;
+              &lt;span&gt;
+                {likes} {likes === 1 ? &quot;like&quot; : &quot;likes&quot;}
+              &lt;/span&gt;
+            &lt;/div&gt;
+
+            {/* ===== COMMENTS SECTION ===== */}
+            &lt;div className=&quot;comments-section&quot;&gt;
+              &lt;h3&gt;Comments&lt;/h3&gt;
+
+              {comments.length === 0 ? (
+                &lt;p className=&quot;no-comments&quot;&gt;No comments yet.&lt;/p&gt;
+              ) : (
+                &lt;&gt;
+                  &lt;div className=&quot;comments-list&quot;&gt;
+                    {comments
+                      .slice(0, showAllComments ? comments.length : 4)
+                      .map((c) =&gt; (
+                        &lt;div key={c.id} className=&quot;comment&quot;&gt;
+                          {c.content}
+                        &lt;/div&gt;
+                      ))}
+                  &lt;/div&gt;
+
+                  {comments.length &gt; 4 &amp;&amp; (
+                    &lt;button
+                      className=&quot;toggle-comments-btn&quot;
+                      onClick={() =&gt; setShowAllComments(!showAllComments)}
+                    &gt;
+                      {showAllComments
+                        ? &quot;Show less &uarr;&quot;
+                        : `View all ${comments.length} comments &darr;`}
+                    &lt;/button&gt;
+                  )}
+                &lt;/&gt;
+              )}
+
+              {/* Comment input */}
+              &lt;div className=&quot;comment-input&quot;&gt;
+                &lt;input
+                  type=&quot;text&quot;
+                  placeholder=&quot;Write a comment...&quot;
+                  maxLength={45}
+                  value={newComment}
+                  onChange={(e) =&gt; setNewComment(e.target.value)}
+                /&gt;
+                &lt;button onClick={handleAddComment}&gt;Post&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;button className=&quot;singleItem-backBtn&quot; onClick={() =&gt; navigate(&quot;/&quot;)}&gt;
+          &larr; Back
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default SingleItem;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/html");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

@@ -1,0 +1,43 @@
+/* src/styles.css */
+.language-selector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.language-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.language-name {
+  font-weight: bold;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 30px; /* Ajuster la position du menu déroulant */
+  right: 0;
+  background-color: black;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.language-dropdown button {
+  background-color: black;
+  border: none;
+  padding: 8px 12px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.language-dropdown button:hover {
+  background-color: #f0f0f0;
+}

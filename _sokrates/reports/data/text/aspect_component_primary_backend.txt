@@ -1,0 +1,12 @@
+Path	Lines of Code
+backend/cloudinaryConfig.js	8
+backend/controllers/ideaController.js	78
+backend/controllers/userController.js	171
+backend/index.js	32
+backend/models/ideaModel.js	37
+backend/models/userModel.js	93
+backend/routes/commentsLikesRoutes.js	83
+backend/routes/ideaRoutes.js	12
+backend/routes/userRoutes.js	19
+backend/supabaseClient.js	15
+backend/testDB.js	10

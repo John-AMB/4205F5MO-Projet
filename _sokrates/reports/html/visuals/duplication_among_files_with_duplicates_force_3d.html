@@ -1,0 +1,168 @@
+<head>
+    <style> body {
+        margin: 0;
+    } </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/3d-force-graph"></script>
+</head>
+
+<body>
+<div id="3d-graph"></div>
+
+<script>
+    const gData = {
+  "nodes" : [ {
+    "id" : "duplicate4",
+    "size" : 2
+  }, {
+    "id" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.jsx]",
+    "size" : 1
+  }, {
+    "id" : "duplicate3",
+    "size" : 2
+  }, {
+    "id" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx]",
+    "size" : 1
+  }, {
+    "id" : "duplicate6",
+    "size" : 2
+  }, {
+    "id" : "duplicate5",
+    "size" : 2
+  }, {
+    "id" : "[backend/controllers/ideaController.js]",
+    "size" : 2
+  }, {
+    "id" : "[backend/controllers/userController.js]",
+    "size" : 1
+  }, {
+    "id" : "[backend/models/userModel.js]",
+    "size" : 6
+  }, {
+    "id" : "[backend/models/ideaModel.js]",
+    "size" : 1
+  }, {
+    "id" : "duplicate2",
+    "size" : 2
+  }, {
+    "id" : "duplicate1",
+    "size" : 2
+  } ],
+  "links" : [ {
+    "source" : "[backend/controllers/ideaController.js]",
+    "target" : "duplicate1",
+    "count" : 1
+  }, {
+    "source" : "duplicate1",
+    "target" : "[backend/controllers/ideaController.js]",
+    "count" : 1
+  }, {
+    "source" : "[backend/controllers/userController.js]",
+    "target" : "duplicate1",
+    "count" : 1
+  }, {
+    "source" : "duplicate1",
+    "target" : "[backend/controllers/userController.js]",
+    "count" : 1
+  }, {
+    "source" : "[backend/controllers/ideaController.js]",
+    "target" : "duplicate2",
+    "count" : 1
+  }, {
+    "source" : "duplicate2",
+    "target" : "[backend/controllers/ideaController.js]",
+    "count" : 1
+  }, {
+    "source" : "[backend/models/ideaModel.js]",
+    "target" : "duplicate2",
+    "count" : 1
+  }, {
+    "source" : "duplicate2",
+    "target" : "[backend/models/ideaModel.js]",
+    "count" : 1
+  }, {
+    "source" : "[backend/models/userModel.js]",
+    "target" : "duplicate3",
+    "count" : 1
+  }, {
+    "source" : "duplicate3",
+    "target" : "[backend/models/userModel.js]",
+    "count" : 1
+  }, {
+    "source" : "[backend/models/userModel.js]",
+    "target" : "duplicate3",
+    "count" : 1
+  }, {
+    "source" : "duplicate3",
+    "target" : "[backend/models/userModel.js]",
+    "count" : 1
+  }, {
+    "source" : "[backend/models/userModel.js]",
+    "target" : "duplicate4",
+    "count" : 1
+  }, {
+    "source" : "duplicate4",
+    "target" : "[backend/models/userModel.js]",
+    "count" : 1
+  }, {
+    "source" : "[backend/models/userModel.js]",
+    "target" : "duplicate4",
+    "count" : 1
+  }, {
+    "source" : "duplicate4",
+    "target" : "[backend/models/userModel.js]",
+    "count" : 1
+  }, {
+    "source" : "[backend/models/userModel.js]",
+    "target" : "duplicate5",
+    "count" : 1
+  }, {
+    "source" : "duplicate5",
+    "target" : "[backend/models/userModel.js]",
+    "count" : 1
+  }, {
+    "source" : "[backend/models/userModel.js]",
+    "target" : "duplicate5",
+    "count" : 1
+  }, {
+    "source" : "duplicate5",
+    "target" : "[backend/models/userModel.js]",
+    "count" : 1
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx]",
+    "target" : "duplicate6",
+    "count" : 1
+  }, {
+    "source" : "duplicate6",
+    "target" : "[frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx]",
+    "count" : 1
+  }, {
+    "source" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.jsx]",
+    "target" : "duplicate6",
+    "count" : 1
+  }, {
+    "source" : "duplicate6",
+    "target" : "[frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.jsx]",
+    "count" : 1
+  } ]
+}
+
+    const maxNodeSize = gData.nodes.map(n => n.size).reduce((a, b) => Math.max(a, b));
+    const maxCount = gData.links.map(l => l.count).reduce((a, b) => Math.max(a, b));
+
+    gData.links = gData.links.map(l => { return {source: l.target, target: l.source, count: l.count} });
+
+    const Graph = ForceGraph3D()
+    (document.getElementById('3d-graph'))
+        .graphData(gData)
+        .nodeRelSize(4)
+        .nodeVal(n => Math.max(20 * n.size / maxNodeSize, 0.001))
+        .nodeLabel(n => n.id + " (" + n.size + ")")
+        .nodeColor(n => n.id.startsWith("[") ? "skyblue" : "")
+        .linkDirectionalParticles(6)
+        .linkDirectionalParticleSpeed(d => d.count / maxCount * 0.01)
+        .linkOpacity(0.1)
+        .linkWidth(d => 3 * d.count / maxCount + 0.1);
+
+</script>
+</body>

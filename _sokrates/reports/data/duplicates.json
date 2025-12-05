@@ -1,0 +1,180 @@
+{
+  "title" : "Duplication",
+  "timestamp" : "2025-12-03 20:18:01",
+  "duplicates" : [ {
+    "blockSize" : 10,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "backend/controllers/ideaController.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 71,
+      "startLine" : 4,
+      "endLine" : 15,
+      "cleanedStartLine" : 3,
+      "cleanedEndLine" : 12
+    }, {
+      "file" : {
+        "relativePath" : "backend/controllers/userController.js",
+        "extension" : "js",
+        "linesOfCode" : 171,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 152,
+      "startLine" : 4,
+      "endLine" : 14,
+      "cleanedStartLine" : 3,
+      "cleanedEndLine" : 12
+    } ]
+  }, {
+    "blockSize" : 8,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "backend/controllers/ideaController.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 71,
+      "startLine" : 90,
+      "endLine" : 98,
+      "cleanedStartLine" : 64,
+      "cleanedEndLine" : 71
+    }, {
+      "file" : {
+        "relativePath" : "backend/models/ideaModel.js",
+        "extension" : "js",
+        "linesOfCode" : 37,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 37,
+      "startLine" : 40,
+      "endLine" : 48,
+      "cleanedStartLine" : 30,
+      "cleanedEndLine" : 37
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 62,
+      "endLine" : 67,
+      "cleanedStartLine" : 49,
+      "cleanedEndLine" : 54
+    }, {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 86,
+      "endLine" : 91,
+      "cleanedStartLine" : 69,
+      "cleanedEndLine" : 74
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 62,
+      "endLine" : 67,
+      "cleanedStartLine" : 49,
+      "cleanedEndLine" : 54
+    }, {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 74,
+      "endLine" : 79,
+      "cleanedStartLine" : 59,
+      "cleanedEndLine" : 64
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 74,
+      "endLine" : 79,
+      "cleanedStartLine" : 59,
+      "cleanedEndLine" : 64
+    }, {
+      "file" : {
+        "relativePath" : "backend/models/userModel.js",
+        "extension" : "js",
+        "linesOfCode" : 93,
+        "components" : [ "primary::backend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 93,
+      "startLine" : 86,
+      "endLine" : 91,
+      "cleanedStartLine" : 69,
+      "cleanedEndLine" : 74
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/ChangePhoto/ChangePhoto.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 77,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 74,
+      "startLine" : 57,
+      "endLine" : 63,
+      "cleanedStartLine" : 46,
+      "cleanedEndLine" : 51
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/components/ModificationProfile/SupprimeAccount/SupprimeAccount.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 89,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 83,
+      "startLine" : 58,
+      "endLine" : 64,
+      "cleanedStartLine" : 47,
+      "cleanedEndLine" : 52
+    } ]
+  } ],
+  "overallDuplication" : null
+}

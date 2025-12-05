@@ -7,27 +7,27 @@ on:
     branches: [main]
 
 jobs:
-  # ===== CYPRESS JEST UNIT TESTS =====
+  # ===== BACKEND JEST TESTS =====
   backend-tests:
     name: Backend Jest Tests
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node 20
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
-      - name: Install backend dependencies
+      - name: Install backend deps
         working-directory: ./backend
         run: npm install
 
       - name: Run Jest tests + coverage
         working-directory: ./backend
         run: npm test -- --coverage
+
   # ===== CYPRESS E2E TESTS =====
   frontend-tests:
     name: Cypress E2E Tests
@@ -35,36 +35,46 @@ jobs:
     needs: backend-tests
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node 20
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
+      # BACKEND
+      - name: Install backend dependencies
+        working-directory: ./backend
+        run: npm install
+
+      - name: Start backend server
+        working-directory: ./backend
+        run: |
+          npm start &
+        env:
+          PORT: 3001
+
+      # FRONTEND
       - name: Install frontend dependencies
         working-directory: ./frontend
         run: npm install
 
-      - name: Start backend
-        working-directory: ./backend
-        run: |
-          npm install
-          npm run dev &
-        env:
-          PORT: 3001
+      - name: Build frontend
+        working-directory: ./frontend
+        run: npm run build
 
-      - name: Start frontend
+      - name: Start frontend (preview mode)
         working-directory: ./frontend
         run: |
-          npm run dev &
+          npx vite preview --port 5173 &
         env:
           PORT: 5173
 
+      # WAIT FOR BOTH SERVERS
       - name: Wait for servers
         run: npx wait-on http://localhost:3001 http://localhost:5173
 
+      # CYPRESS RUN
       - name: Run Cypress Tests
         working-directory: ./frontend
         run: npx cypress run
