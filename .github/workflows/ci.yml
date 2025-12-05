@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20   # REQUIRED by joi + Vite
+          node-version: 20 # REQUIRED by joi + Vite
 
       - name: Install backend dependencies
         working-directory: ./backend
@@ -30,7 +30,6 @@ jobs:
       - name: Run Jest tests with coverage
         working-directory: ./backend
         run: npm test -- --coverage
-
 
   # ============================
   # FRONTEND + BACKEND CYPRESS E2E
@@ -47,7 +46,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20   # Vite REQUIRES Node 20+
+          node-version: 20 # Vite REQUIRES Node 20+
 
       # ---- Backend ----
       - name: Install backend dependencies
@@ -56,7 +55,7 @@ jobs:
 
       - name: Start backend
         working-directory: ./backend
-        run: npm start &    # MUST run in background
+        run: NODE_ENV=production PORT=3001 node index.js & # run directly without cross-env
         env:
           PORT: 3001
 
