@@ -1,7 +1,7 @@
-import { Given, When, Then } from "@cucumber/cucumber";
-import assert from "assert";
-import request from "supertest";
-import app from "../../index.js";
+const { Given, When, Then } = require("@cucumber/cucumber");
+const assert = require("assert");
+const request = require("supertest");
+const app = require("../../index");
 
 let res;
 let payload;
@@ -14,8 +14,8 @@ Given("I have a valid idea payload", function () {
   };
 });
 
-When("I send a POST request to /ideas", async function () {
-  res = await request(app).post("/ideas").send(payload);
+When("I send a POST request to {string}", async function (endpoint) {
+  res = await request(app).post(endpoint).send(payload);
 });
 
 Then("the response status should be {int}", function (status) {

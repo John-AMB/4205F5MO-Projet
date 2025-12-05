@@ -5,6 +5,6 @@ Feature: Manage Ideas
 
   Scenario: Create a new idea
     Given I have a valid idea payload
-    When I send a POST request to /ideas
+    When I send a POST request to "/ideas"
     Then the response status should be 201
     And the response should contain the new idea id
