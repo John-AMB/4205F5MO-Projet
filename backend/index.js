@@ -34,9 +34,10 @@ app.use("/users", userRoutes);
 app.use("/ideas", ideasRoute);
 app.use("/ideas", commentsLikesRoutes);
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`✅ Backend running on port ${PORT}`);
-});
+//utilise server.js pour tester cucumber
+// const PORT = process.env.PORT || 3001;
+// app.listen(PORT, "0.0.0.0", () => {
+//   console.log(`✅ Backend running on port ${PORT}`);
+// });
 
 module.exports = app;

@@ -7,7 +7,8 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "dev": "cross-env NODE_ENV=development node index.js",
-    "start": "cross-env NODE_ENV=production node index.js"
+    "start": "cross-env NODE_ENV=production node index.js",
+    "cucumber": "cucumber-js features --require features/step_definitions"
   },
   "keywords": [],
   "author": "",
