@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20 # REQUIRED by joi + Vite
+          node-version: 20
 
       - name: Install backend dependencies
         working-directory: ./backend
@@ -31,9 +31,10 @@ jobs:
         working-directory: ./backend
         run: npm test -- --coverage
 
-  # ============================
-  # FRONTEND + BACKEND CYPRESS E2E
-  # ============================
+
+  # ===========================
+  # FRONTEND + BACKEND CYPRESS
+  # ===========================
   e2e-tests:
     name: Cypress E2E Tests
     runs-on: ubuntu-latest
@@ -46,20 +47,22 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20 # Vite REQUIRES Node 20+
+          node-version: 20
 
-      # ---- Backend ----
+      # ==== BACKEND ====
       - name: Install backend dependencies
         working-directory: ./backend
         run: npm install
 
       - name: Start backend
         working-directory: ./backend
-        run: NODE_ENV=production PORT=3001 node index.js & # run directly without cross-env
+        run: |
+          echo "Starting backend on port 3001..."
+          PORT=3001 node index.js &
         env:
           PORT: 3001
 
-      # ---- Frontend ----
+      # ==== FRONTEND ====
       - name: Install frontend dependencies
         working-directory: ./frontend
         run: npm install
@@ -70,16 +73,20 @@ jobs:
 
       - name: Start frontend preview
         working-directory: ./frontend
-        run: npx vite preview --port 5173 --host 0.0.0.0 &
+        run: |
+          echo "Starting Vite preview on port 5173..."
+          npx vite preview --port 5173 --host 0.0.0.0 &
         env:
           PORT: 5173
 
-
-      # ---- Wait for both servers ----
+      # ==== WAIT FOR BOTH SERVERS ====
       - name: Wait until backend + frontend are ready
-        run: npx wait-on http://localhost:3001 http://localhost:5173
+        run: |
+          npx wait-on --timeout 600000 \
+            http://localhost:3001 \
+            http://localhost:5173
 
-      # ---- Cypress ----
+      # ==== CYPRESS ====
       - name: Run Cypress Tests
         working-directory: ./frontend
         run: npx cypress run
