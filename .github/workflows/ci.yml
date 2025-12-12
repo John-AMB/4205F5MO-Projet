@@ -78,12 +78,17 @@ jobs:
         env:
           PORT: 5173
 
+      # ==== INSTALL WAIT-ON ====
+      - name: Install wait-on locally
+        working-directory: ./frontend
+        run: npm install wait-on
+
       # ==== WAIT FOR BOTH SERVERS ====
       - name: Wait until backend + frontend are ready
+        working-directory: ./frontend
         run: |
-          npx wait-on --timeout 600000 \
-            http://localhost:3001 \
-            http://localhost:5173
+          echo "Waiting for backend (3001) + frontend (5173)..."
+          ./node_modules/.bin/wait-on http://localhost:3001 http://localhost:5173
 
       # ==== CYPRESS ====
       - name: Run Cypress Tests
