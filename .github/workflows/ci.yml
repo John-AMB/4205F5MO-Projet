@@ -57,9 +57,7 @@ jobs:
         working-directory: ./backend
         run: |
           echo "Starting backend on port 3001..."
-          PORT=3001 node index.js &
-        env:
-          PORT: 3001
+          node server.js > backend.log 2>&1 &
 
       # ==== FRONTEND ====
       - name: Install frontend dependencies
