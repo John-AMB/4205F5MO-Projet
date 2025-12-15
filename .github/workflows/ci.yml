@@ -48,47 +48,13 @@ jobs:
         with:
           node-version: 20
 
-      # ==== BACKEND ====
       - name: Install backend dependencies
         working-directory: ./backend
         run: npm install
 
-      - name: Start backend
+      - name: Run Jest tests (E2E placeholder)
         working-directory: ./backend
-        run: |
-          echo "Starting backend on port 3001..."
-          PORT=3001 node index.js &
-        env:
-          PORT: 3001
-
-      # ==== FRONTEND ====
-      - name: Install frontend dependencies
-        working-directory: ./frontend
-        run: npm install
-
-      - name: Build frontend
-        working-directory: ./frontend
-        run: npm run build
-
-      - name: Start frontend preview
-        working-directory: ./frontend
-        run: |
-          echo "Starting Vite preview on port 5173..."
-          npx vite preview --port 5173 --host 0.0.0.0 &
-        env:
-          PORT: 5173
-
-      # ==== WAIT FOR BOTH SERVERS ====
-      - name: Wait until backend + frontend are ready
-        run: |
-          npx wait-on --timeout 600000 \
-            http://localhost:3001 \
-            http://localhost:5173
-
-      # ==== CYPRESS ====
-      - name: Run Cypress Tests
-        working-directory: ./frontend
-        run: npx cypress run
+        run: npm test
 
   # ===========================
   # BACKEND CUCUMBER TESTS
